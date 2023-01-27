@@ -25,7 +25,7 @@ p {
     min-height: 100vh;
 }
 
-.main .cards div {
+.cards div {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -33,14 +33,14 @@ p {
     margin: 3vh;
 }
 
-.main .cards div input {
+.cards div input {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
-.main .results div {
+.results div {
     display: flex;
     flex-direction: row;
     align-items: center;

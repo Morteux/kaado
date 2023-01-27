@@ -46,6 +46,7 @@ var shuffled = [];
 var actualIndex = 0;
 var correctCount = 0;
 var incorrectCount = 0;
+var incorrectIndexes = [];
 
 function startTest() {
 
@@ -57,10 +58,16 @@ function startTest() {
         </div>
         <div><tag>Roman syllable: </tag><input id="latin_input" type="text"></input></div>
         <div>
-            <button id="next" onclick="next()">Next</button>
-            <button id="correct" onclick="correct()">Correct</button>
+            <button id="next_button" onclick="next()">Next</button>
         </div>
     </div>`;
+
+    document.getElementById("latin_input").addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            document.getElementById("next_button").click();
+        }
+    });
 
     actualIndex = 0;
     correctCount = 0;
@@ -73,46 +80,26 @@ function startTest() {
 function next() {
     let input = document.getElementById("latin_input").value;
 
-    if(input == shuffled[actualIndex].latin)
-    {
+    if (input == shuffled[actualIndex].latin) {
         ++correctCount;
-        // document.getElementById("element_container").style.backgroundImage = "url('images/correct.png')";
-        // $("element_container").each(function(index) {
-        //     $(this).hide();
-        //     $(this).delay(1000* index).fadeIn(1000).fadeOut();
-        // });
-        // $('#img_element').css("background-image", "url('images/correct.png')").opacity = 100;
-        // $('#img_element').css("background-image", "url('images/correct.png')").animate({opacity: 0}, 500);
         $('#img_element').css("background-image", "url('images/correct.png')").fadeIn(0).fadeOut();
-
-    } else {
-        ++incorrectCount;
-        // document.getElementById("element_container").style.backgroundImage = "url('images/incorrect.png')";
-        // $("element_container").each(function(index) {
-        //     $(this).hide();
-        //     $(this).delay(1000* index).fadeIn(1000).fadeOut();
-        // });
-        // $('#img_element').css("background-image", "url('images/incorrect.png')").opacity = 100;
-        // $('#img_element').css("background-image", "url('images/incorrect.png')").animate({opacity: 0}, 500);
-        $('#img_element').css("background-image", "url('images/incorrect.png')").fadeIn(0).fadeOut();
-
-    }
-    // $('#element_container').css("background-image", "url('')").animate({opacity: 1}, 500);
-
-    if(++actualIndex < shuffled.length) {
-        document.getElementById("char_element").innerHTML = shuffled[actualIndex].japanese;
         document.getElementById("latin_input").value = "";
     } else {
-        document.getElementById("char_element").innerHTML = "FIN";
-        document.getElementById("next").disabled = true;
-        document.getElementById("correct").disabled = true;
-        
+        ++incorrectCount;
+        $('#img_element').css("background-image", "url('images/incorrect.png')").fadeIn(0).fadeOut();
+        incorrectIndexes.push(actualIndex);
+        showCorrectAnswer();
+    }
+
+    if (++actualIndex < shuffled.length) {
+        document.getElementById("char_element").innerHTML = shuffled[actualIndex].japanese;
+    } else {
         startEnd();
     }
 }
 
-function correct() {
-
+function showCorrectAnswer() {
+    document.getElementById("latin_input").value = shuffled[actualIndex].latin;
 }
 
 function startEnd() {
