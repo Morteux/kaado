@@ -1,6 +1,12 @@
 body {
-    background-image: url("./images/background.png");
-  }
+    /* background-image: url("./images/background.png"); */
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
 
 .start_button {
     display: flex;
@@ -12,33 +18,82 @@ body {
 .main {
     display: flex;
     width: 100%;
-    height: 100%;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    border: 2px solid red;
+    text-align: center;
+    min-height: 100vh;
 }
 
 .main .cards div {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    border: 2px solid black;
+    justify-content: space-around;
+    margin: 3vh;
+}
+
+.main .cards div input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .main .results div {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-    border: 2px solid black;
+    justify-content: space-between;
+    margin: 3vh;
+}
+
+.main .results div p {
+    font-size: 30px;
 }
 
 #element_container {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    border: 2px solid yellow;
-    font-size: 30px;
+    display: grid;
+    place-items:  center;
+
+    /* border: 2px solid green; */
+}
+
+button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: white;
+    background-color: red;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 9px rgb(71, 71, 71);
+    margin: 3vh;
+}
+
+.char_element, .img_element {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.char_element {
+    font-size: 6vh;
+}
+
+.img_element {
+    width: 200%;
+    height: 200%;
+
+    position: relative;
+    z-index: -1;
+
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    /* border: 2px red solid; */
 }

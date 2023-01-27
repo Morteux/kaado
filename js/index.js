@@ -1,49 +1,3 @@
-// var hiragana = new Map();
-
-// hiragana.get("a", "あ");
-// hiragana.get("i", "い");
-// hiragana.get("u", "う");
-// hiragana.get("e", "え");
-// hiragana.get("o", "お");
-// hiragana.get("ka", "か");
-// hiragana.get("ki", "き");
-// hiragana.get("ku", "く");
-// hiragana.get("ke", "け");
-// hiragana.get("ko", "こ");
-// hiragana.get("sa", "さ");
-// hiragana.get("shi", "し");
-// hiragana.get("su", "す");
-// hiragana.get("se", "せ");
-// hiragana.get("so", "そ");
-// hiragana.get("ta", "た");
-// hiragana.get("chi", "ち");
-// hiragana.get("tsu", "つ");
-// hiragana.get("te", "て");
-// hiragana.get("to", "と");
-// hiragana.get("na", "な");
-// hiragana.get("ni", "に");
-// hiragana.get("nu", "ぬ");
-// hiragana.get("ne", "ね");
-// hiragana.get("no", "の");
-// hiragana.get("ha", "は");
-// hiragana.get("hi", "ひ");
-// hiragana.get("fu", "ふ");
-// hiragana.get("he", "へ");
-// hiragana.get("ho", "ほ");
-// hiragana.get("ma", "ま");
-// hiragana.get("mi", "み");
-// hiragana.get("mu", "む");
-// hiragana.get("me", "め");
-// hiragana.get("mo", "も");
-
-// hiragana.get("a", "");
-// hiragana.get("i", "");
-// hiragana.get("u", "");
-// hiragana.get("e", "");
-// hiragana.get("o", "");
-
-
-
 var dictionary = {
     "hiragana": [
         { "latin": "a", "japanese": "あ" },
@@ -90,57 +44,83 @@ var dictionary = {
 
 var shuffled = [];
 var actualIndex = 0;
-var correctCount = 24;
-var incorrectCount = 3;
+var correctCount = 0;
+var incorrectCount = 0;
 
 function startTest() {
-    // document.getElementById("start_button").display = "none";
 
     document.getElementById("main").innerHTML = `
     <div id="cards" class="cards">
         <div id="element_container">
-            <p id="element" class="element">あ</p>
+            <p id="char_element" class="char_element"></p>
+            <div id="img_element" class="img_element"></div>
         </div>
-        <div><input id="latin_input" type="text"></input></div>
+        <div><tag>Roman syllable: </tag><input id="latin_input" type="text"></input></div>
         <div>
-            <button id="siguiente" onclick="siguiente()">Siguiente</button>
-            <button id="resolver" onclick="resolver()">Resolver</button>
+            <button id="next" onclick="next()">Next</button>
+            <button id="correct" onclick="correct()">Correct</button>
         </div>
     </div>`;
 
-    // for (var key in dictionary.hiragana) {
-    //     console.log(dictionary.hiragana[key].latin + " : " + dictionary.hiragana[key].japanese);
-    // }
+    actualIndex = 0;
+    correctCount = 0;
+    incorrectCount = 0;
 
     shuffled = dictionary.hiragana.sort((a, b) => 0.5 - Math.random());
-    
-    // console.log(shuffled);
+    document.getElementById("char_element").innerHTML = shuffled[actualIndex].japanese;
 }
 
-function siguiente() {
+function next() {
     let input = document.getElementById("latin_input").value;
 
     if(input == shuffled[actualIndex].latin)
     {
         ++correctCount;
+        // document.getElementById("element_container").style.backgroundImage = "url('images/correct.png')";
+        // $("element_container").each(function(index) {
+        //     $(this).hide();
+        //     $(this).delay(1000* index).fadeIn(1000).fadeOut();
+        // });
+        // $('#img_element').css("background-image", "url('images/correct.png')").opacity = 100;
+        // $('#img_element').css("background-image", "url('images/correct.png')").animate({opacity: 0}, 500);
+        $('#img_element').css("background-image", "url('images/correct.png')").fadeIn(0).fadeOut();
+
+    } else {
+        ++incorrectCount;
+        // document.getElementById("element_container").style.backgroundImage = "url('images/incorrect.png')";
+        // $("element_container").each(function(index) {
+        //     $(this).hide();
+        //     $(this).delay(1000* index).fadeIn(1000).fadeOut();
+        // });
+        // $('#img_element').css("background-image", "url('images/incorrect.png')").opacity = 100;
+        // $('#img_element').css("background-image", "url('images/incorrect.png')").animate({opacity: 0}, 500);
+        $('#img_element').css("background-image", "url('images/incorrect.png')").fadeIn(0).fadeOut();
+
     }
+    // $('#element_container').css("background-image", "url('')").animate({opacity: 1}, 500);
 
     if(++actualIndex < shuffled.length) {
-        document.getElementById("element").innerHTML = shuffled[actualIndex].japanese;
+        document.getElementById("char_element").innerHTML = shuffled[actualIndex].japanese;
+        document.getElementById("latin_input").value = "";
     } else {
-        document.getElementById("element").innerHTML = "FIN";
-        document.getElementById("siguiente").disabled = true;
-        document.getElementById("resolver").disabled = true;
+        document.getElementById("char_element").innerHTML = "FIN";
+        document.getElementById("next").disabled = true;
+        document.getElementById("correct").disabled = true;
+        
         startEnd();
     }
 }
 
+function correct() {
+
+}
+
 function startEnd() {
-    
     document.getElementById("main").innerHTML = `
     <div id="results" class="results">
         <div><img src="images/correct.png" alt="Correct icon" width="50" height="50"><p id="correctCounter">0</p></div>
         <div><img src="images/incorrect.png" alt="Incorrect icon" width="50" height="50"><p id="incorrectCounter">0</p></div>
+        <button id="restart" onclick="startTest()">Restart</button>
     </div>`;
 
     document.getElementById("correctCounter").innerHTML = correctCount;
