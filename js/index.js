@@ -47,17 +47,20 @@ var actualIndex = 0;
 var correctCount = 0;
 var incorrectCount = 0;
 var incorrectIndexes = [];
+const rowsPerColumn = 15;
 
 function startTest() {
 
     document.getElementById("main").innerHTML = `
     <div id="cards" class="cards">
-        <div id="element_container">
+        <div class="element_container">
             <p id="char_element" class="char_element"></p>
             <div id="img_element" class="img_element"></div>
         </div>
-        <div><tag>Roman syllable: </tag><input id="latin_input" type="text"></input></div>
-        <div>
+        <div class="input_container">
+            <tag>Roman syllable: </tag>
+            <input id="latin_input" type="text"></input></div>
+        <div class="button_container">
             <button id="next_button" onclick="next()">Next</button>
         </div>
     </div>`;
@@ -72,6 +75,7 @@ function startTest() {
     actualIndex = 0;
     correctCount = 0;
     incorrectCount = 0;
+    incorrectIndexes = [];
 
     shuffled = dictionary.hiragana.sort((a, b) => 0.5 - Math.random());
     document.getElementById("char_element").innerHTML = shuffled[actualIndex].japanese;
@@ -84,11 +88,13 @@ function next() {
         ++correctCount;
         $('#img_element').css("background-image", "url('images/correct.png')").fadeIn(0).fadeOut();
         document.getElementById("latin_input").value = "";
+        document.getElementById("latin_input").placeholder = "";
     } else {
         ++incorrectCount;
         $('#img_element').css("background-image", "url('images/incorrect.png')").fadeIn(0).fadeOut();
         incorrectIndexes.push(actualIndex);
-        showCorrectAnswer();
+        document.getElementById("latin_input").value = "";
+        document.getElementById("latin_input").placeholder = shuffled[actualIndex].latin; // Show correct answer
     }
 
     if (++actualIndex < shuffled.length) {
@@ -98,18 +104,31 @@ function next() {
     }
 }
 
-function showCorrectAnswer() {
-    document.getElementById("latin_input").value = shuffled[actualIndex].latin;
-}
-
 function startEnd() {
     document.getElementById("main").innerHTML = `
-    <div id="results" class="results">
-        <div><img src="images/correct.png" alt="Correct icon" width="50" height="50"><p id="correctCounter">0</p></div>
-        <div><img src="images/incorrect.png" alt="Incorrect icon" width="50" height="50"><p id="incorrectCounter">0</p></div>
+    <div class="results_container">
+        <div><img src="images/correct.png" alt="Correct icon" width="50" height="50"> <p id="correctCounter">0</p></div>
+        <div><img src="images/incorrect.png" alt="Incorrect icon" width="50" height="50"> <p id="incorrectCounter">0</p></div>
         <button id="restart" onclick="startTest()">Restart</button>
-    </div>`;
+    </div>
+    <table id="answers_table" class="answers_table">
+        <caption>Incorrect answers</caption>
+    </table>`;
 
     document.getElementById("correctCounter").innerHTML = correctCount;
     document.getElementById("incorrectCounter").innerHTML = incorrectCount;
+
+    let table = "";
+    table += "<tbody>";
+    for(let i = 0; i < incorrectIndexes.length; i += Math.ceil(incorrectIndexes.length / rowsPerColumn)) {
+        table += "<tr>";
+        for(let j = i; j < i + Math.ceil(incorrectIndexes.length / rowsPerColumn); ++j) {
+            if(j < incorrectIndexes.length)
+                table += "<td>" + shuffled[incorrectIndexes[j]].latin + " : " + shuffled[incorrectIndexes[j]].japanese + "</td>";
+        }
+        table += "</tr>";
+    }
+    table += "</tbody>";
+
+    document.getElementById("answers_table").innerHTML += table;
 }
