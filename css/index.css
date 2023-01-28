@@ -1,6 +1,6 @@
 body {
     background-image: url('../images/background.png');
-    background-size:cover;
+    background-size: cover;
     background-repeat: no-repeat;
     padding: 0;
     margin: 0;
@@ -41,11 +41,16 @@ button {
     text-decoration: none;
     outline: none;
     color: white;
-    background-color: rgb(155, 0, 0);
+    background-color: rgb(95, 95, 133);
     border: none;
     border-radius: 50%;
     box-shadow: 0 9px rgb(71, 71, 71);
     margin: 3vh;
+}
+
+button:active {
+    transform: scale(0.98);
+    box-shadow: 0 9px rgb(27, 27, 27);
 }
 
 .main {
@@ -106,6 +111,7 @@ input[type="text"] {
 }
 
 .char_element {
+    z-index: 2;
     font-size: 6vh;
 }
 
@@ -114,7 +120,7 @@ input[type="text"] {
     height: 100%;
 
     position: relative;
-    z-index: -1;
+    z-index: 1;
 
     background-position: center;
     background-size: contain;

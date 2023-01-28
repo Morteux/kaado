@@ -5,36 +5,86 @@ var dictionary = {
         { "latin": "u", "japanese": "う" },
         { "latin": "e", "japanese": "え" },
         { "latin": "o", "japanese": "お" },
+
         { "latin": "ka", "japanese": "か" },
         { "latin": "ki", "japanese": "き" },
         { "latin": "ku", "japanese": "く" },
         { "latin": "ke", "japanese": "け" },
         { "latin": "ko", "japanese": "こ" },
+
         { "latin": "sa", "japanese": "さ" },
         { "latin": "shi", "japanese": "し" },
         { "latin": "su", "japanese": "す" },
         { "latin": "se", "japanese": "せ" },
         { "latin": "so", "japanese": "そ" },
+
         { "latin": "ta", "japanese": "た" },
         { "latin": "chi", "japanese": "ち" },
         { "latin": "tsu", "japanese": "つ" },
         { "latin": "te", "japanese": "て" },
         { "latin": "to", "japanese": "と" },
+
         { "latin": "na", "japanese": "な" },
         { "latin": "ni", "japanese": "に" },
         { "latin": "nu", "japanese": "ぬ" },
         { "latin": "ne", "japanese": "ね" },
         { "latin": "no", "japanese": "の" },
+
         { "latin": "ha", "japanese": "は" },
         { "latin": "hi", "japanese": "ひ" },
         { "latin": "fu", "japanese": "ふ" },
         { "latin": "he", "japanese": "へ" },
         { "latin": "ho", "japanese": "ほ" },
+
         { "latin": "ma", "japanese": "ま" },
         { "latin": "mi", "japanese": "み" },
         { "latin": "mu", "japanese": "む" },
         { "latin": "me", "japanese": "め" },
-        { "latin": "mo", "japanese": "も" }
+        { "latin": "mo", "japanese": "も" },
+
+        { "latin": "ya", "japanese": "や" },
+        { "latin": "yu", "japanese": "ゆ" },
+        { "latin": "yo", "japanese": "よ" },
+
+        { "latin": "ra", "japanese": "ら" },
+        { "latin": "ri", "japanese": "り" },
+        { "latin": "ru", "japanese": "る" },
+        { "latin": "re", "japanese": "れ" },
+        { "latin": "ro", "japanese": "ろ" },
+
+        { "latin": "wa", "japanese": "わ" },
+        { "latin": "o", "japanese": "を" },
+        { "latin": "n", "japanese": "ん" },
+
+        { "latin": "ga", "japanese": "が" },
+        { "latin": "gi", "japanese": "ぎ" },
+        { "latin": "gu", "japanese": "ぐ" },
+        { "latin": "ge", "japanese": "げ" },
+        { "latin": "go", "japanese": "ご" },
+
+        { "latin": "za", "japanese": "ざ" },
+        { "latin": "ji", "japanese": "じ" },
+        { "latin": "zu", "japanese": "ず" },
+        { "latin": "ze", "japanese": "ぜ" },
+        { "latin": "zo", "japanese": "ぞ" },
+
+        { "latin": "da", "japanese": "だ" },
+        { "latin": "ji", "japanese": "ぢ" },
+        { "latin": "zu", "japanese": "づ" },
+        { "latin": "de", "japanese": "で" },
+        { "latin": "do", "japanese": "ど" },
+
+        { "latin": "ba", "japanese": "ば" },
+        { "latin": "bi", "japanese": "び" },
+        { "latin": "bu", "japanese": "ぶ" },
+        { "latin": "be", "japanese": "べ" },
+        { "latin": "bo", "japanese": "ぼ" },
+
+        { "latin": "pa", "japanese": "ぱ" },
+        { "latin": "pi", "japanese": "ぴ" },
+        { "latin": "pu", "japanese": "ぷ" },
+        { "latin": "pe", "japanese": "ぺ" },
+        { "latin": "po", "japanese": "ぽ" }
     ],
     "katakana": [
     ],
