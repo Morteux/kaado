@@ -58,7 +58,7 @@ function startTest() {
             <div id="img_element" class="img_element"></div>
         </div>
         <div class="input_container">
-            <tag>Roman syllable: </tag>
+            <tag>Roman syllable:</tag>
             <input id="latin_input" type="text"></input></div>
         <div class="button_container">
             <button id="next_button" onclick="next()">Next</button>
