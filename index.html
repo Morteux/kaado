@@ -18,6 +18,32 @@
 <body>
     <div id="main" class="main">
         <button class="start_button" onclick="startTest()">Start test</button>
+        <div class="checkboxes_container">
+            <div>
+                <input type="checkbox" id="hiragana" name="hiragana" checked onchange="changeHiragana()">
+                <label for="hiragana">Hiragana</label><br>
+            </div>
+            <div>
+                <input type="checkbox" id="hiragana_tenten" name="hiragana_tenten" onchange="changeHiraganaTenten()">
+                <label for="hiragana_tenten">Hiragana Tenten</label><br>
+            </div>
+            <div>
+                <input type="checkbox" id="hiragana_maru" name="hiragana_maru" onchange="changeHiraganaMaru()">
+                <label for="hiragana_maru">Hiragana Maru</label><br>
+            </div>
+            <div>
+                <input type="checkbox" id="hiragana_diptongo" name="hiragana_diptongo" onchange="changeHiraganaDiptongo()">
+                <label for="hiragana_diptongo">Hiragana Diptongo</label><br>
+            </div>
+            <div>
+                <input type="checkbox" id="hiragana_diptongo_tenten" name="hiragana_diptongo_tenten" onchange="changeHiraganaDiptongoTenten()">
+                <label for="hiragana_diptongo_tenten">Hiragana Diptongo Tenten</label><br>
+            </div>
+            <div>
+                <input type="checkbox" id="hiragana_diptongo_maru" name="hiragana_diptongo_maru" onchange="changeHiraganaDiptongoMaru()">
+                <label for="hiragana_diptongo_maru">Hiragana Diptongo Maru</label><br>
+            </div>
+        </div>
     </div>
 </body>
 </html>

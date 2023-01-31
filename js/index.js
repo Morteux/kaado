@@ -54,8 +54,9 @@ var dictionary = {
 
         { "latin": "wa", "japanese": "わ" },
         { "latin": "o", "japanese": "を" },
-        { "latin": "n", "japanese": "ん" },
-
+        { "latin": "n", "japanese": "ん" }
+    ],
+    "hiragana_tenten": [
         { "latin": "ga", "japanese": "が" },
         { "latin": "gi", "japanese": "ぎ" },
         { "latin": "gu", "japanese": "ぐ" },
@@ -78,19 +79,119 @@ var dictionary = {
         { "latin": "bi", "japanese": "び" },
         { "latin": "bu", "japanese": "ぶ" },
         { "latin": "be", "japanese": "べ" },
-        { "latin": "bo", "japanese": "ぼ" },
-
+        { "latin": "bo", "japanese": "ぼ" }
+    ],
+    "hiragana_maru": [
         { "latin": "pa", "japanese": "ぱ" },
         { "latin": "pi", "japanese": "ぴ" },
         { "latin": "pu", "japanese": "ぷ" },
         { "latin": "pe", "japanese": "ぺ" },
         { "latin": "po", "japanese": "ぽ" }
     ],
+    "hiragana_diptongo": [
+        { "latin": "kya", "japanese": "きゃ" },
+        { "latin": "kyu", "japanese": "きゅ" },
+        { "latin": "kyo", "japanese": "きょ" },
+        
+        { "latin": "sha", "japanese": "しゃ" },
+        { "latin": "shu", "japanese": "しゅ" },
+        { "latin": "sho", "japanese": "しょ" },
+        
+        { "latin": "cha", "japanese": "ちゃ" },
+        { "latin": "chu", "japanese": "ちゅ" },
+        { "latin": "cho", "japanese": "ちょ" },
+        
+        { "latin": "nya", "japanese": "にゃ" },
+        { "latin": "nyu", "japanese": "にゅ" },
+        { "latin": "nyo", "japanese": "にょ" },
+
+        { "latin": "hya", "japanese": "ひゃ" },
+        { "latin": "hyu", "japanese": "ひゅ" },
+        { "latin": "hyo", "japanese": "ひょ" },
+        
+        { "latin": "mya", "japanese": "みゃ" },
+        { "latin": "myu", "japanese": "みゅ" },
+        { "latin": "myo", "japanese": "みょ" },
+        
+        { "latin": "rya", "japanese": "りゃ" },
+        { "latin": "ryu", "japanese": "りゅ" },
+        { "latin": "ryo", "japanese": "りょ" }
+    ],
+    "hiragana_diptongo_tenten": [
+        { "latin": "gya", "japanese": "ぎゃ" },
+        { "latin": "gyu", "japanese": "ぎゅ" },
+        { "latin": "gyo", "japanese": "ぎょ" },
+        
+        { "latin": "jya", "japanese": "じゃ" },
+        { "latin": "jyu", "japanese": "じゅ" },
+        { "latin": "jyo", "japanese": "じょ" },
+        
+        { "latin": "bya", "japanese": "びゃ" },
+        { "latin": "byu", "japanese": "びゅ" },
+        { "latin": "byo", "japanese": "びょ" }
+    ],
+    "hiragana_diptongo_maru": [
+        { "latin": "pya", "japanese": "ぴゃ" },
+        { "latin": "pyu", "japanese": "ぴゅ" },
+        { "latin": "pyo", "japanese": "ぴょ" }
+    ],
     "katakana": [
     ],
     "kanji": [
     ]
 };
+
+var hiragana = true;
+var hiragana_tenten = false;
+var hiragana_maru = false;
+var hiragana_diptongo = false;
+var hiragana_diptongo_tenten = false;
+var hiragana_diptongo_maru = false;
+
+function changeHiragana() {
+    hiragana = !hiragana;
+}
+
+function changeHiraganaTenten() {
+    hiragana_tenten = !hiragana_tenten;
+}
+
+function changeHiraganaMaru() {
+    hiragana_maru = !hiragana_maru;
+}
+
+function changeHiraganaDiptongo() {
+    hiragana_diptongo = !hiragana_diptongo;
+}
+
+function changeHiraganaDiptongoTenten() {
+    hiragana_diptongo_tenten = !hiragana_diptongo_tenten;
+}
+
+function changeHiraganaDiptongoMaru() {
+    hiragana_diptongo_maru = !hiragana_diptongo_maru;
+}
+
+function calculateWordsArray() {
+    let words = [];
+
+    if( hiragana ) { words = words.concat(dictionary.hiragana); }
+    if( hiragana_tenten ) { words = words.concat(dictionary.hiragana_tenten); }
+    if( hiragana_maru ) { words = words.concat(dictionary.hiragana_maru); }
+    if( hiragana_diptongo ) { words = words.concat(dictionary.hiragana_diptongo); }
+    if( hiragana_diptongo_tenten ) { words = words.concat(dictionary.hiragana_diptongo_tenten); }
+    if( hiragana_diptongo_maru ) { words = words.concat(dictionary.hiragana_diptongo_maru); }
+
+    return words;
+}
+
+
+
+
+
+
+
+
 
 var shuffled = [];
 var actualIndex = 0;
@@ -127,14 +228,14 @@ function startTest() {
     incorrectCount = 0;
     incorrectIndexes = [];
 
-    shuffled = dictionary.hiragana.sort((a, b) => 0.5 - Math.random());
+    shuffled = calculateWordsArray().sort((a, b) => 0.5 - Math.random());
     document.getElementById("char_element").innerHTML = shuffled[actualIndex].japanese;
 }
 
 function next() {
     let input = document.getElementById("latin_input").value;
 
-    if (input == shuffled[actualIndex].latin) {
+    if (input.toUpperCase() == shuffled[actualIndex].latin.toUpperCase()) {
         ++correctCount;
         $('#img_element').css("background-image", "url('images/correct.png')").fadeIn(0).fadeOut();
         document.getElementById("latin_input").value = "";
@@ -159,7 +260,7 @@ function startEnd() {
     <div class="results_container">
         <div><img src="images/correct.png" alt="Correct icon" width="50" height="50"> <p id="correctCounter">0</p></div>
         <div><img src="images/incorrect.png" alt="Incorrect icon" width="50" height="50"> <p id="incorrectCounter">0</p></div>
-        <button id="restart" onclick="startTest()">Restart</button>
+        <button id="restart" onclick="restart()">Restart</button>
     </div>
     <table id="answers_table" class="answers_table">
         <caption>Incorrect answers</caption>
@@ -181,4 +282,35 @@ function startEnd() {
     table += "</tbody>";
 
     document.getElementById("answers_table").innerHTML += table;
+}
+
+function restart() {
+    document.getElementById("main").innerHTML = `
+    <button class="start_button" onclick="startTest()">Start test</button>
+    <div class="checkboxes_container">
+        <div>
+            <input type="checkbox" id="hiragana" name="hiragana" checked onchange="changeHiragana()">
+            <label for="hiragana">Hiragana</label><br>
+        </div>
+        <div>
+            <input type="checkbox" id="hiragana_tenten" name="hiragana_tenten" onchange="changeHiraganaTenten()">
+            <label for="hiragana_tenten">Hiragana Tenten</label><br>
+        </div>
+        <div>
+            <input type="checkbox" id="hiragana_maru" name="hiragana_maru" onchange="changeHiraganaMaru()">
+            <label for="hiragana_maru">Hiragana Maru</label><br>
+        </div>
+        <div>
+            <input type="checkbox" id="hiragana_diptongo" name="hiragana_diptongo" onchange="changeHiraganaDiptongo()">
+            <label for="hiragana_diptongo">Hiragana Diptongo</label><br>
+        </div>
+        <div>
+            <input type="checkbox" id="hiragana_diptongo_tenten" name="hiragana_diptongo_tenten" onchange="changeHiraganaDiptongoTenten()">
+            <label for="hiragana_diptongo_tenten">Hiragana Diptongo Tenten</label><br>
+        </div>
+        <div>
+            <input type="checkbox" id="hiragana_diptongo_maru" name="hiragana_diptongo_maru" onchange="changeHiraganaDiptongoMaru()">
+            <label for="hiragana_diptongo_maru">Hiragana Diptongo Maru</label><br>
+        </div>
+    </div>`;
 }
