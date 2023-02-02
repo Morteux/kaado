@@ -293,27 +293,27 @@ function restart() {
     <button class="start_button" onclick="startTest()">Start test</button>
     <div class="checkboxes_container">
         <div>
-            <input type="checkbox" id="hiragana" name="hiragana" checked onchange="changeHiragana()">
+            <input type="checkbox" id="hiragana" name="hiragana" ` + (hiragana ? `checked` : `false`) + ` onchange="changeHiragana()">
             <label for="hiragana">Hiragana</label><br>
         </div>
         <div>
-            <input type="checkbox" id="hiragana_tenten" name="hiragana_tenten" onchange="changeHiraganaTenten()">
+            <input type="checkbox" id="hiragana_tenten" name="hiragana_tenten" ` + (hiragana_tenten ? `checked` : `false`) + ` onchange="changeHiraganaTenten()">
             <label for="hiragana_tenten">Hiragana Tenten</label><br>
         </div>
         <div>
-            <input type="checkbox" id="hiragana_maru" name="hiragana_maru" onchange="changeHiraganaMaru()">
+            <input type="checkbox" id="hiragana_maru" name="hiragana_maru" ` + (hiragana_maru ? `checked` : `false`) + ` onchange="changeHiraganaMaru()">
             <label for="hiragana_maru">Hiragana Maru</label><br>
         </div>
         <div>
-            <input type="checkbox" id="hiragana_diptongo" name="hiragana_diptongo" onchange="changeHiraganaDiptongo()">
+            <input type="checkbox" id="hiragana_diptongo" name="hiragana_diptongo" ` + (hiragana_diptongo ? `checked` : `false`) + ` onchange="changeHiraganaDiptongo()">
             <label for="hiragana_diptongo">Hiragana Diptongo</label><br>
         </div>
         <div>
-            <input type="checkbox" id="hiragana_diptongo_tenten" name="hiragana_diptongo_tenten" onchange="changeHiraganaDiptongoTenten()">
+            <input type="checkbox" id="hiragana_diptongo_tenten" name="hiragana_diptongo_tenten" ` + (hiragana_diptongo_tenten ? `checked` : `false`) + ` onchange="changeHiraganaDiptongoTenten()">
             <label for="hiragana_diptongo_tenten">Hiragana Diptongo Tenten</label><br>
         </div>
         <div>
-            <input type="checkbox" id="hiragana_diptongo_maru" name="hiragana_diptongo_maru" onchange="changeHiraganaDiptongoMaru()">
+            <input type="checkbox" id="hiragana_diptongo_maru" name="hiragana_diptongo_maru" ` + (hiragana_diptongo_maru ? `checked` : `false`) + ` onchange="changeHiraganaDiptongoMaru()">
             <label for="hiragana_diptongo_maru">Hiragana Diptongo Maru</label><br>
         </div>
     </div>`;
