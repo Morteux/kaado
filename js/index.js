@@ -269,19 +269,23 @@ function startEnd() {
     document.getElementById("correctCounter").innerHTML = correctCount;
     document.getElementById("incorrectCounter").innerHTML = incorrectCount;
 
-    let table = "";
-    table += "<tbody>";
-    for(let i = 0; i < incorrectIndexes.length; i += Math.ceil(incorrectIndexes.length / rowsPerColumn)) {
-        table += "<tr>";
-        for(let j = i; j < i + Math.ceil(incorrectIndexes.length / rowsPerColumn); ++j) {
-            if(j < incorrectIndexes.length)
-                table += "<td>" + shuffled[incorrectIndexes[j]].latin + " : " + shuffled[incorrectIndexes[j]].japanese + "</td>";
+    if(incorrectCount != 0) {
+        let table = "";
+        table += "<tbody>";
+        for(let i = 0; i < incorrectIndexes.length; i += Math.ceil(incorrectIndexes.length / rowsPerColumn)) {
+            table += "<tr>";
+            for(let j = i; j < i + Math.ceil(incorrectIndexes.length / rowsPerColumn); ++j) {
+                if(j < incorrectIndexes.length)
+                    table += "<td>" + shuffled[incorrectIndexes[j]].latin + " : " + shuffled[incorrectIndexes[j]].japanese + "</td>";
+            }
+            table += "</tr>";
         }
-        table += "</tr>";
-    }
-    table += "</tbody>";
+        table += "</tbody>";
 
-    document.getElementById("answers_table").innerHTML += table;
+        document.getElementById("answers_table").innerHTML += table;
+    } else {
+        document.getElementById("answers_table").getElementsByTagName("caption")[0].innerHTML = "PERFECT!";
+    }
 }
 
 function restart() {
