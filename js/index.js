@@ -136,6 +136,61 @@ var dictionary = {
         { "latin": "pyo", "japanese": "ぴょ" }
     ],
     "katakana": [
+        { "latin": "a", "japanese": "ア" },
+        { "latin": "i", "japanese": "イ" },
+        { "latin": "u", "japanese": "ウ" },
+        { "latin": "e", "japanese": "エ" },
+        { "latin": "o", "japanese": "オ" },
+
+        { "latin": "ka", "japanese": "カ" },
+        { "latin": "ki", "japanese": "キ" },
+        { "latin": "ku", "japanese": "ク" },
+        { "latin": "ke", "japanese": "ケ" },
+        { "latin": "ko", "japanese": "コ" },
+
+        { "latin": "sa", "japanese": "サ" },
+        { "latin": "shi", "japanese": "シ" },
+        { "latin": "su", "japanese": "ス" },
+        { "latin": "se", "japanese": "セ" },
+        { "latin": "so", "japanese": "ソ" },
+
+        { "latin": "ta", "japanese": "タ" },
+        { "latin": "chi", "japanese": "チ" },
+        { "latin": "tsu", "japanese": "ツ" },
+        { "latin": "te", "japanese": "テ" },
+        { "latin": "to", "japanese": "ト" },
+
+        // { "latin": "na", "japanese": "ナ" },
+        // { "latin": "ni", "japanese": "ニ" },
+        // { "latin": "nu", "japanese": "ヌ" },
+        // { "latin": "ne", "japanese": "ネ" },
+        // { "latin": "no", "japanese": "ノ" },
+
+        // { "latin": "ha", "japanese": "ハ" },
+        // { "latin": "hi", "japanese": "ヒ" },
+        // { "latin": "fu", "japanese": "フ" },
+        // { "latin": "he", "japanese": "ヘ" },
+        // { "latin": "ho", "japanese": "ホ" },
+
+        // { "latin": "ma", "japanese": "マ" },
+        // { "latin": "mi", "japanese": "ミ" },
+        // { "latin": "mu", "japanese": "ム" },
+        // { "latin": "me", "japanese": "メ" },
+        // { "latin": "mo", "japanese": "モ" },
+
+        // { "latin": "ya", "japanese": "ヤ" },
+        // { "latin": "yu", "japanese": "ユ" },
+        // { "latin": "yo", "japanese": "ヨ" },
+
+        // { "latin": "ra", "japanese": "ラ" },
+        // { "latin": "ri", "japanese": "リ" },
+        // { "latin": "ru", "japanese": "ル" },
+        // { "latin": "re", "japanese": "レ" },
+        // { "latin": "ro", "japanese": "ロ" },
+
+        // { "latin": "wa", "japanese": "ワ" },
+        // { "latin": "o", "japanese": "オ" },
+        // { "latin": "n", "japanese": "ン" }
     ],
     "kanji": [
     ]
@@ -147,6 +202,7 @@ var hiragana_maru = false;
 var hiragana_diptongo = false;
 var hiragana_diptongo_tenten = false;
 var hiragana_diptongo_maru = false;
+var katakana = false;
 
 function changeHiragana() {
     hiragana = !hiragana;
@@ -172,6 +228,10 @@ function changeHiraganaDiptongoMaru() {
     hiragana_diptongo_maru = !hiragana_diptongo_maru;
 }
 
+function changeKatakana() {
+    katakana = !katakana;
+}
+
 function calculateWordsArray() {
     let words = [];
 
@@ -181,6 +241,7 @@ function calculateWordsArray() {
     if( hiragana_diptongo ) { words = words.concat(dictionary.hiragana_diptongo); }
     if( hiragana_diptongo_tenten ) { words = words.concat(dictionary.hiragana_diptongo_tenten); }
     if( hiragana_diptongo_maru ) { words = words.concat(dictionary.hiragana_diptongo_maru); }
+    if( katakana ) { words = words.concat(dictionary.katakana); }
 
     return words;
 }
@@ -315,6 +376,10 @@ function restart() {
         <div>
             <input type="checkbox" id="hiragana_diptongo_maru" name="hiragana_diptongo_maru" ` + (hiragana_diptongo_maru ? `checked` : `false`) + ` onchange="changeHiraganaDiptongoMaru()">
             <label for="hiragana_diptongo_maru">Hiragana Diptongo Maru</label><br>
+        </div>
+        <div>
+            <input type="checkbox" id="katakana" name="katakana" ` + (katakana ? `checked` : `false`) + ` onchange="changeKatakana()">
+            <label for="katakana">Katakana</label><br>
         </div>
     </div>`;
 }
