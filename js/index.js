@@ -135,6 +135,12 @@ var dictionary = {
         { "latin": "pyu", "japanese": "ぴゅ" },
         { "latin": "pyo", "japanese": "ぴょ" }
     ],
+
+
+
+
+
+
     "katakana": [
         { "latin": "a", "japanese": "ア" },
         { "latin": "i", "japanese": "イ" },
@@ -160,38 +166,123 @@ var dictionary = {
         { "latin": "te", "japanese": "テ" },
         { "latin": "to", "japanese": "ト" },
 
-        // { "latin": "na", "japanese": "ナ" },
-        // { "latin": "ni", "japanese": "ニ" },
-        // { "latin": "nu", "japanese": "ヌ" },
-        // { "latin": "ne", "japanese": "ネ" },
-        // { "latin": "no", "japanese": "ノ" },
+        { "latin": "na", "japanese": "ナ" },
+        { "latin": "ni", "japanese": "ニ" },
+        { "latin": "nu", "japanese": "ヌ" },
+        { "latin": "ne", "japanese": "ネ" },
+        { "latin": "no", "japanese": "ノ" },
 
-        // { "latin": "ha", "japanese": "ハ" },
-        // { "latin": "hi", "japanese": "ヒ" },
-        // { "latin": "fu", "japanese": "フ" },
-        // { "latin": "he", "japanese": "ヘ" },
-        // { "latin": "ho", "japanese": "ホ" },
+        { "latin": "ha", "japanese": "ハ" },
+        { "latin": "hi", "japanese": "ヒ" },
+        { "latin": "fu", "japanese": "フ" },
+        { "latin": "he", "japanese": "ヘ" },
+        { "latin": "ho", "japanese": "ホ" },
 
-        // { "latin": "ma", "japanese": "マ" },
-        // { "latin": "mi", "japanese": "ミ" },
-        // { "latin": "mu", "japanese": "ム" },
-        // { "latin": "me", "japanese": "メ" },
-        // { "latin": "mo", "japanese": "モ" },
+        { "latin": "ma", "japanese": "マ" },
+        { "latin": "mi", "japanese": "ミ" },
+        { "latin": "mu", "japanese": "ム" },
+        { "latin": "me", "japanese": "メ" },
+        { "latin": "mo", "japanese": "モ" },
 
-        // { "latin": "ya", "japanese": "ヤ" },
-        // { "latin": "yu", "japanese": "ユ" },
-        // { "latin": "yo", "japanese": "ヨ" },
+        { "latin": "ya", "japanese": "ヤ" },
+        { "latin": "yu", "japanese": "ユ" },
+        { "latin": "yo", "japanese": "ヨ" },
 
-        // { "latin": "ra", "japanese": "ラ" },
-        // { "latin": "ri", "japanese": "リ" },
-        // { "latin": "ru", "japanese": "ル" },
-        // { "latin": "re", "japanese": "レ" },
-        // { "latin": "ro", "japanese": "ロ" },
+        { "latin": "ra", "japanese": "ラ" },
+        { "latin": "ri", "japanese": "リ" },
+        { "latin": "ru", "japanese": "ル" },
+        { "latin": "re", "japanese": "レ" },
+        { "latin": "ro", "japanese": "ロ" },
 
-        // { "latin": "wa", "japanese": "ワ" },
-        // { "latin": "o", "japanese": "オ" },
-        // { "latin": "n", "japanese": "ン" }
+        { "latin": "wa", "japanese": "ワ" },
+        { "latin": "o", "japanese": "オ" },
+        { "latin": "n", "japanese": "ン" }
     ],
+    "katakana_tenten": [
+        { "latin": "ga", "japanese": "ガ" },
+        { "latin": "gi", "japanese": "ギ" },
+        { "latin": "gu", "japanese": "グギ" },
+        { "latin": "ge", "japanese": "ゲ" },
+        { "latin": "go", "japanese": "ゴ" },
+
+        { "latin": "za", "japanese": "ザ" },
+        { "latin": "ji", "japanese": "ジ" },
+        { "latin": "zu", "japanese": "ズ" },
+        { "latin": "ze", "japanese": "ゼ" },
+        { "latin": "zo", "japanese": "ゾ" },
+
+        { "latin": "da", "japanese": "ダ" },
+        { "latin": "ji", "japanese": "ヂ" },
+        { "latin": "zu", "japanese": "ヅ" },
+        { "latin": "de", "japanese": "デ" },
+        { "latin": "do", "japanese": "ド" },
+
+        { "latin": "ba", "japanese": "バ" },
+        { "latin": "bi", "japanese": "ビ" },
+        { "latin": "bu", "japanese": "ブ" },
+        { "latin": "be", "japanese": "ベ" },
+        { "latin": "bo", "japanese": "ボ" }
+    ],
+    "katakana_maru": [
+        { "latin": "pa", "japanese": "パ" },
+        { "latin": "pi", "japanese": "ピ" },
+        { "latin": "pu", "japanese": "プ" },
+        { "latin": "pe", "japanese": "ペ" },
+        { "latin": "po", "japanese": "ポ" }
+    ],
+    "katakana_diptongo": [
+        { "latin": "kya", "japanese": "キャ" },
+        { "latin": "kyu", "japanese": "キュ" },
+        { "latin": "kyo", "japanese": "キョ" },
+        
+        { "latin": "sha", "japanese": "シャ" },
+        { "latin": "shu", "japanese": "シュ" },
+        { "latin": "sho", "japanese": "ショ" },
+        
+        { "latin": "cha", "japanese": "チャ" },
+        { "latin": "chu", "japanese": "チュ" },
+        { "latin": "cho", "japanese": "チョ" },
+        
+        { "latin": "nya", "japanese": "ニャ" },
+        { "latin": "nyu", "japanese": "ニュ" },
+        { "latin": "nyo", "japanese": "ニョ" },
+
+        { "latin": "hya", "japanese": "ヒャ" },
+        { "latin": "hyu", "japanese": "ヒュ" },
+        { "latin": "hyo", "japanese": "ヒョ" },
+        
+        { "latin": "mya", "japanese": "ミャ" },
+        { "latin": "myu", "japanese": "ミュ" },
+        { "latin": "myo", "japanese": "ミョ" },
+        
+        { "latin": "rya", "japanese": "リャ" },
+        { "latin": "ryu", "japanese": "リュ" },
+        { "latin": "ryo", "japanese": "リョ" }
+    ],
+    "katakana_diptongo_tenten": [
+        { "latin": "gya", "japanese": "ギャ" },
+        { "latin": "gyu", "japanese": "ギュ" },
+        { "latin": "gyo", "japanese": "ギョ" },
+        
+        { "latin": "jya", "japanese": "ジャ" },
+        { "latin": "jyu", "japanese": "ジュ" },
+        { "latin": "jyo", "japanese": "ジョ" },
+        
+        { "latin": "bya", "japanese": "ビャ" },
+        { "latin": "byu", "japanese": "ビュ" },
+        { "latin": "byo", "japanese": "ビョ" }
+    ],
+    "katakana_diptongo_maru": [
+        { "latin": "pya", "japanese": "ピャ" },
+        { "latin": "pyu", "japanese": "ピュ" },
+        { "latin": "pyo", "japanese": "ピョ" }
+    ],
+
+
+
+
+
+
     "kanji": [
     ]
 };
@@ -203,6 +294,11 @@ var hiragana_diptongo = false;
 var hiragana_diptongo_tenten = false;
 var hiragana_diptongo_maru = false;
 var katakana = false;
+var katakana_tenten = false;
+var katakana_maru = false;
+var katakana_diptongo = false;
+var katakana_diptongo_tenten = false;
+var katakana_diptongo_maru = false;
 
 function changeHiragana() {
     hiragana = !hiragana;
@@ -232,6 +328,26 @@ function changeKatakana() {
     katakana = !katakana;
 }
 
+function changeKatakanaTenten() {
+    katakana_tenten = !katakana_tenten;
+}
+
+function changeKatakanaMaru() {
+    katakana_maru = !katakana_maru;
+}
+
+function changeKatakanaDiptongo() {
+    katakana_diptongo = !katakana_diptongo;
+}
+
+function changeKatakanaDiptongoTenten() {
+    katakana_diptongo_tenten = !katakana_diptongo_tenten;
+}
+
+function changeKatakanaDiptongoMaru() {
+    katakana_diptongo_maru = !katakana_diptongo_maru;
+}
+
 function calculateWordsArray() {
     let words = [];
 
@@ -242,6 +358,11 @@ function calculateWordsArray() {
     if( hiragana_diptongo_tenten ) { words = words.concat(dictionary.hiragana_diptongo_tenten); }
     if( hiragana_diptongo_maru ) { words = words.concat(dictionary.hiragana_diptongo_maru); }
     if( katakana ) { words = words.concat(dictionary.katakana); }
+    if( katakana_tenten ) { words = words.concat(dictionary.katakana_tenten); }
+    if( katakana_maru ) { words = words.concat(dictionary.katakana_maru); }
+    if( katakana_diptongo ) { words = words.concat(dictionary.katakana_diptongo); }
+    if( katakana_diptongo_tenten ) { words = words.concat(dictionary.katakana_diptongo_tenten); }
+    if( katakana_diptongo_maru ) { words = words.concat(dictionary.katakana_diptongo_maru); }
 
     return words;
 }
@@ -377,9 +498,34 @@ function restart() {
             <input type="checkbox" id="hiragana_diptongo_maru" name="hiragana_diptongo_maru" ` + (hiragana_diptongo_maru ? `checked` : `false`) + ` onchange="changeHiraganaDiptongoMaru()">
             <label for="hiragana_diptongo_maru">Hiragana Diptongo Maru</label><br>
         </div>
+
+
+        <br>
+        
+
         <div>
             <input type="checkbox" id="katakana" name="katakana" ` + (katakana ? `checked` : `false`) + ` onchange="changeKatakana()">
             <label for="katakana">Katakana</label><br>
+        </div>
+        <div>
+            <input type="checkbox" id="katakana_tenten" name="katakana_tenten" ` + (katakana_tenten ? `checked` : `false`) + ` onchange="changeKatakanaTenten()">
+            <label for="katakana_tenten">Katakana Tenten</label><br>
+        </div>
+        <div>
+            <input type="checkbox" id="katakana_maru" name="katakana_maru" ` + (katakana_maru ? `checked` : `false`) + ` onchange="changeKatakanaMaru()">
+            <label for="katakana_maru">Katakana Maru</label><br>
+        </div>
+        <div>
+            <input type="checkbox" id="katakana_diptongo" name="katakana_diptongo" ` + (katakana_diptongo ? `checked` : `false`) + ` onchange="changeKatakanaDiptongo()">
+            <label for="katakana_diptongo">Katakana Diptongo</label><br>
+        </div>
+        <div>
+            <input type="checkbox" id="katakana_diptongo_tenten" name="katakana_diptongo_tenten" ` + (katakana_diptongo_tenten ? `checked` : `false`) + ` onchange="changeKatakanaDiptongoTenten()">
+            <label for="katakana_diptongo_tenten">Katakana Diptongo Tenten</label><br>
+        </div>
+        <div>
+            <input type="checkbox" id="katakana_diptongo_maru" name="katakana_diptongo_maru" ` + (katakana_diptongo_maru ? `checked` : `false`) + ` onchange="changeKatakanaDiptongoMaru()">
+            <label for="katakana_diptongo_maru">Katakana Diptongo Maru</label><br>
         </div>
     </div>`;
 }
