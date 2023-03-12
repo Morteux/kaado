@@ -47,7 +47,7 @@ var dictionary = {
     ]
 };
 
-var comidas = true;
+var comidas = false;
 
 function changeComidas() {
     comidas = !comidas;
