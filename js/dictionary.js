@@ -56,7 +56,7 @@ function changeComidas() {
 function calculateWordsArray() {
     let words = [];
 
-    if( comidas ) { words = words.concat(dictionary.hiragana); }
+    if( comidas ) { words = words.concat(dictionary.comidas); }
 
     return words;
 }
