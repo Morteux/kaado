@@ -120,6 +120,121 @@ var dictionary = {
         { "latin": "Argentina", "japanese": "アルゼンチン" },
         { "latin": "Brasil", "japanese": "ブラジルル" },
         { "latin": "Tailandia", "japanese": "タイ" }
+    ],
+
+
+    "profesiones": [
+        { "latin": "profesiones", "japanese": "しょくぎょう" },
+        { "latin": "empleado de la empresa", "japanese": "かいしゃいん" },
+        { "latin": ["empleado del banco", "banquero"], "japanese": "ぎんこういん" },
+        { "latin": "dependiente", "japanese": "てんいん" },
+        { "latin": "médico", "japanese": "いしゃ" },
+        { "latin": "enfermero", "japanese": "かんごし" },
+        { "latin": "ingeniero", "japanese": "エンジニア" },
+        { "latin": ["profesor", "maestro"], "japanese": ["きょうし", "せんせい"] },
+        { "latin": "estudiante", "japanese": "がくせい" },
+        { "latin": "funcionario", "japanese": "こうむいｎ" },
+        { "latin": "peluquero", "japanese": "びようし" },
+        { "latin": "abogado", "japanese": "べんごし" },
+        { "latin": "agente de policía", "japanese": "けいさつかん" },
+        { "latin": "cantante", "japanese": "かしゅ" },
+        { "latin": ["actor", "actriz"], "japanese": "はいゆう" },
+        { "latin": "escritor", "japanese": "さっか" },
+        { "latin": "pintor", "japanese": "がか" },
+        { "latin": "futbolista", "japanese": "サッカーせんしゅ" },
+        { "latin": "programador", "japanese": "プログラマー" },
+        { "latin": "ilustrador", "japanese": "イラストレーター" }
+    ],
+
+
+    "personas": [
+        { "latin": "personas", "japanese": "ひよ" },
+        { "latin": "familia", "japanese": "かぞく" },
+        { "latin": "padre", "japanese": "おとうさん" },
+        { "latin": "madre", "japanese": "おかあさん" },
+        { "latin": "amigo", "japanese": "ともだち" },
+        { "latin": "compañero de la clase", "japanese": "クラスメイト" },
+        { "latin": "compañero de la empresa", "japanese": "かいしゃのひと" }
+    ],
+
+
+    "cosas": [
+        { "latin": ["cosas", "objetos"], "japanese": "もの" },
+        { "latin": "libro", "japanese": "ほん" },
+        { "latin": "periódico", "japanese": "しんぶん" },
+        { "latin": "revista", "japanese": "ざっし" },
+        { "latin": "correo electrónico", "japanese": "" },
+        { "latin": "carta", "japanese": "メール" },
+        { "latin": "dibujo", "japanese": "え" },
+        { "latin": "reloj", "japanese": "とけい" },
+        { "latin": ["casa", "hogar"], "japanese": ["いえ", "うち"] },
+        { "latin": ["ropa", "prenda"], "japanese": "ふく" },
+        { "latin": "zapatos", "japanese": "くつ" },
+        { "latin": "película", "japanese": "えいが" },
+        { "latin": "televisión", "japanese": "テレビ" },
+        { "latin": "radio", "japanese": "ラジオ" },
+        { "latin": "ordenador", "japanese": "パソコン" },
+        { "latin": "serie", "japanese": "ドラマ" },
+        { "latin": "canción", "japanese": "うた" },
+        { "latin": "música", "japanese": "おんがく" },
+        { "latin": "teléfono móvil", "japanese": "ケータイでんわ" },
+        { "latin": "videojuego", "japanese": "ゲーム" },
+        { "latin": "manga", "japanese": "まんが" },
+        { "latin": "anime", "japanese": "アニメ" }
+    ],
+
+
+    "lugares": [
+        { "latin": "lugares", "japanese": "ばしょ" },
+        { "latin": "empresa", "japanese": "かいしゃ" },
+        { "latin": "banco", "japanese": "ぎんこう" },
+        { "latin": ["escuela", "colegio"], "japanese": "がっこう" },
+        { "latin": "universidad", "japanese": "だいがく" },
+        { "latin": "restaurante", "japanese": "レストラン" },
+        { "latin": ["bar", "taberna"], "japanese": "いざかや" },
+        { "latin": "cafetería", "japanese": ["きっさてん", "カフェ"] },
+        { "latin": "cine", "japanese": "えいがかん" },
+        { "latin": "supermercado", "japanese": "スーパー" },
+        { "latin": "grandes almacenes", "japanese": "デパート" },
+        { "latin": "gimnasio", "japanese": "ジム" },
+        { "latin": "supermercado abierto 24 horas", "japanese": "コンビニ" }
+    ],
+
+
+    "vehículos": [
+        { "latin": "vehículos", "japanese": "のりもの" },
+        { "latin": "tren", "japanese": "でんしゃ" },
+        { "latin": "metro", "japanese": "ちかてつ" },
+        { "latin": "tren bala", "japanese": "しんかんせん" },
+        { "latin": "barco", "japanese": "ふね" },
+        { "latin": "bicicleta", "japanese": "じてんしゃ" },
+        { "latin": "coche", "japanese": "くるま" },
+        { "latin": "taxi", "japanese": "タクシー" },
+        { "latin": "autobús", "japanese": "バス" },
+        { "latin": "avión", "japanese": "ひこうき" },
+        { "latin": "moto", "japanese": ["オートバイ", "バイク"] },
+        { "latin": ["andando", "a pie"], "japanese": "あるいて" }
+    ],
+
+
+    "verbos": [
+        { "latin": "verbos", "japanese": "どうし" },
+        { "latin": "comer", "japanese": "たべます" },
+        { "latin": ["beber", "tomar"], "japanese": "のみます" },
+        { "latin": ["ver", "mirar"], "japanese": "みます" },
+        { "latin": "leer", "japanese": "よみます" },
+        { "latin": "comprar", "japanese": "かいます" },
+        { "latin": "escuchar", "japanese": "ききます" },
+        { "latin": "escribir", "japanese": "かきます" },
+        { "latin": "ir", "japanese": "いきます" },
+        { "latin": "venir", "japanese": "きます" },
+        { "latin": "regresar", "japanese": "かえります" },
+        { "latin": "trabajar", "japanese": "はたらきます" },
+        { "latin": "descansar", "japanese": "やすみます" },
+        { "latin": "hacer", "japanese": "します" },
+        { "latin": "estudiar", "japanese": "べんきょうします" },
+        { "latin": "practicar", "japanese": "れんしゅうします" },
+        { "latin": "repasar", "japanese": "ふくしゅうします" }
     ]
 };
 
