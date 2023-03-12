@@ -434,7 +434,7 @@ function restart() {
         </div>
         <div>
             <input type="checkbox" id="semana" name="semana" ` + (semana ? `checked` : `false`) + ` onchange="changeSemana()">
-            <label for="semana">D&iactue;as de la semana</label><br>
+            <label for="semana">D&iacute;as de la semana</label><br>
         </div>
         <div>
             <input type="checkbox" id="adverbiosTemporales" name="adverbiosTemporales" ` + (adverbiosTemporales ? `checked` : `false`) + ` onchange="changeAdverbiosTemporales()">
@@ -442,7 +442,7 @@ function restart() {
         </div>
         <div>
             <input type="checkbox" id="paises" name="paises" ` + (paises ? `checked` : `false`) + ` onchange="changePaises()">
-            <label for="paises">Pa&iactue;ses</label><br>
+            <label for="paises">Pa&iacute;ses</label><br>
         </div>
         <div>
             <input type="checkbox" id="profesiones" name="profesiones" ` + (profesiones ? `checked` : `false`) + ` onchange="changeProfesiones()">
@@ -462,7 +462,7 @@ function restart() {
         </div>
         <div>
             <input type="checkbox" id="vehiculos" name="vehiculos" ` + (vehiculos ? `checked` : `false`) + ` onchange="changeVehiculos()">
-            <label for="vehiculos">Veh&iactue;culos</label><br>
+            <label for="vehiculos">Veh&iacute;culos</label><br>
         </div>
         <div>
             <input type="checkbox" id="verbos" name="verbos" ` + (verbos ? `checked` : `false`) + ` onchange="changeVerbos()">
