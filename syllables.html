@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Japanese, Hiragana, Katakana, Kanji, Memorize, Cards, Test, Letters, Words">
+    <meta name="authors" content="Ignacio Meléndez Lapi">
+
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="css/syllables.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="js/syllables.js"></script>
+
+    <title>Kado - Syllables</title>
+</head>
+<body>
+    <div id="main" class="main">
+        <button class="start_button" onclick="startSyllables()">Start syllable test</button>
+        <div class="checkboxes_container">
+            <div>
+                <input type="checkbox" id="hiragana" name="hiragana" checked onchange="changeHiragana()">
+                <label for="hiragana">Hiragana</label><br>
+            </div>
+            <div>
+                <input type="checkbox" id="hiragana_tenten" name="hiragana_tenten" onchange="changeHiraganaTenten()">
+                <label for="hiragana_tenten">Hiragana Tenten</label><br>
+            </div>
+            <div>
+                <input type="checkbox" id="hiragana_maru" name="hiragana_maru" onchange="changeHiraganaMaru()">
+                <label for="hiragana_maru">Hiragana Maru</label><br>
+            </div>
+            <div>
+                <input type="checkbox" id="hiragana_diptongo" name="hiragana_diptongo" onchange="changeHiraganaDiptongo()">
+                <label for="hiragana_diptongo">Hiragana Diptongo</label><br>
+            </div>
+            <div>
+                <input type="checkbox" id="hiragana_diptongo_tenten" name="hiragana_diptongo_tenten" onchange="changeHiraganaDiptongoTenten()">
+                <label for="hiragana_diptongo_tenten">Hiragana Diptongo Tenten</label><br>
+            </div>
+            <div>
+                <input type="checkbox" id="hiragana_diptongo_maru" name="hiragana_diptongo_maru" onchange="changeHiraganaDiptongoMaru()">
+                <label for="hiragana_diptongo_maru">Hiragana Diptongo Maru</label><br>
+            </div>
+
+            
+            <br>
+
+
+            <div>
+                <input type="checkbox" id="katakana" name="katakana" onchange="changeKatakana()">
+                <label for="katakana">Katakana</label><br>
+            </div>
+            <div>
+                <input type="checkbox" id="katakana_tenten" name="katakana_tenten" onchange="changeKatakanaTenten()">
+                <label for="katakana_tenten">Katakana Tenten</label><br>
+            </div>
+            <div>
+                <input type="checkbox" id="katakana_maru" name="katakana_maru" onchange="changeKatakanaMaru()">
+                <label for="katakana_maru">Katakana Maru</label><br>
+            </div>
+            <div>
+                <input type="checkbox" id="katakana_diptongo" name="katakana_diptongo" onchange="changeKatakanaDiptongo()">
+                <label for="katakana_diptongo">Katakana Diptongo</label><br>
+            </div>
+            <div>
+                <input type="checkbox" id="katakana_diptongo_tenten" name="katakana_diptongo_tenten" onchange="changeKatakanaDiptongoTenten()">
+                <label for="katakana_diptongo_tenten">Katakana Diptongo Tenten</label><br>
+            </div>
+            <div>
+                <input type="checkbox" id="katakana_diptongo_maru" name="katakana_diptongo_maru" onchange="changeKatakanaDiptongoMaru()">
+                <label for="katakana_diptongo_maru">Katakana Diptongo Maru</label><br>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
