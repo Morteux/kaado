@@ -1,0 +1,72 @@
+body {
+    background-image: url('../images/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    font-size: 4vh;
+}
+
+button {
+    display: inline-block;
+    padding: 1.5vh 2vh;
+    font-size: 2vh;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: white;
+    background-color: rgb(95, 95, 133);
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 9px rgb(71, 71, 71);
+    margin: 3vh;
+}
+
+button:active {
+    transform: scale(0.98);
+    box-shadow: 0 9px rgb(27, 27, 27);
+}
+
+.main {
+    display: flex;
+    min-width: 100vh;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    background-color: transparent;
+}
+
+.start_button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-image: url('../images/mobile_background_3.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 0;
+        margin: 0;
+    }
+
+    .main {
+        display: flex;
+        min-width: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 100vh;
+        background-color: transparent;
+    }
+}

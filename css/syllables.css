@@ -1,16 +1,16 @@
-body {
-    background-image: url('../images/background.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 0;
-    margin: 0;
+.checkboxes_container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    border: 2px solid black;
+    border-radius: 10% / 50%;
+    ;
+    padding: 1vh;
+    background-color: rgb(95, 95, 133);
 }
 
-p {
-    margin: 0;
-    font-size: 4vh;
-}
-
+/* Table */
 label {
     margin: 0;
     font-size: 2vh;
@@ -24,7 +24,7 @@ td {
     font-size: 2.5vh;
     border: 1px solid black;
     padding: 1vh;
-    
+
     background-color: rgb(95, 95, 133);
 }
 
@@ -37,58 +37,9 @@ caption {
     border-radius: 10% / 50%;
 }
 
-button {
-    display: inline-block;
-    padding: 1.5vh 2vh;
-    font-size: 2vh;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: white;
-    background-color: rgb(95, 95, 133);
-    border: none;
-    border-radius: 50%;
-    box-shadow: 0 9px rgb(71, 71, 71);
-    margin: 3vh;
-}
-
-button:active {
-    transform: scale(0.98);
-    box-shadow: 0 9px rgb(27, 27, 27);
-}
-
-.main {
-    display: flex;
-    min-width: 100vh;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    min-height: 100vh;
-    background-color: transparent;
-}
-
-.start_button {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.checkboxes_container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    
-    border: 2px solid black;
-    border-radius: 10% / 50%;;
-    padding: 1vh;
-    background-color: rgb(95, 95, 133);
-}
-
 /* Start elements */
-.input_container, .button_container {
+.input_container,
+.button_container {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -98,9 +49,9 @@ button:active {
 
 .input_container {
     border: 2px solid black;
-    border-radius: 10% / 50%;;
+    border-radius: 10% / 50%;
     padding: 1vh;
-    
+
     justify-content: center;
     font-size: 3vh;
     background-color: rgb(95, 95, 133);
@@ -114,14 +65,16 @@ input[type="text"] {
 
 .element_container {
     display: grid;
-    place-items:  center;
+    place-items: center;
 
     background-color: rgb(95, 95, 133);
     border: 2px solid black;
-    border-radius: 10% / 50%;;
+    border-radius: 10% / 50%;
+    ;
 }
 
-.char_element, .img_element {
+.char_element,
+.img_element {
     grid-column: 1;
     grid-row: 1;
 }
@@ -162,33 +115,6 @@ input[type="text"] {
 }
 
 @media only screen and (max-width: 600px) {
-    body {
-        background-image: url('../images/mobile_background_3.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        padding: 0;
-        margin: 0;
-    }
-
-    .main {
-        display: flex;
-        min-width: auto;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        min-height: 100vh;
-        background-color: transparent;
-    }
-
-    td {
-        font-size: 2vh;
-        border: 1px solid black;
-        padding: 1vh;
-        
-        background-color: rgb(95, 95, 133);
-    }
-
     /* End elements */
     .results_container div {
         display: flex;
@@ -197,9 +123,13 @@ input[type="text"] {
         justify-content: space-between;
         margin: 3vh;
         padding: 1vh;
-        
+
         background-color: rgb(95, 95, 133);
         border: 2px solid black;
-        border-radius: 10% / 50%;;
+        border-radius: 10% / 50%;
     }
-  }
+
+    .answers_table {
+        margin-left: 0vh;
+    }
+}
