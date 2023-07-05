@@ -1,4 +1,6 @@
-var lessons_json = JSON.parse(lessons);
+// var lessons_json = JSON.parse(lessons);
+
+var lessons_json = lessons;
 
 var lessons_checks = [true, false, false, false, false, false, false, false, false];
 
