@@ -1,6 +1,6 @@
 // var lessons_json = JSON.parse(lessons);
 
-var lessons_json = lessons;
+// var lessons_json = lessons;
 
 var lessons_json = {
     "1": [
