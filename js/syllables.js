@@ -395,6 +395,7 @@ function calculateWordsArray() {
     if( katakana_diptongo ) { words = words.concat(dictionary.katakana_diptongo); }
     if( katakana_diptongo_tenten ) { words = words.concat(dictionary.katakana_diptongo_tenten); }
     if( katakana_diptongo_maru ) { words = words.concat(dictionary.katakana_diptongo_maru); }
+    if( katakana_extra ) { words = words.concat(dictionary.katakana_extra); }
 
     return words;
 }
