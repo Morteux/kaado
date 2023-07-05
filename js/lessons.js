@@ -502,7 +502,12 @@ function startLessons() {
 function next() {
     let input = document.getElementById("latin_input").value;
 
-    if (input.toUpperCase() == shuffled[actualIndex].latin.toUpperCase()) {
+    if (!Array.isArray(shuffled[actualIndex].latin) && input.toUpperCase() == shuffled[actualIndex].latin.toUpperCase()) {
+        ++correctCount;
+        $('#img_element').css("background-image", "url('images/correct.png')").fadeIn(0).fadeOut();
+        document.getElementById("latin_input").value = "";
+        document.getElementById("latin_input").placeholder = "";
+    } else if (Array.isArray(shuffled[actualIndex].latin) && shuffled[actualIndex].latin.some(e => e.toUpperCase() === input.toUpperCase())) {
         ++correctCount;
         $('#img_element').css("background-image", "url('images/correct.png')").fadeIn(0).fadeOut();
         document.getElementById("latin_input").value = "";
