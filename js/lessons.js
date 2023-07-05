@@ -3,7 +3,7 @@
 // var lessons_json = lessons;
 
 var lessons_json = {
-    "1": [
+    "lesson1": [
         { "latin": "yo", "japanese": "わたし" },
         { "latin": "tú, usted", "japanese": "あなた" },
         { "latin": "aquella persona", "japanese": ["あのひと", "あのかた"] },
@@ -39,7 +39,7 @@ var lessons_json = {
     ],
 
 
-    "2": [
+    "lesson2": [
         { "latin": ["este", "esta", "esto"], "japanese": "これ" },
         { "latin": ["ese", "esa", "eso"], "japanese": "それ" },
         { "latin": ["aquel", "aquella", "aquello"], "japanese": "あれ" },
@@ -80,7 +80,7 @@ var lessons_json = {
     ],
 
 
-    "3": [
+    "lesson3": [
         { "latin": ["aquí", "este lugar"], "japanese": "ここ" },
         { "latin": ["ahí", "ese lugar"], "japanese": "そこ" },
         { "latin": ["allí", "aquel lugar"], "japanese": "あそこ" },
@@ -120,7 +120,7 @@ var lessons_json = {
     ],
 
 
-    "4": [
+    "lesson4": [
         { "latin": "levantarse", "japanese": "おきます" },
         { "latin": ["acostarse", "ir a la cama"], "japanese": "ねます" },
         { "latin": "trabajar", "japanese": "はたらきませ" },
@@ -173,7 +173,7 @@ var lessons_json = {
     ],
 
 
-    "5": [
+    "lesson5": [
         { "latin": "ir", "japanese": "いきます" },
         { "latin": "venir", "japanese": "きます" },
         { "latin": "volver, regresar, irse a casa", "japanese": "かえります" },
@@ -230,7 +230,7 @@ var lessons_json = {
     ],
 
 
-    "6": [
+    "lesson6": [
         { "latin": "comer", "japanese": "たべます" },
         { "latin": ["beber", "tomar"], "japanese": "のみます" },
         { "latin": "fumar", "japanese": "すいます" },
@@ -282,7 +282,7 @@ var lessons_json = {
     ],
 
 
-    "7": [
+    "lesson7": [
         { "latin": "cortar", "japanese": "きります" },
         { "latin": "enviar", "japanese": "おくります" },
         { "latin": "dar", "japanese": "あげます" },
@@ -324,7 +324,7 @@ var lessons_json = {
     ],
 
 
-    "8": [
+    "lesson8": [
         { "latin": "guapo", "japanese": "ハンサム「な」" },
         { "latin": ["hermoso", "limpio"], "japanese": "きれい「な」" },
         { "latin": "silencioso", "japanese": "しずか「な」" },
@@ -376,7 +376,7 @@ var lessons_json = {
     ],
 
 
-    "9": [
+    "lesson9": [
         { "latin": ["entender", "comprender"], "japanese": "わかります" },
         { "latin": ["haber", "estar", "existir"], "japanese": "あります" },
         { "latin": "gustar", "japanese": "すき" },
@@ -446,7 +446,7 @@ function calculateWordsArray() {
     let words = [];
 
     for (let index = 0; index < lessons_checks.length; ++index) {
-        if( lessons_checks[index] ) { words = words.concat(lessons_json[index]); }
+        if( lessons_checks[index] ) { words = words.concat(lessons_json["lesson" + index]); }
     }
 
     return words;
