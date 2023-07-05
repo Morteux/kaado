@@ -299,6 +299,7 @@ var katakana_maru = false;
 var katakana_diptongo = false;
 var katakana_diptongo_tenten = false;
 var katakana_diptongo_maru = false;
+var katakana_extra = false;
 
 function changeHiragana() {
     hiragana = !hiragana;
@@ -346,6 +347,10 @@ function changeKatakanaDiptongoTenten() {
 
 function changeKatakanaDiptongoMaru() {
     katakana_diptongo_maru = !katakana_diptongo_maru;
+}
+
+function changeKatakanaExtra() {
+    katakana_extra = !katakana_extra;
 }
 
 function calculateWordsArray() {
@@ -526,6 +531,10 @@ function restart() {
         <div>
             <input type="checkbox" id="katakana_diptongo_maru" name="katakana_diptongo_maru" ` + (katakana_diptongo_maru ? `checked` : `false`) + ` onchange="changeKatakanaDiptongoMaru()">
             <label for="katakana_diptongo_maru">Katakana Diptongo Maru</label><br>
+        </div>
+        <div>
+            <input type="checkbox" id="katakana_extra" name="katakana_extra" ` + (katakana_extra ? `checked` : `false`) + ` onchange="changeKatakanaExtra()">
+            <label for="katakana_extra">Katakana Extra</label><br>
         </div>
     </div>`;
 }
