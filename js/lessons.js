@@ -569,35 +569,35 @@ function restart() {
             <label for="1">Lesson 1</label><br>
         </div>
         <div>
-            <input type="checkbox" id="2" name="2" ` + (lessons_checks[1] ? `checked` : `false`) + ` onchange="changeLesson(1)">
+            <input type="checkbox" id="2" name="2" ` + (lessons_checks[1] ? `checked` : `false`) + ` onchange="changeLesson(2)">
             <label for="2">Lesson 2</label><br>
         </div>
         <div>
-            <input type="checkbox" id="3" name="3" ` + (lessons_checks[2] ? `checked` : `false`) + ` onchange="changeLesson(1)">
+            <input type="checkbox" id="3" name="3" ` + (lessons_checks[2] ? `checked` : `false`) + ` onchange="changeLesson(3)">
             <label for="3">Lesson 3</label><br>
         </div>
         <div>
-            <input type="checkbox" id="4" name="4" ` + (lessons_checks[3] ? `checked` : `false`) + ` onchange="changeLesson(1)">
+            <input type="checkbox" id="4" name="4" ` + (lessons_checks[3] ? `checked` : `false`) + ` onchange="changeLesson(4)">
             <label for="4">Lesson 4</label><br>
         </div>
         <div>
-            <input type="checkbox" id="5" name="5" ` + (lessons_checks[4] ? `checked` : `false`) + ` onchange="changeLesson(1)">
+            <input type="checkbox" id="5" name="5" ` + (lessons_checks[4] ? `checked` : `false`) + ` onchange="changeLesson(5)">
             <label for="5">Lesson 5</label><br>
         </div>
         <div>
-            <input type="checkbox" id="6" name="6" ` + (lessons_checks[5] ? `checked` : `false`) + ` onchange="changeLesson(1)">
+            <input type="checkbox" id="6" name="6" ` + (lessons_checks[5] ? `checked` : `false`) + ` onchange="changeLesson(6)">
             <label for="6">Lesson 6</label><br>
         </div>
         <div>
-            <input type="checkbox" id="7" name="7" ` + (lessons_checks[6] ? `checked` : `false`) + ` onchange="changeLesson(1)">
+            <input type="checkbox" id="7" name="7" ` + (lessons_checks[6] ? `checked` : `false`) + ` onchange="changeLesson(7)">
             <label for="7">Lesson 7</label><br>
         </div>
         <div>
-            <input type="checkbox" id="8" name="8" ` + (lessons_checks[7] ? `checked` : `false`) + ` onchange="changeLesson(1)">
+            <input type="checkbox" id="8" name="8" ` + (lessons_checks[7] ? `checked` : `false`) + ` onchange="changeLesson(8)">
             <label for="8">Lesson 8</label><br>
         </div>
         <div>
-            <input type="checkbox" id="9" name="9" ` + (lessons_checks[8] ? `checked` : `false`) + ` onchange="changeLesson(1)">
+            <input type="checkbox" id="9" name="9" ` + (lessons_checks[8] ? `checked` : `false`) + ` onchange="changeLesson(9)">
             <label for="9">Lesson 9</label><br>
         </div>
     </div>`;
