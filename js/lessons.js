@@ -26,15 +26,15 @@ var lessons_json = {
         { "latin": "sí", "japanese": "はい" },
         { "latin": "no", "japanese": "いいえ" },
 
-        { "latin": "1 año", "japanese": "いっさい" },
-        { "latin": "2 año", "japanese": "にさい" },
-        { "latin": "3 año", "japanese": "さんさい" },
-        { "latin": "4 año", "japanese": "よんさい" },
-        { "latin": "5 año", "japanese": "ごさい" },
-        { "latin": "6 año", "japanese": "ろくさい" },
-        { "latin": "7 año", "japanese": "ななさい" },
-        { "latin": "8 año", "japanese": "はっさい" },
-        { "latin": "9 año", "japanese": "きゅうさい" },
+        { "latin": "1 años", "japanese": "いっさい" },
+        { "latin": "2 años", "japanese": "にさい" },
+        { "latin": "3 años", "japanese": "さんさい" },
+        { "latin": "4 años", "japanese": "よんさい" },
+        { "latin": "5 años", "japanese": "ごさい" },
+        { "latin": "6 años", "japanese": "ろくさい" },
+        { "latin": "7 años", "japanese": "ななさい" },
+        { "latin": "8 años", "japanese": "はっさい" },
+        { "latin": "9 años", "japanese": "きゅうさい" },
         { "latin": "10 años", "japanese": "じゅさい" }
     ],
 
@@ -446,7 +446,7 @@ function calculateWordsArray() {
     let words = [];
 
     for (let index = 0; index < lessons_checks.length; ++index) {
-        if( lessons_checks[index] ) { words = words.concat(lessons_json["lesson" + index]); }
+        if( lessons_checks[index] ) { words = words.concat(lessons_json["lesson" + (index + 1)]); }
     }
 
     return words;
