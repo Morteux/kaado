@@ -277,6 +277,33 @@ var dictionary = {
         { "latin": "pyu", "japanese": "ピュ" },
         { "latin": "pyo", "japanese": "ピョ" }
     ],
+    "katakana_extra": [
+        { "latin": "wi", "japanese": "ウィ" },
+        { "latin": "we", "japanese": "ウェ" },
+        { "latin": "wo", "japanese": "ウォ" },
+
+        { "latin": "va", "japanese": "ヴァ" },
+        { "latin": "vi", "japanese": "ヴィ" },
+        { "latin": "vu", "japanese": "ヴ" },
+        { "latin": "ve", "japanese": "ヴぇ" },
+        { "latin": "vo", "japanese": "ヴォ" },
+        
+        { "latin": "she", "japanese": "シェ" },
+        { "latin": "jye", "japanese": "ジェ" },
+        { "latin": "che", "japanese": "チェ" },
+        
+        { "latin": "ti", "japanese": "ティ" },
+        { "latin": "di", "japanese": "ヂィ" },
+        { "latin": "dyu", "japanese": "ヂュ" },
+        
+        { "latin": "tu", "japanese": "トウ" },
+        { "latin": "du", "japanese": "ドウ" },
+
+        { "latin": "fa", "japanese": "ファ" },
+        { "latin": "fi", "japanese": "フィ" },
+        { "latin": "fe", "japanese": "フェ" },
+        { "latin": "fo", "japanese": "フォ" }
+    ],
 
 
 
