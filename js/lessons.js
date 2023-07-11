@@ -414,7 +414,7 @@ var lessons_json = {
         { "latin": ["trabajo temporal", "trabajo eventual"], "japanese": "アルバイト" },
         { "latin": "todo", "japanese": "ぜんぶ" },
         { "latin": "crear", "japanese": "つくります" },
-        { "latin": ["su esposo", "tu esposo"], "japanese": "ごしゅじん" },
+        { "latin": ["su marido", "tu marido"], "japanese": "ごしゅじん" },
         { "latin": ["mi marido", "mi esposo"], "japanese": ["おっと", "しゅじん"] },
         { "latin": ["su esposa", "tu esposa"], "japanese": "おくさん" },
         { "latin": "mi esposa", "japanese": ["つま", "かない"] },
@@ -433,10 +433,16 @@ var lessons_json = {
         { "latin": "cabeza", "japanese": "あたま" },
         { "latin": "querer", "japanese": "したい" },
         { "latin": ["guapo", "guay"], "japanese": "かっこいい" }
+    ],
+
+
+    "lesson10": [
+        { "latin": ["entender", "comprender"], "japanese": "わかります" },
+        { "latin": ["haber", "estar", "existir"], "japanese": "あります" }
     ]
 };
 
-var lessons_checks = [true, false, false, false, false, false, false, false, false];
+var lessons_checks = [true, false, false, false, false, false, false, false, false, false];
 
 function changeLesson(lesson_index) {
     lessons_checks[lesson_index - 1] = !lessons_checks[lesson_index - 1];
@@ -599,6 +605,10 @@ function restart() {
         <div>
             <input type="checkbox" id="9" name="9" ` + (lessons_checks[8] ? `checked` : `false`) + ` onchange="changeLesson(9)">
             <label for="9">Lesson 9</label><br>
+        </div>
+        <div>
+            <input type="checkbox" id="10" name="10" ` + (lessons_checks[9] ? `checked` : `false`) + ` onchange="changeLesson(10)">
+            <label for="10">Lesson 10</label><br>
         </div>
     </div>`;
 }
