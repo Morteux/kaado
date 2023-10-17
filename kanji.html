@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Japanese, Hiragana, Katakana, Kanji, Memorize, Cards, Test, Letters, Words">
+    <meta name="authors" content="Ignacio Meléndez Lapi">
+
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/syllables.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="json/syllables/kanji.js"></script>
+    <script src="js/kanji.js"></script>
+
+    <title>Kaado - Syllables</title>
+</head>
+<body>
+    <div id="main" class="main">
+        <button class="start_button" onclick="startSyllables()">Start syllable test</button>
+        <div class="checkboxes_container">
+            <div>
+                <input type="checkbox" id="kanji_lesson_1" name="kanji_lesson_1" checked onchange="changeKanjiLesson1()">
+                <label for="kanji_lesson_1">Kanji Lesson 1</label><br>
+            </div>
+            <br>
+            <div>
+                <input type="checkbox" id="kanji_lesson_2" name="kanji_lesson_2" onchange="changeKanjiLesson2()">
+                <label for="kanji_lesson_2">Kanji Lesson 2</label><br>
+            </div>
+            <br>
+            <div>
+                <input type="checkbox" id="kanji_lesson_3" name="kanji_lesson_3" onchange="changeKanjiLesson3()">
+                <label for="kanji_lesson_3">Kanji Lesson 3</label><br>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
