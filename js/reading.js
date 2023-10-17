@@ -1,7 +1,7 @@
 var readingJson = [];
   
 function loadReadingJSON(filename) {
-    fetch('./json/reading/' + filename + '.json')
+    fetch('./json/reading/' + filename + '.js')
         .then(response => response.json())
         .then(data => {
             readingJson = data;
