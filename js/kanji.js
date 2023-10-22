@@ -83,12 +83,16 @@ function next() {
 
     console.log(shuffled[actualIndex]);
 
-    if (input == shuffled[actualIndex].kana) {
+    if (!Array.isArray(shuffled[actualIndex].kana) && input.toUpperCase() == shuffled[actualIndex].kana.toUpperCase()) {
         ++correctCount;
         $('#img_element').css("background-image", "url('images/correct.png')").fadeIn(0).fadeOut();
         document.getElementById("kana_input").value = "";
         document.getElementById("kana_input").placeholder = "";
-        
+    } else if (Array.isArray(shuffled[actualIndex].kana) && shuffled[actualIndex].kana.some(e => e.toUpperCase() === input.toUpperCase())) {
+        ++correctCount;
+        $('#img_element').css("background-image", "url('images/correct.png')").fadeIn(0).fadeOut();
+        document.getElementById("kana_input").value = "";
+        document.getElementById("kana_input").placeholder = "";
     } else {
         ++incorrectCount;
         $('#img_element').css("background-image", "url('images/incorrect.png')").fadeIn(0).fadeOut();
