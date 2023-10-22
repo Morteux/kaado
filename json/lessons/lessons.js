@@ -572,5 +572,117 @@ const lessons_json = {
         { "latin": "descansar", "japanese": "きゅうけいします" },
         { "latin": "descanso", "japanese": "きゅうけい" },
         { "latin": "patinar", "japanese": "スケートボード" }
+    ],
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    "lesson14": [
+        { "latin": "encender", "japanese": "つけます" },
+        { "latin": "apagar", "japanese": "けします" },
+        { "latin": "abrir", "japanese": "あけます" },
+        { "latin": "cerrar", "japanese": "しめます" },
+        { "latin": ["apresurarse", "darse prisa"], "japanese": "いそぎます" },
+        { "latin": "esperar", "japanese": "まちます" },
+        { "latin": ["tener algo en la mano", "tomar"], "japanese": "もちます" },
+        { "latin": ["pasar", "dar"], "japanese": "とります" },
+        { "latin": "ayudar", "japanese": "てつだいます" },
+        { "latin": "llamar", "japanese": "よびます" },
+        { "latin": "hablar", "japanese": "はなします" },
+        { "latin": "usar", "japanese": "つかいます" },
+        { "latin": ["parar", "estacionar"], "japanese": "とめます" },
+        { "latin": ["mostrar", "enseñar"], "japanese": "みせます" },
+        { "latin": ["enseñar, dar"], "japanese": "［じゅうしょを］おしえます" },
+        { "latin": "sentarse", "japanese": "すわります" },
+        { "latin": "ponerse de pie", "japanese": "たちます" },
+        { "latin": "entrar", "japanese": "［きっさてんに］はいります" },
+        { "latin": "salir", "japanese": "［きっさてんを］でます" },
+        { "latin": "llover", "japanese": "［あめが］ふります" },
+        { "latin": "sacar fotocopias", "japanese": "コピーします" },
+        { "latin": ["electricidad", "luz"], "japanese": "でんき" },
+        { "latin": "aire acondicionado", "japanese": "エアコン" },
+        { "latin": "pasaporte", "japanese": "パスポート" },
+        { "latin": "nombre", "japanese": "なまえ" },
+        { "latin": ["dirección, domicilio"], "japanese": "じゅうしょ" },
+        { "latin": ["mapa", "plano"], "japanese": "ちず" },
+        { "latin": "sal", "japanese": "しお" },
+        { "latin": "azúcar", "japanese": "さとう" },
+        { "latin": ["pregunta", "problema"], "japanese": "もんだい" },
+        { "latin": "respuesta", "japanese": "こたえ" },
+        { "latin": ["cómo leer", "modo de lectura"], "japanese": "よみかた" },
+        { "latin": ["cómo", "modo de", "manera de"], "japanese": "～かた" },
+        { "latin": ["derecho", "recto"], "japanese": "まっすぐ" },
+        { "latin": "despacio", "japanese": "ゆっくり" },
+        { "latin": "inmediatamente", "japanese": "すぐ" },
+        { "latin": "de nuevo", "japanese": "また" },
+        { "latin": ["después", "más tarde"], "japanese": "あとで" },
+        { "latin": "un poco más", "japanese": "もうすこし" },
+        { "latin": ["más", "otro"], "japanese": "もう" },
+        { "latin": "vamos", "japanese": "さあ" },
+        { "latin": ["¿Cómo?", "¿Eh?"], "japanese": "あれ？" },
+        { "latin": "mudanza", "japanese": "ひっこし" },
+        { "latin": "explicar", "japanese": "せつめいします" },
+        { "latin": "sacar", "japanese": "だします" },
+        { "latin": "solo", "japanese": "だけ" },
+        { "latin": "girar", "japanese": "まがります" },
+        { "latin": "recoger a alguien", "japanese": "むかえます" },
+        { "latin": "montar", "japanese": "のります" },
+        { "latin": "reservar", "japanese": "よやくします" },
+        { "latin": "jefe de departamento", "japanese": "ぶちょう" },
+        { "latin": "jefe", "japanese": "かちょう" },
+        { "latin": "materiales", "japanese": "しりょう" },
+        { "latin": "conductor", "japanese": "うんてんしゅ" },
+        { "latin": "semáforo", "japanese": "しんごう" },
+        { "latin": "lavar", "japanese": "あらいます" },
+        { "latin": "tejado", "japanese": "やね" },
+        { "latin": "calle", "japanese": "みち" },
+        { "latin": "correa", "japanese": "リード" },
+        { "latin": "sin", "japanese": "なし" },
+        { "latin": "sopa de cerdo", "japanese": ["ぶたじる", "とんじる"] },
+        { "latin": "estofado", "japanese": "ツチュー" }
+    ],
+
+
+    "lesson14": [
+        { "latin": "", "japanese": "" },
+        { "latin": "", "japanese": "" },
+        { "latin": "", "japanese": "" },
+        { "latin": "", "japanese": "" },
+        { "latin": "", "japanese": "" },
+        { "latin": "", "japanese": "" },
+        { "latin": "", "japanese": "" },
+        { "latin": "", "japanese": "" },
+        { "latin": "", "japanese": "" },
+        { "latin": "", "japanese": "" },
+        { "latin": "", "japanese": "" },
+        { "latin": "", "japanese": "" },
+        { "latin": "", "japanese": "" },
+        { "latin": "", "japanese": "" },
+        { "latin": "", "japanese": "" },
+        { "latin": "", "japanese": "" },
+        { "latin": "", "japanese": "" },
+        { "latin": "", "japanese": "" },
+        { "latin": "", "japanese": "" },
+        { "latin": "", "japanese": "" },
+        { "latin": "", "japanese": "" },
+        { "latin": "", "japanese": "" },
+        { "latin": "", "japanese": "" },
+        { "latin": "", "japanese": "" },
+        { "latin": "", "japanese": "" }
     ]
 }
