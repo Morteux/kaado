@@ -162,5 +162,21 @@ function restart() {
             <input type="checkbox" id="11" name="11" ` + (lessons_checks[10] ? `checked` : `false`) + ` onchange="changeLesson(11)">
             <label for="11">Lesson 11</label><br>
         </div>
+        <div>
+            <input type="checkbox" id="12" name="12" ` + (lessons_checks[11] ? `checked` : `false`) + ` onchange="changeLesson(12)">
+            <label for="12">Lesson 12</label><br>
+        </div>
+        <div>
+            <input type="checkbox" id="13" name="13" ` + (lessons_checks[12] ? `checked` : `false`) + ` onchange="changeLesson(13)">
+            <label for="13">Lesson 13</label><br>
+        </div>
+        <div>
+            <input type="checkbox" id="14" name="14" ` + (lessons_checks[13] ? `checked` : `false`) + ` onchange="changeLesson(14)">
+            <label for="14">Lesson 14</label><br>
+        </div>
+        <div>
+            <input type="checkbox" id="15" name="15" ` + (lessons_checks[14] ? `checked` : `false`) + ` onchange="changeLesson(15)">
+            <label for="15">Lesson 15</label><br>
+        </div>
     </div>`;
 }

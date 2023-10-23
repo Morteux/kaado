@@ -583,6 +583,8 @@ const lessons_json = {
 
 
 
+    "lesson12": [],
+    "lesson13": [],
 
 
 
@@ -658,30 +660,7 @@ const lessons_json = {
     ],
 
 
-    "lesson14": [
-        { "latin": "", "japanese": "" },
-        { "latin": "", "japanese": "" },
-        { "latin": "", "japanese": "" },
-        { "latin": "", "japanese": "" },
-        { "latin": "", "japanese": "" },
-        { "latin": "", "japanese": "" },
-        { "latin": "", "japanese": "" },
-        { "latin": "", "japanese": "" },
-        { "latin": "", "japanese": "" },
-        { "latin": "", "japanese": "" },
-        { "latin": "", "japanese": "" },
-        { "latin": "", "japanese": "" },
-        { "latin": "", "japanese": "" },
-        { "latin": "", "japanese": "" },
-        { "latin": "", "japanese": "" },
-        { "latin": "", "japanese": "" },
-        { "latin": "", "japanese": "" },
-        { "latin": "", "japanese": "" },
-        { "latin": "", "japanese": "" },
-        { "latin": "", "japanese": "" },
-        { "latin": "", "japanese": "" },
-        { "latin": "", "japanese": "" },
-        { "latin": "", "japanese": "" },
+    "lesson15": [
         { "latin": "", "japanese": "" },
         { "latin": "", "japanese": "" }
     ]
