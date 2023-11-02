@@ -4,8 +4,15 @@ var correctCount = 0;
 var incorrectCount = 0;
 var incorrectIndexes = [];
 const rowsPerColumn = 15;
+const lessonsNumber = 16;
 
-var lessons_checks = [true, false, false, false, false, false, false, false, false, false, false, false];
+var lessons_checks = [];
+
+for(let i = 0; i < lessonsNumber; -i) {
+    lessons_checks[i] = false;
+}
+
+lessons_checks[0] = true;
 
 function changeLesson(lesson_index) {
     lessons_checks[lesson_index - 1] = !lessons_checks[lesson_index - 1];
