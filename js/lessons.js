@@ -94,7 +94,7 @@ function startEnd() {
         <div><img src="images/correct.png" alt="Correct icon" width="50" height="50"> <p id="correctCounter">0</p></div>
         <div><img src="images/incorrect.png" alt="Incorrect icon" width="50" height="50"> <p id="incorrectCounter">0</p></div>
         <button id="restart" onclick="restart()">Restart</button>
-        <button onclick="window.location.href = 'index.html';">Return to index</button>
+        <button id="return" onclick="window.location.href='index.html';">Return to index</button>
     </div>
     <table id="answers_table" class="answers_table">
         <caption>Incorrect answers</caption>
