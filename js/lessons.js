@@ -187,7 +187,7 @@ function restart() {
             <label for="15">Lesson 15</label><br>
         </div>
         <div>
-            <input type="checkbox" id="16" name="16" ` + (lessons_checks[14] ? `checked` : `false`) + ` onchange="changeLesson(16)">
+            <input type="checkbox" id="16" name="16" ` + (lessons_checks[15] ? `checked` : `false`) + ` onchange="changeLesson(16)">
             <label for="16">Lesson 16</label><br>
         </div>
     </div>`;
