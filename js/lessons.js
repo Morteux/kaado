@@ -129,72 +129,19 @@ function startEnd() {
 }
 
 function restart() {
-    document.getElementById("main").innerHTML = `
+
+    let text = `
     <button class="start_button" onclick="startLessons()">Start lesson test</button>
-    <div class="checkboxes_container">
-        <div>
-            <input type="checkbox" id="1" name="1" ` + (lessons_checks[0] ? `checked` : `false`) + ` onchange="changeLesson(1)">
-            <label for="1">Lesson 1</label><br>
-        </div>
-        <div>
-            <input type="checkbox" id="2" name="2" ` + (lessons_checks[1] ? `checked` : `false`) + ` onchange="changeLesson(2)">
-            <label for="2">Lesson 2</label><br>
-        </div>
-        <div>
-            <input type="checkbox" id="3" name="3" ` + (lessons_checks[2] ? `checked` : `false`) + ` onchange="changeLesson(3)">
-            <label for="3">Lesson 3</label><br>
-        </div>
-        <div>
-            <input type="checkbox" id="4" name="4" ` + (lessons_checks[3] ? `checked` : `false`) + ` onchange="changeLesson(4)">
-            <label for="4">Lesson 4</label><br>
-        </div>
-        <div>
-            <input type="checkbox" id="5" name="5" ` + (lessons_checks[4] ? `checked` : `false`) + ` onchange="changeLesson(5)">
-            <label for="5">Lesson 5</label><br>
-        </div>
-        <div>
-            <input type="checkbox" id="6" name="6" ` + (lessons_checks[5] ? `checked` : `false`) + ` onchange="changeLesson(6)">
-            <label for="6">Lesson 6</label><br>
-        </div>
-        <div>
-            <input type="checkbox" id="7" name="7" ` + (lessons_checks[6] ? `checked` : `false`) + ` onchange="changeLesson(7)">
-            <label for="7">Lesson 7</label><br>
-        </div>
-        <div>
-            <input type="checkbox" id="8" name="8" ` + (lessons_checks[7] ? `checked` : `false`) + ` onchange="changeLesson(8)">
-            <label for="8">Lesson 8</label><br>
-        </div>
-        <div>
-            <input type="checkbox" id="9" name="9" ` + (lessons_checks[8] ? `checked` : `false`) + ` onchange="changeLesson(9)">
-            <label for="9">Lesson 9</label><br>
-        </div>
-        <div>
-            <input type="checkbox" id="10" name="10" ` + (lessons_checks[9] ? `checked` : `false`) + ` onchange="changeLesson(10)">
-            <label for="10">Lesson 10</label><br>
-        </div>
-        <div>
-            <input type="checkbox" id="11" name="11" ` + (lessons_checks[10] ? `checked` : `false`) + ` onchange="changeLesson(11)">
-            <label for="11">Lesson 11</label><br>
-        </div>
-        <div>
-            <input type="checkbox" id="12" name="12" ` + (lessons_checks[11] ? `checked` : `false`) + ` onchange="changeLesson(12)">
-            <label for="12">Lesson 12</label><br>
-        </div>
-        <div>
-            <input type="checkbox" id="13" name="13" ` + (lessons_checks[12] ? `checked` : `false`) + ` onchange="changeLesson(13)">
-            <label for="13">Lesson 13</label><br>
-        </div>
-        <div>
-            <input type="checkbox" id="14" name="14" ` + (lessons_checks[13] ? `checked` : `false`) + ` onchange="changeLesson(14)">
-            <label for="14">Lesson 14</label><br>
-        </div>
-        <div>
-            <input type="checkbox" id="15" name="15" ` + (lessons_checks[14] ? `checked` : `false`) + ` onchange="changeLesson(15)">
-            <label for="15">Lesson 15</label><br>
-        </div>
-        <div>
-            <input type="checkbox" id="16" name="16" ` + (lessons_checks[15] ? `checked` : `false`) + ` onchange="changeLesson(16)">
-            <label for="16">Lesson 16</label><br>
-        </div>
-    </div>`;
+    <div class="checkboxes_container">`;
+
+    for (let i = 0; i < lessonsNumber; ++i) {
+        text += `<div>
+                    <input type="checkbox" id="` + i + `" name="` + i + `" ` + (lessons_checks[i - 1] ? `checked` : `false`) + ` onchange="changeLesson(` + i + `)">
+                    <label for="` + i + `">Lesson ` + i + `</label><br>
+                </div>`
+    }
+
+    text += `</div>`;
+
+    document.getElementById("main").innerHTML = text;
 }
