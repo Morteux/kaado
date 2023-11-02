@@ -8,11 +8,17 @@ const lessonsNumber = Object.keys(lessons_json).length;
 
 var lessons_checks = [];
 
-for(let i = 0; i < lessonsNumber; ++i) {
-    lessons_checks.push(false);
-}
 
-lessons_checks[0] = true;
+document.addEventListener("DOMContentLoaded", (event) => {
+
+    for (let i = 0; i < lessonsNumber; ++i) {
+        lessons_checks.push(false);
+    }
+
+    lessons_checks[0] = true;
+
+    restart();
+});
 
 function changeLesson(lesson_index) {
     lessons_checks[lesson_index - 1] = !lessons_checks[lesson_index - 1];
@@ -22,7 +28,7 @@ function calculateWordsArray() {
     let words = [];
 
     for (let index = 0; index < lessons_checks.length; ++index) {
-        if( lessons_checks[index] ) { words = words.concat(lessons_json["lesson" + (index + 1)]); }
+        if (lessons_checks[index]) { words = words.concat(lessons_json["lesson" + (index + 1)]); }
     }
 
     return words;
@@ -103,13 +109,13 @@ function startEnd() {
     document.getElementById("correctCounter").innerHTML = correctCount;
     document.getElementById("incorrectCounter").innerHTML = incorrectCount;
 
-    if(incorrectCount != 0) {
+    if (incorrectCount != 0) {
         let table = "";
         table += "<tbody>";
-        for(let i = 0; i < incorrectIndexes.length; i += Math.ceil(incorrectIndexes.length / rowsPerColumn)) {
+        for (let i = 0; i < incorrectIndexes.length; i += Math.ceil(incorrectIndexes.length / rowsPerColumn)) {
             table += "<tr>";
-            for(let j = i; j < i + Math.ceil(incorrectIndexes.length / rowsPerColumn); ++j) {
-                if(j < incorrectIndexes.length)
+            for (let j = i; j < i + Math.ceil(incorrectIndexes.length / rowsPerColumn); ++j) {
+                if (j < incorrectIndexes.length)
                     table += "<td>" + shuffled[incorrectIndexes[j]].latin + " : " + shuffled[incorrectIndexes[j]].japanese + "</td>";
             }
             table += "</tr>";
