@@ -81,8 +81,6 @@ function startSyllables() {
 function next() {
     let input = document.getElementById("kana_input").value;
 
-    console.log(shuffled[actualIndex]);
-
     if (!Array.isArray(shuffled[actualIndex].kana) && input.toUpperCase() == shuffled[actualIndex].kana.toUpperCase()) {
         ++correctCount;
         $('#img_element').css("background-image", "url('images/correct.png')").fadeIn(0).fadeOut();
