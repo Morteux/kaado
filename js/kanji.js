@@ -5,30 +5,30 @@ var kanji_lesson_3 = false;
 
 
 
-function changeKanjiLesson1() {
-    kanji_lesson_1 = !kanji_lesson_1;
-}
+// function changeKanjiLesson1() {
+//     kanji_lesson_1 = !kanji_lesson_1;
+// }
 
-function changeKanjiLesson2() {
-    kanji_lesson_2 = !kanji_lesson_2;
-}
+// function changeKanjiLesson2() {
+//     kanji_lesson_2 = !kanji_lesson_2;
+// }
 
-function changeKanjiLesson3() {
-    kanji_lesson_3 = !kanji_lesson_3;
-}
-
-
+// function changeKanjiLesson3() {
+//     kanji_lesson_3 = !kanji_lesson_3;
+// }
 
 
-function calculateWordsArray() {
-    let words = [];
+
+
+// function calculateWordsArray() {
+//     let words = [];
     
-    if( kanji_lesson_1 ) { words = words.concat(dictionary.kanji_lesson_1); }
-    if( kanji_lesson_2 ) { words = words.concat(dictionary.kanji_lesson_2); }
-    if( kanji_lesson_3 ) { words = words.concat(dictionary.kanji_lesson_3); }
+//     if( kanji_lesson_1 ) { words = words.concat(dictionary.kanji_lesson_1); }
+//     if( kanji_lesson_2 ) { words = words.concat(dictionary.kanji_lesson_2); }
+//     if( kanji_lesson_3 ) { words = words.concat(dictionary.kanji_lesson_3); }
 
-    return words;
-}
+//     return words;
+// }
 
 
 
@@ -44,6 +44,35 @@ var correctCount = 0;
 var incorrectCount = 0;
 var incorrectIndexes = [];
 const rowsPerColumn = 15;
+const checksNumber = Object.keys(dictionary).length;
+
+var kanji_checks = [];
+
+
+document.addEventListener("DOMContentLoaded", (event) => {
+
+    for (let i = 0; i < checksNumber; ++i) {
+        kanji_checks.push(false);
+    }
+
+    kanji_checks[0] = true;
+
+    restart();
+});
+
+function changeKanjiLesson(lesson_index) {
+    kanji_checks[lesson_index - 1] = !kanji_checks[lesson_index - 1];
+}
+
+function calculateWordsArray() {
+    let words = [];
+
+    for (let index = 0; index < kanji_checks.length; ++index) {
+        if (kanji_checks[index]) { words = words.concat(dictionary["kanji_lesson_" + (index + 1)]); }
+    }
+
+    return words;
+}
 
 function startSyllables() {
 
@@ -142,22 +171,19 @@ function startEnd() {
 }
 
 function restart() {
-    document.getElementById("main").innerHTML = `
-    <button class="start_button" onclick="startSyllables()">Start syllables test</button>
-    <div class="checkboxes_container">
-        <div>
-            <input type="checkbox" id="kanji_lesson_1" name="kanji_lesson_1" ` + (kanji_lesson_1 ? `checked` : `false`) + ` onchange="changeKanjiLesson1()">
-            <label for="kanji_lesson_1">Kanji Lesson 1</label><br>
-        </div>
-        <br>
-        <div>
-            <input type="checkbox" id="kanji_lesson_2" name="kanji_lesson_2" ` + (kanji_lesson_2 ? `checked` : `false`) + ` onchange="changeKanjiLesson2()">
-            <label for="kanji_lesson_2">Kanji Lesson 2</label><br>
-        </div>
-        <br>
-        <div>
-            <input type="checkbox" id="kanji_lesson_3" name="kanji_lesson_3" ` + (kanji_lesson_3 ? `checked` : `false`) + ` onchange="changeKanjiLesson3()">
-            <label for="kanji_lesson_3">Kanji Lesson 3</label><br>
-        </div>
-    </div>`;
+
+    let text = `
+    <button class="start_button" onclick="startLessons()">Start lesson test</button>
+    <div class="checkboxes_container">`;
+
+    for (let i = 1; i <= checksNumber; ++i) {
+        text += `<div>
+                    <input type="checkbox" id="kanji_lesson_` + i + `" name="kanji_lesson_` + i + `" ` + (kanji_lesson_1 ? `checked` : `false`) + ` onchange="changeKanjiLesson(` + i + `)">
+                    <label for="kanji_lesson_` + i + `">Kanji Lesson ` + i + `</label><br>
+                </div>`;
+    }
+
+    text += `</div>`;
+
+    document.getElementById("main").innerHTML = text;
 }

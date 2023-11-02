@@ -4,14 +4,14 @@ var correctCount = 0;
 var incorrectCount = 0;
 var incorrectIndexes = [];
 const rowsPerColumn = 15;
-const lessonsNumber = Object.keys(lessons_json).length;
+const checksNumber = Object.keys(lessons_json).length;
 
 var lessons_checks = [];
 
 
 document.addEventListener("DOMContentLoaded", (event) => {
 
-    for (let i = 0; i < lessonsNumber; ++i) {
+    for (let i = 0; i < checksNumber; ++i) {
         lessons_checks.push(false);
     }
 
@@ -134,11 +134,11 @@ function restart() {
     <button class="start_button" onclick="startLessons()">Start lesson test</button>
     <div class="checkboxes_container">`;
 
-    for (let i = 1; i <= lessonsNumber; ++i) {
+    for (let i = 1; i <= checksNumber; ++i) {
         text += `<div>
                     <input type="checkbox" id="` + i + `" name="` + i + `" ` + (lessons_checks[i - 1] ? `checked` : `false`) + ` onchange="changeLesson(` + i + `)">
                     <label for="` + i + `">Lesson ` + i + `</label><br>
-                </div>`
+                </div>`;
     }
 
     text += `</div>`;
