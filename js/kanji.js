@@ -178,7 +178,7 @@ function restart() {
 
     for (let i = 1; i <= checksNumber; ++i) {
         text += `<div>
-                    <input type="checkbox" id="kanji_lesson_` + i + `" name="kanji_lesson_` + i + `" ` + (kanji_lesson_1 ? `checked` : `false`) + ` onchange="changeKanjiLesson(` + i + `)">
+                    <input type="checkbox" id="kanji_lesson_` + i + `" name="kanji_lesson_` + i + `" ` + (kanji_lesson[i - 1] ? `checked` : `false`) + ` onchange="changeKanjiLesson(` + i + `)">
                     <label for="kanji_lesson_` + i + `">Kanji Lesson ` + i + `</label><br>
                 </div>`;
     }
