@@ -5,7 +5,7 @@ var incorrectCount = 0;
 var incorrectIndexes = [];
 const rowsPerColumn = 15;
 
-var lessons_checks = [true, false, false, false, false, false, false, false, false, false, false];
+var lessons_checks = [true, false, false, false, false, false, false, false, false, false, false, false];
 
 function changeLesson(lesson_index) {
     lessons_checks[lesson_index - 1] = !lessons_checks[lesson_index - 1];
@@ -177,6 +177,10 @@ function restart() {
         <div>
             <input type="checkbox" id="15" name="15" ` + (lessons_checks[14] ? `checked` : `false`) + ` onchange="changeLesson(15)">
             <label for="15">Lesson 15</label><br>
+        </div>
+        <div>
+            <input type="checkbox" id="16" name="16" ` + (lessons_checks[14] ? `checked` : `false`) + ` onchange="changeLesson(16)">
+            <label for="16">Lesson 16</label><br>
         </div>
     </div>`;
 }
