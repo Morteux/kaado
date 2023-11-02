@@ -4,15 +4,18 @@ var correctCount = 0;
 var incorrectCount = 0;
 var incorrectIndexes = [];
 const rowsPerColumn = 15;
-const lessonsNumber = Object.keys(lessons_json).length;
+const lessonsNumber = 16;
 
-var lessons_checks = [];
+var lessons_checks = [true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
 
 for(let i = 0; i < lessonsNumber; -i) {
-    lessons_checks[i] = false;
+    table += "<tr>";
+    for(let j = i; j < i + Math.ceil(incorrectIndexes.length / rowsPerColumn); ++j) {
+        if(j < incorrectIndexes.length)
+            table += "<td>" + shuffled[incorrectIndexes[j]].latin + " : " + shuffled[incorrectIndexes[j]].japanese + "</td>";
+    }
+    table += "</tr>";
 }
-
-lessons_checks[0] = true;
 
 function changeLesson(lesson_index) {
     lessons_checks[lesson_index - 1] = !lessons_checks[lesson_index - 1];
@@ -94,7 +97,6 @@ function startEnd() {
         <div><img src="images/correct.png" alt="Correct icon" width="50" height="50"> <p id="correctCounter">0</p></div>
         <div><img src="images/incorrect.png" alt="Incorrect icon" width="50" height="50"> <p id="incorrectCounter">0</p></div>
         <button id="restart" onclick="restart()">Restart</button>
-        <button id="return" onclick="window.location.href='index.html';">Return to index</button>
     </div>
     <table id="answers_table" class="answers_table">
         <caption>Incorrect answers</caption>
