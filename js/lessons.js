@@ -4,7 +4,7 @@ var correctCount = 0;
 var incorrectCount = 0;
 var incorrectIndexes = [];
 const rowsPerColumn = 15;
-const lessonsNumber = 16;
+const lessonsNumber = Object.keys(lessons_json).length;
 
 var lessons_checks = [];
 
