@@ -50,6 +50,24 @@ button:active {
     justify-content: space-between;
 }
 
+/* End elements */
+.results_container div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 3vh;
+    padding: 1vh;
+    
+    background-color: rgb(95, 95, 133);
+    border: 2px solid black;
+    border-radius: 10% / 50%;;
+}
+
+.answers_table {
+    margin-left: 5vh;
+}
+
 @media only screen and (max-width: 600px) {
     body {
         background-image: url('../images/mobile_background_3.jpg');
