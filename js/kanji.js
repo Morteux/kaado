@@ -143,6 +143,7 @@ function startEnd() {
         <div><img src="images/correct.png" alt="Correct icon" width="50" height="50"> <p id="correctCounter">0</p></div>
         <div><img src="images/incorrect.png" alt="Incorrect icon" width="50" height="50"> <p id="incorrectCounter">0</p></div>
         <button id="restart" onclick="restart()">Restart</button>
+        <button id="return" onclick="window.location.href = '/kaado/index.html'">Return to index</button>
     </div>
     <table id="answers_table" class="answers_table">
         <caption>Incorrect answers</caption>
@@ -173,12 +174,12 @@ function startEnd() {
 function restart() {
 
     let text = `
-    <button class="start_button" onclick="startLessons()">Start lesson test</button>
+    <button class="start_button" onclick="startSyllables()">Start lesson test</button>
     <div class="checkboxes_container">`;
 
     for (let i = 1; i <= checksNumber; ++i) {
         text += `<div>
-                    <input type="checkbox" id="kanji_lesson_` + i + `" name="kanji_lesson_` + i + `" ` + (kanji_lesson[i - 1] ? `checked` : `false`) + ` onchange="changeKanjiLesson(` + i + `)">
+                    <input type="checkbox" id="kanji_lesson_` + i + `" name="kanji_lesson_` + i + `" ` + (kanji_checks[i - 1] ? `checked` : `false`) + ` onchange="changeKanjiLesson(` + i + `)">
                     <label for="kanji_lesson_` + i + `">Kanji Lesson ` + i + `</label><br>
                 </div>`;
     }
