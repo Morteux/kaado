@@ -134,7 +134,7 @@ function restart() {
     <button class="start_button" onclick="startLessons()">Start lesson test</button>
     <div class="checkboxes_container">`;
 
-    for (let i = 0; i < lessonsNumber; ++i) {
+    for (let i = 1; i <= lessonsNumber; ++i) {
         text += `<div>
                     <input type="checkbox" id="` + i + `" name="` + i + `" ` + (lessons_checks[i - 1] ? `checked` : `false`) + ` onchange="changeLesson(` + i + `)">
                     <label for="` + i + `">Lesson ` + i + `</label><br>
