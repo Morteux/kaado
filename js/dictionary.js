@@ -362,12 +362,12 @@ function startDictionary() {
 function next() {
     let input = document.getElementById("latin_input").value;
 
-    if (!Array.isArray(shuffled[actualIndex].latin) && input.toUpperCase() == shuffled[actualIndex].latin.toUpperCase()) {
+    if (!Array.isArray(shuffled[actualIndex].latin) && input.toUpperCase().trim() == shuffled[actualIndex].latin.toUpperCase()) {
         ++correctCount;
         $('#img_element').css("background-image", "url('images/correct.png')").fadeIn(0).fadeOut();
         document.getElementById("latin_input").value = "";
         document.getElementById("latin_input").placeholder = "";
-    } else if (Array.isArray(shuffled[actualIndex].latin) && shuffled[actualIndex].latin.some(e => e.toUpperCase() === input.toUpperCase())) {
+    } else if (Array.isArray(shuffled[actualIndex].latin) && shuffled[actualIndex].latin.some(e => e.toUpperCase() === input.toUpperCase().trim())) {
         ++correctCount;
         $('#img_element').css("background-image", "url('images/correct.png')").fadeIn(0).fadeOut();
         document.getElementById("latin_input").value = "";

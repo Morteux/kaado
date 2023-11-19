@@ -70,12 +70,12 @@ function startSyllables() {
 function next() {
     let input = document.getElementById("kana_input").value;
 
-    if (!Array.isArray(shuffled[actualIndex].kana) && input.toUpperCase() == shuffled[actualIndex].kana.toUpperCase()) {
+    if (!Array.isArray(shuffled[actualIndex].kana) && input.toUpperCase().trim() == shuffled[actualIndex].kana.toUpperCase()) {
         ++correctCount;
         $('#img_element').css("background-image", "url('images/correct.png')").fadeIn(0).fadeOut();
         document.getElementById("kana_input").value = "";
         document.getElementById("kana_input").placeholder = "";
-    } else if (Array.isArray(shuffled[actualIndex].kana) && shuffled[actualIndex].kana.some(e => e.toUpperCase() === input.toUpperCase())) {
+    } else if (Array.isArray(shuffled[actualIndex].kana) && shuffled[actualIndex].kana.some(e => e.toUpperCase() === input.toUpperCase().trim())) {
         ++correctCount;
         $('#img_element').css("background-image", "url('images/correct.png')").fadeIn(0).fadeOut();
         document.getElementById("kana_input").value = "";

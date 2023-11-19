@@ -141,7 +141,7 @@ function startSyllables() {
 function next() {
     let input = document.getElementById("latin_input").value;
 
-    if (input.toUpperCase() == shuffled[actualIndex].latin.toUpperCase()) {
+    if (input.toUpperCase().trim() == shuffled[actualIndex].latin.toUpperCase()) {
         ++correctCount;
         $('#img_element').css("background-image", "url('images/correct.png')").fadeIn(0).fadeOut();
         document.getElementById("latin_input").value = "";
