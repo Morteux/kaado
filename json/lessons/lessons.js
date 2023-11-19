@@ -584,7 +584,6 @@ const lessons_json = {
 
 
     "lesson12": [],
-    "lesson13": [],
 
 
 
@@ -592,6 +591,55 @@ const lessons_json = {
 
 
 
+
+
+
+    "lesson13": [
+        { "latin": ["jugar", "divertirse"], "japanese": "あそびます" },
+        { "latin": "nadar", "japanese": "およぎます" },
+        { "latin": ["recoger", "recibir"], "japanese": "むかえます" },
+        { "latin": "cansarse", "japanese": "つかれます" },
+        { "latin": "estar cansado", "japanese": "つかれました" },
+        { "latin": "casarse", "japanese": "けっこんします" },
+        { "latin": "hacer compras", "japanese": "かいものします" },
+        { "latin": "comer", "japanese": "しょくじします" },
+        { "latin": "pasear", "japanese": "「こうえんを」さんぽします" },
+        { "latin": ["duro", "terrible"], "japanese": "たいへん「な」" },
+        { "latin": "querer", "japanese": "ほしい" },
+        { "latin": ["amplio", "espacioso"], "japanese": "ひるい" },
+        { "latin": ["pequeño", "angosto", "estrecho"], "japanese": "せまい" },
+        { "latin": "piscina", "japanese": "プール" },
+        { "latin": "río", "japanese": "かわ" },
+        { "latin": "bellas artes", "japanese": "びじゅつ" },
+        { "latin": "pesca", "japanese": "つり" },
+        { "latin": "pescar", "japanese": "つりをします" },
+        { "latin": "esquí", "japanese": "スキー" },
+        { "latin": "esquiar", "japanese": "スキーをします" },
+        { "latin": "fin de semana", "japanese": "しゅうまつ" },
+        { "latin": "año nuevo", "japanese": "「お」しょうがつ" },
+        { "latin": "hacia", "japanese": "～ごろ" },
+        { "latin": "algo", "japanese": "なにか" },
+        { "latin": "algún lugar", "japanese": "どこか" },
+        { "latin": "tener sed", "japanese": "のどがかわきました" },
+        { "latin": "tener hambre", "japanese": "おなかがすきました" },
+        { "latin": "garganta", "japanese": "のど" },
+        { "latin": "secar", "japanese": "かわきます" },
+        { "latin": "estómago", "japanese": "おなか" },
+        { "latin": "estar vacío", "japanese": "すきます" },
+        { "latin": "alguien", "japanese": "だれか" },
+        { "latin": "algún momento", "japanese": "いつか" },
+        { "latin": "matrimonio", "japanese": "けっこん" },
+        { "latin": "boda", "japanese": "けっこんしき" },
+        { "latin": "siguiente", "japanese": "つぎ" },
+        { "latin": "estar lleno", "japanese": "いっぱいです" },
+        { "latin": "mucho", "japanese": "いっぱい「たくさん」" },
+        { "latin": "recoger", "japanese": "うけとります" },
+        { "latin": "pagar", "japanese": "はらいます" },
+        { "latin": "esperar", "japanese": "まちます" },
+        { "latin": "economía", "japanese": "けいざい" },
+        { "latin": "entrar", "japanese": "はいります「に」" },
+        { "latin": "salir", "japanese": "でます「を」" },
+    ],
 
 
     "lesson14": [
