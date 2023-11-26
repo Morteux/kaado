@@ -788,5 +788,41 @@ const lessons_json = {
         { "latin": "todavía", "japanese": "まだまだです" },
         { "latin": ["bajo", "pequeño"], "japanese": "ちさい" },
         { "latin": "botón", "japanese": "ボタン" }
+    ],
+    
+
+    "lesson17": [
+        { "latin": "memorizar", "japanese": "おぼえます" },
+        { "latin": "olvidar", "japanese": "わすれます" },
+        { "latin": "perder", "japanese": "なくします" },
+        { "latin": "pagar", "japanese": "はらいます" },
+        { "latin": "devolver", "japanese": "かえします" },
+        { "latin": ["salir", "ir", "venir", "volver"], "japanese": "「へ」でかけます" },
+        { "latin": "quitarse", "japanese": "ぬぎます" },
+        { "latin": "llevar", "japanese": "もっていきます" },
+        { "latin": "traer", "japanese": "もってきます" },
+        { "latin": "preocuparse", "japanese": "しんぱいします" },
+        { "latin": "trabajar horas extra", "japanese": "ざんぎょうします" },
+        { "latin": "ir de viaje de trabajo", "japanese": "しゅっちょうします" },
+        { "latin": "tomar", "japanese": "「くすりを」のみます" },
+        { "latin": ["tomar un baño", "bañarse"], "japanese": "「おふろに」はいります" },
+        { "latin": "importante", "japanese": "たいせつ「な」" },
+        { "latin": "estar bien", "japanese": "だいじょうぶ「な」" },
+        { "latin": "peligroso", "japanese": "あぶない" },
+        { "latin": "prohibido fumar", "japanese": "きんえん" },
+        { "latin": "tarjeta del seguro de salud", "japanese": "けんこうほけんしょう" },
+        { "latin": "fiebre", "japanese": "ねつ" },
+        { "latin": "enfermedad grave", "japanese": "びょうき" },
+        { "latin": ["medicina", "medicamento", "pastillas"], "japanese": "くすり" },
+        { "latin": ["chaqueta", "abrigo"], "japanese": "うわぎ" },
+        { "latin": "ropa interior", "japanese": "したぎ" },
+        { "latin": "unos días", "japanese": "２，３にち" },
+        { "latin": "unos", "japanese": "２，３～" },
+        { "latin": "antes de", "japanese": "～までに" },
+        { "latin": ["por eso", "entonces"], "japanese": "ですから" },
+        { "latin": "procupación", "japanese": "しんぱい" },
+        { "latin": "horas extra", "japanese": "ざんぎょう" },
+        { "latin": "seguro", "japanese": "ほけん" },
+        { "latin": "tarjeta", "japanese": "しょう" }
     ]
 }
