@@ -804,7 +804,7 @@ const lessons_json = {
         { "latin": "preocuparse", "japanese": "しんぱいします" },
         { "latin": "trabajar horas extra", "japanese": "ざんぎょうします" },
         { "latin": "ir de viaje de trabajo", "japanese": "しゅっちょうします" },
-        { "latin": "tomar", "japanese": "「くすりを」のみます" },
+        { "latin": ["tomar medicinas", "medicarse"], "japanese": "「くすりを」のみます" },
         { "latin": ["tomar un baño", "bañarse"], "japanese": "「おふろに」はいります" },
         { "latin": "importante", "japanese": "たいせつ「な」" },
         { "latin": "estar bien", "japanese": "だいじょうぶ「な」" },
@@ -820,7 +820,7 @@ const lessons_json = {
         { "latin": "unos", "japanese": "２，３～" },
         { "latin": "antes de", "japanese": "～までに" },
         { "latin": ["por eso", "entonces"], "japanese": "ですから" },
-        { "latin": "procupación", "japanese": "しんぱい" },
+        { "latin": "preocupación", "japanese": "しんぱい" },
         { "latin": "horas extra", "japanese": "ざんぎょう" },
         { "latin": "seguro", "japanese": "ほけん" },
         { "latin": "tarjeta", "japanese": "しょう" }
