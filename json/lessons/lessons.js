@@ -621,6 +621,7 @@ const lessons_json = {
         { "latin": ["el más", "el primero"], "japanese": "いちばん" },
         { "latin": ["mucho más", "continuamente", "sin parar"], "japanese": "ずっと" },
         { "latin": "por primera vez", "japanese": "はじめて" },
+
         { "latin": "aburrido", "japanese": "つまらない" },
         { "latin": "normal", "japanese": "ふつう「な」" },
         { "latin": "espinacas", "japanese": "ほうれんそう" },
@@ -645,7 +646,7 @@ const lessons_json = {
         { "latin": "elecciones", "japanese": "せんきょ" },
         { "latin": "recomendar", "japanese": "おすすめ「な」" },
         { "latin": ["mejórate", "espero que te mejores"], "japanese": "おだいじに" },
-        { "latin": "vacaciones", "japanese": "きゅうじつ" },
+        { "latin": "vacaciones", "japanese": "きゅうじつ" }
     ],
 
 
