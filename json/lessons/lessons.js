@@ -575,23 +575,78 @@ const lessons_json = {
     ],
 
 
-
-
-
-
-
-
-
-
-    "lesson12": [],
-
-
-
-
-
-
-
-
+    "lesson12": [
+        { "latin": ["fácil", "sencillo"], "japanese": "かんたん「な」" },
+        { "latin": "cercano", "japanese": "ちかい" },
+        { "latin": ["distante", "lejano"], "japanese": "とおい" },
+        { "latin": ["rápido", "temprano"], "japanese": "はやい" },
+        { "latin": ["tarde", "lento", "despacio"], "japanese": "おそい" },
+        { "latin": ["mucha", "muchos", "mucho"], "japanese": "「ひとが」おおい" },
+        { "latin": ["poca", "un poco", "escaso"], "japanese": "「ひとが」すくない" },
+        { "latin": ["cálido", "templado"], "japanese": "あたたかい" },
+        { "latin": "fresco", "japanese": "すずしい" },
+        { "latin": "dulce", "japanese": "あまい" },
+        { "latin": "picante", "japanese": "からい" },
+        { "latin": "pesado", "japanese": "おもい" },
+        { "latin": "ligero", "japanese": "かるい" },
+        { "latin": "preferir", "japanese": "「コーヒーが」いい" },
+        { "latin": ["estación", "temporada"], "japanese": "きせつ" },
+        { "latin": "primavera", "japanese": "はる" },
+        { "latin": "verano", "japanese": "なつ" },
+        { "latin": "otoño", "japanese": "あき" },
+        { "latin": "invierno", "japanese": "ふゆ" },
+        { "latin": ["tiempo", "clima"], "japanese": "てんき" },
+        { "latin": "lluvia", "japanese": "あめ" },
+        { "latin": "nieve", "japanese": "ゆき" },
+        { "latin": "nublado", "japanese": "くもり" },
+        { "latin": "soleado", "japanese": "はれ" },
+        { "latin": "hotel", "japanese": "ホテル" },
+        { "latin": "aeropuerto", "japanese": "くうごう" },
+        { "latin": ["mar", "océano"], "japanese": "うみ" },
+        { "latin": "mundo", "japanese": "せかい" },
+        { "latin": "fiesta", "japanese": "パーティー" },
+        { "latin": ["festival", "feria"], "japanese": "「お」まつり" },
+        { "latin": "estofado de ternera y verduras", "japanese": "すきやき" },
+        { "latin": "sashimi", "japanese": "さしみ" },
+        { "latin": "sushi", "japanese": "「お」すし" },
+        { "latin": "tempura", "japanese": "てんぷら" },
+        { "latin": "carne de cerdo", "japanese": "ぶたにく" },
+        { "latin": "carne de pollo", "japanese": "とりにく" },
+        { "latin": "carne de vaca", "japanese": "ぎゅうにく" },
+        { "latin": "limón", "japanese": "レモン" },
+        { "latin": "arreglo floral", "japanese": "いけばな" },
+        { "latin": ["arce", "hojas coloradas de otoño"], "japanese": "もみじ" },
+        { "latin": "cúal", "japanese": "どちら" },
+        { "latin": "ambos", "japanese": "どちらも" },
+        { "latin": ["el más", "el primero"], "japanese": "いちばん" },
+        { "latin": ["mucho más", "continuamente", "sin parar"], "japanese": "ずっと" },
+        { "latin": "por primera vez", "japanese": "はじめて" },
+        { "latin": "aburrido", "japanese": "つまらない" },
+        { "latin": "normal", "japanese": "ふつう「な」" },
+        { "latin": "espinacas", "japanese": "ほうれんそう" },
+        { "latin": "huevo frito", "japanese": "めだまやき" },
+        { "latin": "cuando tenía", "japanese": "～のとき" },
+        { "latin": ["buen tiempo", "buen clima"], "japanese": "いいてんき" },
+        { "latin": "más", "japanese": "より" },
+        { "latin": "más", "japanese": "ほう" },
+        { "latin": "igual", "japanese": "おなじ" },
+        { "latin": "meterse", "japanese": "いれます" },
+        { "latin": "vivir solo", "japanese": "ひとりぐらし" },
+        { "latin": "patinete eléctrico", "japanese": "スクーター" },
+        { "latin": "salmón crudo", "japanese": "サーモン" },
+        { "latin": "salmón cocinado", "japanese": "さけ" },
+        { "latin": "atún", "japanese": "まぐる" },
+        { "latin": "atún enlatado", "japanese": "ツナ" },
+        { "latin": "cansado", "japanese": "つかれ" },
+        { "latin": "encuesta", "japanese": "アンケート" },
+        { "latin": "hacer encuesta", "japanese": "アンケートします" },
+        { "latin": "primos", "japanese": "いとこ" },
+        { "latin": "votar", "japanese": "とうびょうします" },
+        { "latin": "elecciones", "japanese": "せんきょ" },
+        { "latin": "recomendar", "japanese": "おすすめ「な」" },
+        { "latin": ["mejórate", "espero que te mejores"], "japanese": "おだいじに" },
+        { "latin": "vacaciones", "japanese": "きゅうじつ" },
+    ],
 
 
     "lesson13": [
