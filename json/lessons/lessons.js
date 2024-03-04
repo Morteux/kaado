@@ -998,5 +998,42 @@ const lessons_json = {
         { "latin": "guía", "japanese": "ガイド" },
         { "latin": "elegante", "japanese": "エレガント" },
         { "latin": ["dejar de funcionar", "estropearse"], "japanese": "こしょうします" }
+    ],
+    
+
+
+    "lesson20": [
+        { "latin": ["necesitar", "requerir"], "japanese": "「ビザが」いります" },
+        { "latin": ["buscar", "averiguar", "investigar"], "japanese": "しらべます" },
+        { "latin": "reparar", "japanese": "しゅうりします" },
+        { "latin": "yo", "japanese": "ぼく" },
+        { "latin": "tú", "japanese": "きみ" },
+        { "latin": "señor", "japanese": "～くん" },
+        { "latin": "sí", "japanese": "うん" },
+        { "latin": "no", "japanese": "ううん" },
+        { "latin": ["palabra", "lenguaje", "idioma"], "japanese": "ことば" },
+        { "latin": "kimono", "japanese": "きもの" },
+        { "latin": ["visa", "visado"], "japanese": "ビザ" },
+        { "latin": ["comienzo", "principio"], "japanese": "はじめ" },
+        { "latin": "fin", "japanese": "おわり" },
+        { "latin": ["por aquí", "aquí"], "japanese": "こっち" },
+        { "latin": ["por ahí", "ahí"], "japanese": "そっち" },
+        { "latin": ["por allí", "allí"], "japanese": "あっち" },
+        { "latin": ["cuál", "dónde", "por dónde"], "japanese": "どっち" },
+        { "latin": "todos juntos", "japanese": "みんなで" },
+        { "latin": "pero", "japanese": "～けど" },
+        { "latin": ["estoy satisfecho", "estoy lleno"], "japanese": "おなかがいっぱいです" },
+
+        { "latin": "lo siento pero me voy primero", "japanese": "おさきにしつれいします" },
+        { "latin": "ayuntamiento", "japanese": "しやくしょ" },
+        { "latin": "cómo", "japanese": "どう" },
+        { "latin": "cómo fue", "japanese": "どうだった" },
+        { "latin": ["vamos a", "hagámoslo"], "japanese": "そうします" },
+        { "latin": "ida y vuelta", "japanese": "おうふく" },
+        { "latin": "?", "japanese": "はてな" },
+        { "latin": "!", "japanese": "ビックリマーク" },
+        { "latin": "si no te importa", "japanese": "よかったら" },
+        { "latin": "más o menos cuando", "japanese": "いつごろ" },
+        { "latin": "creo que no", "japanese": "ないかも" },
     ]
 }
