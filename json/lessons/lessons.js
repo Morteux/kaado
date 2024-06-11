@@ -1218,8 +1218,8 @@ const lessons_json = {
         { "latin": "alquiler", "japanese": "やちん" },
         { "latin": "croissant", "japanese": "クㇿクッサン" }
     ],
-    // { "latin": "", "japanese": "" },
-    // { "latin": ["", ""], "japanese": "" },
+
+
 
     "lesson25": [
         { "latin": ["pensar", "considerar"], "japanese": "かんがえます" },
