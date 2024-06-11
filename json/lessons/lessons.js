@@ -881,8 +881,6 @@ const lessons_json = {
         { "latin": "seguro", "japanese": "ほけん" },
         { "latin": "tarjeta", "japanese": "しょう" },
 
-
-
         { "latin": "bañera", "japanese": "おふろ" },
         { "latin": "platos", "japanese": "おさら" },
         { "latin": "país extranjero", "japanese": "かいがい" },
@@ -918,8 +916,6 @@ const lessons_json = {
         { "latin": "animal", "japanese": "どうぶつ" },
         { "latin": "caballo", "japanese": "うま" },
         { "latin": "internet", "japanese": "インターネット" },
-
-
 
         { "latin": ["por supuesto", "claro"], "japanese": "ぜひ" },
         { "latin": "estar feliz", "japanese": "うれしい" },
@@ -989,8 +985,6 @@ const lessons_json = {
         { "latin": ["gracias a usted", "gracias a Dios"], "japanese": "おかげさまで" },
         { "latin": ["pero", "sin embargo"], "japanese": ["でも", "けど"] },
 
-
-
         { "latin": "lavadora", "japanese": "せんたくき" },
         { "latin": "olor", "japanese": "におい" },
         { "latin": "marear", "japanese": "よいます" },
@@ -1034,7 +1028,7 @@ const lessons_json = {
         { "latin": "!", "japanese": "ビックリマーク" },
         { "latin": "si no te importa", "japanese": "よかったら" },
         { "latin": "más o menos cuando", "japanese": "いつごろ" },
-        { "latin": "creo que no", "japanese": "ないかも" },
+        { "latin": "creo que no", "japanese": "ないかも" }
     ],
 
 
@@ -1096,6 +1090,8 @@ const lessons_json = {
         { "latin": "tiempo", "japanese": "きかん" }
     ],
 
+
+
     "lesson22": [
         { "latin": "ponerse camisa", "japanese": "「ふくを」きます" },
         { "latin": ["ponerse zapatos", "ponerse pantalones"], "japanese": "「くつを」はきます" },
@@ -1140,12 +1136,10 @@ const lessons_json = {
         { "latin": "buscar", "japanese": "さがします" },
         { "latin": "garaje", "japanese": "ちゅうしゃじょう" },
         { "latin": "trastero", "japanese": "ものおき" },
-        { "latin": "polen", "japanese": "かふん" },
+        { "latin": "polen", "japanese": "かふん" }
     ],
 
 
-    // { "latin": "", "japanese": "" },
-    // { "latin": ["", ""], "japanese": "" },
 
     "lesson23": [
         { "latin": "preguntar", "japanese": "ききます" },
@@ -1178,5 +1172,71 @@ const lessons_json = {
         { "latin": ["ir sin permiso de los padres", "fugarse"], "japanese": "かけおち「します」" },
         { "latin": "buscar", "japanese": "さがします" },
         { "latin": "político", "japanese": "せいじか" },
+        { "latin": "pintar", "japanese": "ぬります" },
+        { "latin": "cajones", "japanese": "ひきだし" },
+        { "latin": "cantidad", "japanese": "りょう" },
+        { "latin": "mucho", "japanese": "おおい" },
+        { "latin": "engordar", "japanese": "ふとります" },
+        { "latin": "feliz", "japanese": "しあわせ「な」" },
+        { "latin": "electrodoméstico", "japanese": "かでん" },
+        { "latin": "globo", "japanese": "ふうせん" },
+        { "latin": "museo", "japanese": "はくぶつかん" },
+        { "latin": "ambos", "japanese": "りょうほう" }
+    ],
+
+
+
+    "lesson24": [
+        { "latin": "darme", "japanese": "くれます" },
+        { "latin": ["reparar", "arreglar", "corregir"], "japanese": "なおします" },
+        { "latin": "llevar", "japanese": "つれていきます" },
+        { "latin": "traer", "japanese": "つれてきます" },
+        { "latin": ["acompañar", "llevar"], "japanese": "おくります" },
+        { "latin": "presentar", "japanese": "しょうかいします" },
+        { "latin": ["guiar por", "indicar el camino"], "japanese": "あんないします" },
+        { "latin": "explicar", "japanese": "せつめいします" },
+        { "latin": ["abuelo", "anciano"], "japanese": ["おじいさん", "おじいちゃん"] },
+        { "latin": ["abuela", "anciana"], "japanese": ["おばあさん", "おばあちゃん"] },
+        { "latin": "preparación", "japanese": "じゅんび" },
+        { "latin": "mudanza", "japanese": "ひっこし" },
+        { "latin": ["dulce", "golosina"], "japanese": "「お」かし" },
+        { "latin": "hospedaje en casa de una familia", "japanese": "ホームステイ" },
+        { "latin": "todo", "japanese": ["ぜんぶ", "すべて"] },
+        { "latin": ["por uno mismo", "por sí mismo"], "japanese": "じぶんで" },
+
+        { "latin": "presentación", "japanese": "しょうかい" },
+        { "latin": "ramo de flores", "japanese": "はなたば" },
+        { "latin": "anillo", "japanese": "ゆびわ" },
+        { "latin": "dedo", "japanese": "ゆび" },
+        { "latin": "otro", "japanese": "ほか" },
+        { "latin": "otro lugar", "japanese": "ほかのところ" },
+        { "latin": "otro día", "japanese": "ほかのひ" },
+        { "latin": "separado", "japanese": "べつべつに" },
+        { "latin": "quedarse en habitaciones separadas", "japanese": "べつべつにとまります" },
+        { "latin": "primer sueldo", "japanese": "しょにんきゅう" },
+        { "latin": "muebles", "japanese": "かぐ" },
+        { "latin": "alquiler", "japanese": "やちん" },
+        { "latin": "croissant", "japanese": "クㇿクッサン" }
+    ],
+    // { "latin": "", "japanese": "" },
+    // { "latin": ["", ""], "japanese": "" },
+
+    "lesson25": [
+        { "latin": ["pensar", "considerar"], "japanese": "かんがえます" },
+        { "latin": "llegar", "japanese": "つきます" },
+        { "latin": "envejecer", "japanese": "としをとります" },
+        { "latin": "ser suficiente", "japanese": "たります" },
+        { "latin": ["zona rural", "pueblo natal"], "japanese": "いなか" },
+        { "latin": "oportunidad", "japanese": "チャンス" },
+        { "latin": "cien millones", "japanese": "おく" },
+        { "latin": "si", "japanese": "もし" },
+        { "latin": ["significado", "sentido"], "japanese": "いみ" },
+
+        { "latin": "nuevo", "japanese": "しんちゃ" },
+        { "latin": ["segunda mano", "seminuevo"], "japanese": "ちゅうこしゃ" },
+        { "latin": "protector solar", "japanese": "ひやけどぬ" },
+        { "latin": "almohada", "japanese": "まくら" },
+        { "latin": "enfadarse", "japanese": "むかつきます" },
+        { "latin": "pasar tiempo", "japanese": "たちます" }
     ]
 }
