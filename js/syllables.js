@@ -73,20 +73,20 @@ function changeKatakanaExtra() {
 function calculateWordsArray() {
     let words = [];
 
-    if( hiragana ) { words = words.concat(dictionary.hiragana); }
-    if( hiragana_tenten ) { words = words.concat(dictionary.hiragana_tenten); }
-    if( hiragana_maru ) { words = words.concat(dictionary.hiragana_maru); }
-    if( hiragana_diptongo ) { words = words.concat(dictionary.hiragana_diptongo); }
-    if( hiragana_diptongo_tenten ) { words = words.concat(dictionary.hiragana_diptongo_tenten); }
-    if( hiragana_diptongo_maru ) { words = words.concat(dictionary.hiragana_diptongo_maru); }
+    if (hiragana) { words = words.concat(dictionary.hiragana); }
+    if (hiragana_tenten) { words = words.concat(dictionary.hiragana_tenten); }
+    if (hiragana_maru) { words = words.concat(dictionary.hiragana_maru); }
+    if (hiragana_diptongo) { words = words.concat(dictionary.hiragana_diptongo); }
+    if (hiragana_diptongo_tenten) { words = words.concat(dictionary.hiragana_diptongo_tenten); }
+    if (hiragana_diptongo_maru) { words = words.concat(dictionary.hiragana_diptongo_maru); }
 
-    if( katakana ) { words = words.concat(dictionary.katakana); }
-    if( katakana_tenten ) { words = words.concat(dictionary.katakana_tenten); }
-    if( katakana_maru ) { words = words.concat(dictionary.katakana_maru); }
-    if( katakana_diptongo ) { words = words.concat(dictionary.katakana_diptongo); }
-    if( katakana_diptongo_tenten ) { words = words.concat(dictionary.katakana_diptongo_tenten); }
-    if( katakana_diptongo_maru ) { words = words.concat(dictionary.katakana_diptongo_maru); }
-    if( katakana_extra ) { words = words.concat(dictionary.katakana_extra); }
+    if (katakana) { words = words.concat(dictionary.katakana); }
+    if (katakana_tenten) { words = words.concat(dictionary.katakana_tenten); }
+    if (katakana_maru) { words = words.concat(dictionary.katakana_maru); }
+    if (katakana_diptongo) { words = words.concat(dictionary.katakana_diptongo); }
+    if (katakana_diptongo_tenten) { words = words.concat(dictionary.katakana_diptongo_tenten); }
+    if (katakana_diptongo_maru) { words = words.concat(dictionary.katakana_diptongo_maru); }
+    if (katakana_extra) { words = words.concat(dictionary.katakana_extra); }
 
     return words;
 }
@@ -99,110 +99,13 @@ function calculateWordsArray() {
 
 
 
-var shuffled = [];
-var actualIndex = 0;
-var correctCount = 0;
-var incorrectCount = 0;
-var incorrectIndexes = [];
-const rowsPerColumn = 15;
 
-function startSyllables() {
 
-    document.getElementById("main").innerHTML = `
-    <div id="cards" class="cards">
-        <div class="element_container">
-            <p id="char_element" class="char_element"></p>
-            <div id="img_element" class="img_element"></div>
-        </div>
-        <div class="input_container">
-            <tag>Latin syllable:</tag>
-            <input id="latin_input" type="text"></input>
-        </div>
-        <div id="correct_answer_container" class="input_container">
-            <span>Correct answer: </span><span id="correct_answer"></span>
-        </div>
-        <div class="button_container">
-            <button id="next_button" onclick="next()">Next</button>
-        </div>
-    </div>`;
 
-    document.getElementById("latin_input").addEventListener("keypress", function (event) {
-        if (event.key === "Enter") {
-            event.preventDefault();
-            document.getElementById("next_button").click();
-        }
-    });
-
-    actualIndex = 0;
-    correctCount = 0;
-    incorrectCount = 0;
-    incorrectIndexes = [];
-
-    shuffled = calculateWordsArray().sort((a, b) => 0.5 - Math.random());
-    document.getElementById("char_element").innerHTML = shuffled[actualIndex].kana;
-}
-
-function next() {
-    let input = document.getElementById("latin_input").value;
-
-    if (input.toUpperCase().trim() == shuffled[actualIndex].latin.toUpperCase()) {
-        ++correctCount;
-        $('#img_element').css("background-image", "url('images/correct.png')").fadeIn(0).fadeOut();
-        document.getElementById("latin_input").value = "";
-        document.getElementById("correct_answer").innerHTML = "";
-        document.getElementById("correct_answer_container").style.display = "none";
-    } else {
-        ++incorrectCount;
-        $('#img_element').css("background-image", "url('images/incorrect.png')").fadeIn(0).fadeOut();
-        incorrectIndexes.push(actualIndex);
-        document.getElementById("latin_input").value = "";
-        document.getElementById("correct_answer_container").style.display = "";
-        document.getElementById("correct_answer").innerHTML = shuffled[actualIndex].latin; // Show correct answer
-    }
-
-    if (++actualIndex < shuffled.length) {
-        document.getElementById("char_element").innerHTML = shuffled[actualIndex].kana;
-    } else {
-        startEnd();
-    }
-}
-
-function startEnd() {
-    document.getElementById("main").innerHTML = `
-    <div class="results_container">
-        <div><img src="images/correct.png" alt="Correct icon" width="50" height="50"> <p id="correctCounter">0</p></div>
-        <div><img src="images/incorrect.png" alt="Incorrect icon" width="50" height="50"> <p id="incorrectCounter">0</p></div>
-        <button id="restart" onclick="restart()">Restart</button>
-    </div>
-    <table id="answers_table" class="answers_table">
-        <caption>Incorrect answers</caption>
-    </table>`;
-
-    document.getElementById("correctCounter").innerHTML = correctCount;
-    document.getElementById("incorrectCounter").innerHTML = incorrectCount;
-
-    if(incorrectCount != 0) {
-        let table = "";
-        table += "<tbody>";
-        for(let i = 0; i < incorrectIndexes.length; i += Math.ceil(incorrectIndexes.length / rowsPerColumn)) {
-            table += "<tr>";
-            for(let j = i; j < i + Math.ceil(incorrectIndexes.length / rowsPerColumn); ++j) {
-                if(j < incorrectIndexes.length)
-                    table += "<td>" + shuffled[incorrectIndexes[j]].latin + " : " + shuffled[incorrectIndexes[j]].kana + "</td>";
-            }
-            table += "</tr>";
-        }
-        table += "</tbody>";
-
-        document.getElementById("answers_table").innerHTML += table;
-    } else {
-        document.getElementById("answers_table").getElementsByTagName("caption")[0].innerHTML = "PERFECT!";
-    }
-}
 
 function restart() {
     document.getElementById("main").innerHTML = `
-    <button class="start_button" onclick="startSyllables()">Start syllables test</button>
+    <button class="start_button" onclick="startTest()">Start test</button>
     <div class="checkboxes_container">
         <div>
             <input type="checkbox" id="hiragana" name="hiragana" ` + (hiragana ? `checked` : `false`) + ` onchange="changeHiragana()">

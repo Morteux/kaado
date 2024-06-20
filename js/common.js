@@ -1,52 +1,51 @@
-const CHECKS_LENGTH = Object.keys(dictionary).length;
+const MAX_ROWS_PER_COLUMN = 15;
 
-
-document.addEventListener("DOMContentLoaded", (event) => {
-
-    for (let i = 0; i < CHECKS_LENGTH; ++i) {
-        category_checks.push(false);
-    }
-
-    category_checks[0] = true;
-
-    restart();
-});
-
-function changeKanjiLesson(lesson_index) {
-    category_checks[lesson_index - 1] = !category_checks[lesson_index - 1];
-}
-
-function calculateWordsArray() {
-    let words = [];
-
-    for (let index = 0; index < category_checks.length; ++index) {
-        if (category_checks[index]) { words = words.concat(dictionary["kanji_lesson_" + (index + 1)]); }
-    }
-
-    return words;
-}
-
-function startSyllables() {
-
-    document.getElementById("main").innerHTML = `
+const CARD_HTML =`
     <div id="cards" class="cards">
+
         <div class="element_container">
             <p id="char_element" class="char_element"></p>
             <div id="img_element" class="img_element"></div>
         </div>
+
         <div class="input_container">
-            <tag id="yomi_tag"></tag>
-            <input id="kana_input" type="text"></input>
+            <tag>Latin syllable:</tag>
+            <input id="latin_input" type="text"></input>
         </div>
+
         <div id="correct_answer_container" class="input_container">
             <span>Correct answer: </span><span id="correct_answer"></span>
         </div>
+
         <div class="button_container">
             <button id="next_button" onclick="next()">Next</button>
         </div>
+
     </div>`;
 
-    document.getElementById("kana_input").addEventListener("keypress", function (event) {
+
+var shuffled = [];
+var actualIndex = 0;
+var correctCount = 0;
+var incorrectCount = 0;
+var incorrectIndexes = [];
+
+var category_checks = [];
+
+function startTest() {
+    // Reset all variables
+    shuffled = [];
+    actualIndex = 0;
+    correctCount = 0;
+    incorrectCount = 0;
+    incorrectIndexes = [];
+    
+    category_checks = []; // ???????????
+
+    // Print initial card template
+    document.getElementById("main").innerHTML = CARD_HTML;
+
+    document.getElementById("latin_input").addEventListener("keypress", function (event) {
         if (event.key === "Enter") {
             event.preventDefault();
             document.getElementById("next_button").click();
@@ -59,42 +58,46 @@ function startSyllables() {
     incorrectIndexes = [];
 
     shuffled = calculateWordsArray().sort((a, b) => 0.5 - Math.random());
-    document.getElementById("char_element").innerHTML = shuffled[actualIndex].kanji;
-    document.getElementById("yomi_tag").innerHTML = shuffled[actualIndex].yomi + ": ";
+    document.getElementById("char_element").innerHTML = shuffled[actualIndex].kana;
 }
 
 function next() {
-    let input = document.getElementById("kana_input").value;
+    let input = document.getElementById("latin_input").value;
 
-    if (!Array.isArray(shuffled[actualIndex].kana) && input.toUpperCase().trim() == shuffled[actualIndex].kana.toUpperCase()) {
+    // Check for single string
+    if (!Array.isArray(shuffled[actualIndex].latin) && input.toUpperCase().trim() == shuffled[actualIndex].latin.toUpperCase()) {
         ++correctCount;
         $('#img_element').css("background-image", "url('images/correct.png')").fadeIn(0).fadeOut();
-        document.getElementById("kana_input").value = "";
+        document.getElementById("latin_input").value = "";
         document.getElementById("correct_answer").innerHTML = "";
         document.getElementById("correct_answer_container").style.display = "none";
-    } else if (Array.isArray(shuffled[actualIndex].kana) && shuffled[actualIndex].kana.some(e => e.toUpperCase() === input.toUpperCase().trim())) {
+    } 
+
+    // Check for array of strings
+    else if (Array.isArray(shuffled[actualIndex].latin) && shuffled[actualIndex].latin.some(e => e.toUpperCase() === input.toUpperCase().trim())) {
         ++correctCount;
         $('#img_element').css("background-image", "url('images/correct.png')").fadeIn(0).fadeOut();
-        document.getElementById("kana_input").value = "";
+        document.getElementById("latin_input").value = "";
         document.getElementById("correct_answer").innerHTML = "";
         document.getElementById("correct_answer_container").style.display = "none";
-    } else {
+    }
+    // If not, it is incorrect
+    else {
         ++incorrectCount;
         $('#img_element').css("background-image", "url('images/incorrect.png')").fadeIn(0).fadeOut();
         incorrectIndexes.push(actualIndex);
-        document.getElementById("kana_input").value = "";
+        document.getElementById("latin_input").value = "";
         document.getElementById("correct_answer_container").style.display = "";
-        document.getElementById("correct_answer").innerHTML = shuffled[actualIndex].kana; // Show correct answer
+        document.getElementById("correct_answer").innerHTML = shuffled[actualIndex].latin; // Show correct answer
     }
 
     if (++actualIndex < shuffled.length) {
-        document.getElementById("char_element").innerHTML = shuffled[actualIndex].kanji;
-        
-        document.getElementById("yomi_tag").innerHTML = shuffled[actualIndex].yomi + ": ";
+        document.getElementById("char_element").innerHTML = shuffled[actualIndex].kana;
     } else {
         startEnd();
     }
 }
+
 
 function startEnd() {
     document.getElementById("main").innerHTML = `
@@ -118,7 +121,7 @@ function startEnd() {
             table += "<tr>";
             for (let j = i; j < i + Math.ceil(incorrectIndexes.length / MAX_ROWS_PER_COLUMN); ++j) {
                 if (j < incorrectIndexes.length)
-                    table += "<td>" + shuffled[incorrectIndexes[j]].kana + " : " + shuffled[incorrectIndexes[j]].kanji + "</td>";
+                    table += "<td>" + shuffled[incorrectIndexes[j]].latin + " : " + shuffled[incorrectIndexes[j]].kana + "</td>";
             }
             table += "</tr>";
         }
@@ -128,22 +131,4 @@ function startEnd() {
     } else {
         document.getElementById("answers_table").getElementsByTagName("caption")[0].innerHTML = "PERFECT!";
     }
-}
-
-function restart() {
-
-    let text = `
-    <button class="start_button" onclick="startSyllables()">Start test</button>
-    <div class="checkboxes_container">`;
-
-    for (let i = 1; i <= CHECKS_LENGTH; ++i) {
-        text += `<div>
-                    <input type="checkbox" id="kanji_lesson_` + i + `" name="kanji_lesson_` + i + `" ` + (category_checks[i - 1] ? `checked` : `false`) + ` onchange="changeKanjiLesson(` + i + `)">
-                    <label for="kanji_lesson_` + i + `">Kanji Lesson ` + i + `</label><br>
-                </div>`;
-    }
-
-    text += `</div>`;
-
-    document.getElementById("main").innerHTML = text;
 }
