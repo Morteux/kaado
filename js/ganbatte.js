@@ -57,17 +57,17 @@ function changeVerbos() {
 function calculateWordsArray() {
     let words = [];
 
-    if (comidas) { words = words.concat(dictionary.comidas); }
-    if (bebidas) { words = words.concat(dictionary.bebidas); }
-    if (semana) { words = words.concat(dictionary.semana); }
-    if (adverbiosTemporales) { words = words.concat(dictionary.adverbiosTemporales); }
-    if (paises) { words = words.concat(dictionary.paises); }
-    if (profesiones) { words = words.concat(dictionary.profesiones); }
-    if (personas) { words = words.concat(dictionary.personas); }
-    if (cosas) { words = words.concat(dictionary.cosas); }
-    if (lugares) { words = words.concat(dictionary.lugares); }
-    if (vehiculos) { words = words.concat(dictionary.vehiculos); }
-    if (verbos) { words = words.concat(dictionary.verbos); }
+    if (comidas) { words = words.concat(ganbatte_json.comidas); }
+    if (bebidas) { words = words.concat(ganbatte_json.bebidas); }
+    if (semana) { words = words.concat(ganbatte_json.semana); }
+    if (adverbiosTemporales) { words = words.concat(ganbatte_json.adverbiosTemporales); }
+    if (paises) { words = words.concat(ganbatte_json.paises); }
+    if (profesiones) { words = words.concat(ganbatte_json.profesiones); }
+    if (personas) { words = words.concat(ganbatte_json.personas); }
+    if (cosas) { words = words.concat(ganbatte_json.cosas); }
+    if (lugares) { words = words.concat(ganbatte_json.lugares); }
+    if (vehiculos) { words = words.concat(ganbatte_json.vehiculos); }
+    if (verbos) { words = words.concat(ganbatte_json.verbos); }
 
     return words;
 }

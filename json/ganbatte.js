@@ -1,4 +1,4 @@
-const dictionary = {
+const ganbatte_json = {
     "comidas": [
         { "latin": "comidas", "kana": "たべもの" },
         { "latin": ["arroz", "comida"], "kana": "ごはん" },
