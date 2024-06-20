@@ -115,8 +115,12 @@ function startSyllables() {
             <div id="img_element" class="img_element"></div>
         </div>
         <div class="input_container">
-            <tag>Roman syllable:</tag>
-            <input id="latin_input" type="text"></input></div>
+            <tag>Latin syllable:</tag>
+            <input id="latin_input" type="text"></input>
+        </div>
+        <div id="correct_answer_container" class="input_container">
+            <span>Correct answer: </span><span id="correct_answer"></span>
+        </div>
         <div class="button_container">
             <button id="next_button" onclick="next()">Next</button>
         </div>
@@ -135,7 +139,7 @@ function startSyllables() {
     incorrectIndexes = [];
 
     shuffled = calculateWordsArray().sort((a, b) => 0.5 - Math.random());
-    document.getElementById("char_element").innerHTML = shuffled[actualIndex].japanese;
+    document.getElementById("char_element").innerHTML = shuffled[actualIndex].kana;
 }
 
 function next() {
@@ -145,17 +149,19 @@ function next() {
         ++correctCount;
         $('#img_element').css("background-image", "url('images/correct.png')").fadeIn(0).fadeOut();
         document.getElementById("latin_input").value = "";
-        document.getElementById("latin_input").placeholder = "";
+        document.getElementById("correct_answer").innerHTML = "";
+        document.getElementById("correct_answer_container").style.display = "none";
     } else {
         ++incorrectCount;
         $('#img_element').css("background-image", "url('images/incorrect.png')").fadeIn(0).fadeOut();
         incorrectIndexes.push(actualIndex);
         document.getElementById("latin_input").value = "";
-        document.getElementById("latin_input").placeholder = shuffled[actualIndex].latin; // Show correct answer
+        document.getElementById("correct_answer_container").style.display = "";
+        document.getElementById("correct_answer").innerHTML = shuffled[actualIndex].latin; // Show correct answer
     }
 
     if (++actualIndex < shuffled.length) {
-        document.getElementById("char_element").innerHTML = shuffled[actualIndex].japanese;
+        document.getElementById("char_element").innerHTML = shuffled[actualIndex].kana;
     } else {
         startEnd();
     }
@@ -182,7 +188,7 @@ function startEnd() {
             table += "<tr>";
             for(let j = i; j < i + Math.ceil(incorrectIndexes.length / rowsPerColumn); ++j) {
                 if(j < incorrectIndexes.length)
-                    table += "<td>" + shuffled[incorrectIndexes[j]].latin + " : " + shuffled[incorrectIndexes[j]].japanese + "</td>";
+                    table += "<td>" + shuffled[incorrectIndexes[j]].latin + " : " + shuffled[incorrectIndexes[j]].kana + "</td>";
             }
             table += "</tr>";
         }

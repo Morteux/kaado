@@ -1,24 +1,24 @@
 const kaguya = {
     "1": [
-        { "japanese": "" },
+        { "kana": "" },
         { "romaji": "" },
         { "latin": "" }
     ],
 
     "2": [
-        { "japanese": "" },
+        { "kana": "" },
         { "romaji": "" },
         { "latin": "" }
     ],
 
     "3": [
-        { "japanese": "" },
+        { "kana": "" },
         { "romaji": "" },
         { "latin": "" }
     ],
 
     "4": [
-        { "japanese": "" },
+        { "kana": "" },
         { "romaji": "" },
         { "latin": "" }
     ]

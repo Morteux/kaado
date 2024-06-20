@@ -44,7 +44,11 @@ function startSyllables() {
         </div>
         <div class="input_container">
             <tag id="yomi_tag"></tag>
-            <input id="kana_input" type="text"></input></div>
+            <input id="kana_input" type="text"></input>
+        </div>
+        <div id="correct_answer_container" class="input_container">
+            <span>Correct answer: </span><span id="correct_answer"></span>
+        </div>
         <div class="button_container">
             <button id="next_button" onclick="next()">Next</button>
         </div>
@@ -74,18 +78,21 @@ function next() {
         ++correctCount;
         $('#img_element').css("background-image", "url('images/correct.png')").fadeIn(0).fadeOut();
         document.getElementById("kana_input").value = "";
-        document.getElementById("kana_input").placeholder = "";
+        document.getElementById("correct_answer").innerHTML = "";
+        document.getElementById("correct_answer_container").style.display = "none";
     } else if (Array.isArray(shuffled[actualIndex].kana) && shuffled[actualIndex].kana.some(e => e.toUpperCase() === input.toUpperCase().trim())) {
         ++correctCount;
         $('#img_element').css("background-image", "url('images/correct.png')").fadeIn(0).fadeOut();
         document.getElementById("kana_input").value = "";
-        document.getElementById("kana_input").placeholder = "";
+        document.getElementById("correct_answer").innerHTML = "";
+        document.getElementById("correct_answer_container").style.display = "none";
     } else {
         ++incorrectCount;
         $('#img_element').css("background-image", "url('images/incorrect.png')").fadeIn(0).fadeOut();
         incorrectIndexes.push(actualIndex);
         document.getElementById("kana_input").value = "";
-        document.getElementById("kana_input").placeholder = shuffled[actualIndex].kana; // Show correct answer
+        document.getElementById("correct_answer_container").style.display = "";
+        document.getElementById("correct_answer").innerHTML = shuffled[actualIndex].kana; // Show correct answer
     }
 
     if (++actualIndex < shuffled.length) {
@@ -103,7 +110,7 @@ function startEnd() {
         <div><img src="images/correct.png" alt="Correct icon" width="50" height="50"> <p id="correctCounter">0</p></div>
         <div><img src="images/incorrect.png" alt="Incorrect icon" width="50" height="50"> <p id="incorrectCounter">0</p></div>
         <button id="restart" onclick="restart()">Restart</button>
-        <button id="return" onclick="window.location.href = '/kaado/index.html'">Return to index</button>
+        <button id="return" onclick="window.location.href = '/index.html'">Return to index</button>
     </div>
     <table id="answers_table" class="answers_table">
         <caption>Incorrect answers</caption>
