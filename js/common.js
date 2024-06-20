@@ -1,3 +1,4 @@
+// Const variables
 const MAX_ROWS_PER_COLUMN = 15;
 
 const CARD_HTML =`
@@ -13,8 +14,8 @@ const CARD_HTML =`
             <input id="latin_input" type="text"></input>
         </div>
 
-        <div id="correct_answer_container" class="input_container">
-            <span>Correct answer: </span><span id="correct_answer"></span>
+        <div id="correct_answer_container" class="input_container" style="display:none;">
+            <span>Correct answer:&nbsp;</span><span id="correct_answer"></span>
         </div>
 
         <div class="button_container">
@@ -24,13 +25,82 @@ const CARD_HTML =`
     </div>`;
 
 
+
+// Read only variables
+var CHECKS_LENGTH;
+var JSON_KEYS;
+
+
+
+// Common variables
 var shuffled = [];
 var actualIndex = 0;
 var correctCount = 0;
 var incorrectCount = 0;
 var incorrectIndexes = [];
-
 var category_checks = [];
+
+
+
+// Extra functions 
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function formatCategoryName(category_name) {
+    return capitalizeFirstLetter(category_name.replaceAll("_", " "));
+}
+
+
+
+// Common functions
+document.addEventListener("DOMContentLoaded", (event) => {
+    CHECKS_LENGTH = Object.keys(JSON_DATA).length;
+    JSON_KEYS = Object.keys(JSON_DATA);
+    
+    // Initialize category_checks
+    for (let i = 0; i < CHECKS_LENGTH; ++i) {
+        category_checks.push(false);
+    }
+
+    // Last category check by default
+    category_checks[CHECKS_LENGTH - 1] = true;
+
+    restart();
+});
+
+function changeCategory(category_index) {
+    category_checks[category_index] = !category_checks[category_index];
+}
+
+function calculateWordsArray() {
+    let words = [];
+
+    for (let index = 0; index < category_checks.length; ++index) {
+        if (category_checks[index]) { words = words.concat(JSON_DATA[JSON_KEYS[index]]); }
+    }
+    
+    return words;
+}
+
+function restart() {
+
+    let text = `
+    <button class="start_button" onclick="startTest()">Start test</button>
+    <div class="checkboxes_container">`;
+
+    for (let i = 0; i < CHECKS_LENGTH; ++i) {
+        text += `<div>
+                    <input type="checkbox" id="` + i + `" name="` + i + `" ` + (category_checks[i] ? `checked` : `false`) + ` onchange="changeCategory(` + i + `)">
+                    <label for="` + i + `">` + formatCategoryName(JSON_KEYS[i]) + `</label><br>
+                </div>`;
+    }
+
+    text += `</div>`;
+
+    document.getElementById("main").innerHTML = text;
+}
 
 function startTest() {
     // Reset all variables
@@ -39,8 +109,6 @@ function startTest() {
     correctCount = 0;
     incorrectCount = 0;
     incorrectIndexes = [];
-    
-    category_checks = []; // ???????????
 
     // Print initial card template
     document.getElementById("main").innerHTML = CARD_HTML;
@@ -97,7 +165,6 @@ function next() {
         startEnd();
     }
 }
-
 
 function startEnd() {
     document.getElementById("main").innerHTML = `

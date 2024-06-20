@@ -1,5 +1,5 @@
 const lessons_json = {
-    "lesson1": [
+    "lesson_1": [
         { "latin": "yo", "kana": "わたし" },
         { "latin": "tú, usted", "kana": "あなた" },
         { "latin": "aquella persona", "kana": ["あのひと", "あのかた"] },
@@ -35,7 +35,7 @@ const lessons_json = {
     ],
 
 
-    "lesson2": [
+    "lesson_2": [
         { "latin": ["este", "esta", "esto"], "kana": "これ" },
         { "latin": ["ese", "esa", "eso"], "kana": "それ" },
         { "latin": ["aquel", "aquella", "aquello"], "kana": "あれ" },
@@ -76,7 +76,7 @@ const lessons_json = {
     ],
 
 
-    "lesson3": [
+    "lesson_3": [
         { "latin": ["aquí", "este lugar"], "kana": "ここ" },
         { "latin": ["ahí", "ese lugar"], "kana": "そこ" },
         { "latin": ["allí", "aquel lugar"], "kana": "あそこ" },
@@ -116,7 +116,7 @@ const lessons_json = {
     ],
 
 
-    "lesson4": [
+    "lesson_4": [
         { "latin": "levantarse", "kana": "おきます" },
         { "latin": ["acostarse", "ir a la cama"], "kana": "ねます" },
         { "latin": "trabajar", "kana": "はたらきませ" },
@@ -169,7 +169,7 @@ const lessons_json = {
     ],
 
 
-    "lesson5": [
+    "lesson_5": [
         { "latin": "ir", "kana": "いきます" },
         { "latin": "venir", "kana": "きます" },
         { "latin": "volver, regresar, irse a casa", "kana": "かえります" },
@@ -226,7 +226,7 @@ const lessons_json = {
     ],
 
 
-    "lesson6": [
+    "lesson_6": [
         { "latin": "comer", "kana": "たべます" },
         { "latin": ["beber", "tomar"], "kana": "のみます" },
         { "latin": "fumar", "kana": "すいます" },
@@ -278,7 +278,7 @@ const lessons_json = {
     ],
 
 
-    "lesson7": [
+    "lesson_7": [
         { "latin": "cortar", "kana": "きります" },
         { "latin": "enviar", "kana": "おくります" },
         { "latin": "dar", "kana": "あげます" },
@@ -320,7 +320,7 @@ const lessons_json = {
     ],
 
 
-    "lesson8": [
+    "lesson_8": [
         { "latin": "guapo", "kana": "ハンサム「な」" },
         { "latin": ["hermoso", "limpio"], "kana": "きれい「な」" },
         { "latin": "silencioso", "kana": "しずか「な」" },
@@ -372,7 +372,7 @@ const lessons_json = {
     ],
 
 
-    "lesson9": [
+    "lesson_9": [
         { "latin": ["entender", "comprender"], "kana": "わかります" },
         { "latin": ["haber", "estar", "existir"], "kana": "あります" },
         { "latin": "gustar", "kana": "すき" },
@@ -432,7 +432,7 @@ const lessons_json = {
     ],
 
 
-    "lesson10": [
+    "lesson_10": [
         { "latin": ["estar", "haber", "existir"], "kana": "あります" },
         { "latin": ["estar", "haber", "existir"], "kana": "います" },
         { "latin": "diversos", "kana": "いろいろ「な」" },
@@ -513,7 +513,7 @@ const lessons_json = {
     ],
 
 
-    "lesson11": [
+    "lesson_11": [
         { "latin": "tener hijos", "kana": "「こどもが」います" },
         { "latin": ["estar", "permanecer"], "kana": "います" },
         { "latin": ["tardar", "costar"], "kana": "かかります" },
@@ -575,7 +575,7 @@ const lessons_json = {
     ],
 
 
-    "lesson12": [
+    "lesson_12": [
         { "latin": ["fácil", "sencillo"], "kana": "かんたん「な」" },
         { "latin": "cercano", "kana": "ちかい" },
         { "latin": ["distante", "lejano"], "kana": "とおい" },
@@ -650,7 +650,7 @@ const lessons_json = {
     ],
 
 
-    "lesson13": [
+    "lesson_13": [
         { "latin": ["jugar", "divertirse"], "kana": "あそびます" },
         { "latin": "nadar", "kana": "およぎます" },
         { "latin": ["recoger", "recibir"], "kana": "むかえます" },
@@ -698,7 +698,7 @@ const lessons_json = {
     ],
 
 
-    "lesson14": [
+    "lesson_14": [
         { "latin": "encender", "kana": "つけます" },
         { "latin": "apagar", "kana": "けします" },
         { "latin": "abrir", "kana": "あけます" },
@@ -764,7 +764,7 @@ const lessons_json = {
     ],
 
 
-    "lesson15": [
+    "lesson_15": [
         { "latin": ["poner", "colocar"], "kana": "おきます" },
         { "latin": ["hacer", "producir"], "kana": "つくります" },
         { "latin": "vender", "kana": "うります" },
@@ -798,7 +798,7 @@ const lessons_json = {
     ],
 
 
-    "lesson16": [
+    "lesson_16": [
         { "latin": "subir", "kana": "「でんしゃに」のります" },
         { "latin": "bajar", "kana": "「でんしゃお」おります" },
         { "latin": ["trasbordo", "transbordo"], "kana": "のりかえます" },
@@ -847,7 +847,7 @@ const lessons_json = {
     ],
 
 
-    "lesson17": [
+    "lesson_17": [
         { "latin": "memorizar", "kana": "おぼえます" },
         { "latin": "olvidar", "kana": "わすれます" },
         { "latin": "perder", "kana": "なくします" },
@@ -894,7 +894,7 @@ const lessons_json = {
 
 
 
-    "lesson18": [
+    "lesson_18": [
         { "latin": ["poder", "ser capaz de"], "kana": "できます" },
         { "latin": "lavar", "kana": "あらいます" },
         { "latin": "tocar", "kana": "ひきます" },
@@ -960,7 +960,7 @@ const lessons_json = {
 
 
 
-    "lesson19": [
+    "lesson_19": [
         { "latin": ["subir", "escalar"], "kana": "「やまに」のぼります" },
         { "latin": ["alojarse", "hospedarse"], "kana": "「ホテルに」とまります" },
         { "latin": "limpiar", "kana": "そうじします" },
@@ -996,7 +996,7 @@ const lessons_json = {
 
 
 
-    "lesson20": [
+    "lesson_20": [
         { "latin": ["necesitar", "requerir"], "kana": "「ビザが」いります" },
         { "latin": ["buscar", "averiguar", "investigar"], "kana": "しらべます" },
         { "latin": "reparar", "kana": "しゅうりします" },
@@ -1033,7 +1033,7 @@ const lessons_json = {
 
 
 
-    "lesson21": [
+    "lesson_21": [
         { "latin": ["creer", "opinar"], "kana": "おもいます" },
         { "latin": "decir", "kana": "いいます" },
         { "latin": "ganar", "kana": "かちます" },
@@ -1092,7 +1092,7 @@ const lessons_json = {
 
 
 
-    "lesson22": [
+    "lesson_22": [
         { "latin": "ponerse camisa", "kana": "「ふくを」きます" },
         { "latin": ["ponerse zapatos", "ponerse pantalones"], "kana": "「くつを」はきます" },
         { "latin": "ponerse sombrero", "kana": "「ぼうしを」かぶります" },
@@ -1141,7 +1141,7 @@ const lessons_json = {
 
 
 
-    "lesson23": [
+    "lesson_23": [
         { "latin": "preguntar", "kana": "ききます" },
         { "latin": "girar", "kana": "まわします" },
         { "latin": ["tirar", "jalar", "enfermar"], "kana": "ひきます" },
@@ -1186,7 +1186,7 @@ const lessons_json = {
 
 
 
-    "lesson24": [
+    "lesson_24": [
         { "latin": "darme", "kana": "くれます" },
         { "latin": ["reparar", "arreglar", "corregir"], "kana": "なおします" },
         { "latin": "llevar", "kana": "つれていきます" },
@@ -1221,7 +1221,7 @@ const lessons_json = {
 
 
 
-    "lesson25": [
+    "lesson_25": [
         { "latin": ["pensar", "considerar"], "kana": "かんがえます" },
         { "latin": "llegar", "kana": "つきます" },
         { "latin": "envejecer", "kana": "としをとります" },

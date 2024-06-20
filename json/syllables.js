@@ -1,4 +1,4 @@
-const dictionary = {
+const syllables_json = {
     "hiragana": [
         { "latin": "a", "kana": "あ" },
         { "latin": "i", "kana": "い" },

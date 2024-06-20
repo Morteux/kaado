@@ -75,7 +75,7 @@ const ganbatte_json = {
     ],
 
 
-    "adverbiosTemporales": [
+    "adverbios_temporales": [
         { "latin": "adverbios temporales", "kana": "じかんのふくし" },
         { "latin": "por la mañana", "kana": "あさ" },
         { "latin": "al mediodía", "kana": "ひる" },
