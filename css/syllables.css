@@ -73,13 +73,13 @@ input[type="text"] {
     ;
 }
 
-.char_element,
+.question_element,
 .img_element {
     grid-column: 1;
     grid-row: 1;
 }
 
-.char_element {
+.question_element {
     z-index: 2;
     font-size: 6vh;
 }

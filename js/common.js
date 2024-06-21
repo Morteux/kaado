@@ -1,17 +1,17 @@
 // Const variables
 const MAX_ROWS_PER_COLUMN = 15;
 
-const CARD_HTML =`
+const CARD_HTML = `
     <div id="cards" class="cards">
 
         <div class="element_container">
-            <p id="char_element" class="char_element"></p>
+            <p id="question_element" class="question_element"></p>
             <div id="img_element" class="img_element"></div>
         </div>
 
         <div class="input_container">
-            <tag>Latin syllable:</tag>
-            <input id="latin_input" type="text"></input>
+            <tag id="answer_tag">Latin syllable:</tag>
+            <input id="card_input" type="text"></input>
         </div>
 
         <div id="correct_answer_container" class="input_container" style="display:none;">
@@ -58,7 +58,7 @@ function formatCategoryName(category_name) {
 document.addEventListener("DOMContentLoaded", (event) => {
     CHECKS_LENGTH = Object.keys(JSON_DATA).length;
     JSON_KEYS = Object.keys(JSON_DATA);
-    
+
     // Initialize category_checks
     for (let i = 0; i < CHECKS_LENGTH; ++i) {
         category_checks.push(false);
@@ -80,26 +80,8 @@ function calculateWordsArray() {
     for (let index = 0; index < category_checks.length; ++index) {
         if (category_checks[index]) { words = words.concat(JSON_DATA[JSON_KEYS[index]]); }
     }
-    
+
     return words;
-}
-
-function restart() {
-
-    let text = `
-    <button class="start_button" onclick="startTest()">Start test</button>
-    <div class="checkboxes_container">`;
-
-    for (let i = 0; i < CHECKS_LENGTH; ++i) {
-        text += `<div>
-                    <input type="checkbox" id="` + i + `" name="` + i + `" ` + (category_checks[i] ? `checked` : `false`) + ` onchange="changeCategory(` + i + `)">
-                    <label for="` + i + `">` + formatCategoryName(JSON_KEYS[i]) + `</label><br>
-                </div>`;
-    }
-
-    text += `</div>`;
-
-    document.getElementById("main").innerHTML = text;
 }
 
 function startTest() {
@@ -113,7 +95,7 @@ function startTest() {
     // Print initial card template
     document.getElementById("main").innerHTML = CARD_HTML;
 
-    document.getElementById("latin_input").addEventListener("keypress", function (event) {
+    document.getElementById("card_input").addEventListener("keypress", function (event) {
         if (event.key === "Enter") {
             event.preventDefault();
             document.getElementById("next_button").click();
@@ -126,41 +108,50 @@ function startTest() {
     incorrectIndexes = [];
 
     shuffled = calculateWordsArray().sort((a, b) => 0.5 - Math.random());
-    document.getElementById("char_element").innerHTML = shuffled[actualIndex].kana;
+    document.getElementById("question_element").innerHTML = shuffled[actualIndex][question_key];
+
+    if (shuffled[actualIndex].hasOwnProperty(answer_tag)) {
+        document.getElementById("answer_tag").innerHTML = shuffled[actualIndex][answer_tag] + ": ";
+    }
 }
 
 function next() {
-    let input = document.getElementById("latin_input").value;
+    let input = document.getElementById("card_input").value;
 
     // Check for single string
-    if (!Array.isArray(shuffled[actualIndex].latin) && input.toUpperCase().trim() == shuffled[actualIndex].latin.toUpperCase()) {
+    if (!Array.isArray(shuffled[actualIndex][answer_key]) && input.toUpperCase().trim() == shuffled[actualIndex][answer_key].toUpperCase()) {
         ++correctCount;
         $('#img_element').css("background-image", "url('images/correct.png')").fadeIn(0).fadeOut();
-        document.getElementById("latin_input").value = "";
-        document.getElementById("correct_answer").innerHTML = "";
-        document.getElementById("correct_answer_container").style.display = "none";
-    } 
-
-    // Check for array of strings
-    else if (Array.isArray(shuffled[actualIndex].latin) && shuffled[actualIndex].latin.some(e => e.toUpperCase() === input.toUpperCase().trim())) {
-        ++correctCount;
-        $('#img_element').css("background-image", "url('images/correct.png')").fadeIn(0).fadeOut();
-        document.getElementById("latin_input").value = "";
+        document.getElementById("card_input").value = "";
         document.getElementById("correct_answer").innerHTML = "";
         document.getElementById("correct_answer_container").style.display = "none";
     }
+
+    // Check for array of strings
+    else if (Array.isArray(shuffled[actualIndex][answer_key]) && shuffled[actualIndex][answer_key].some(e => e.toUpperCase() === input.toUpperCase().trim())) {
+        ++correctCount;
+        $('#img_element').css("background-image", "url('images/correct.png')").fadeIn(0).fadeOut();
+        document.getElementById("card_input").value = "";
+        document.getElementById("correct_answer").innerHTML = "";
+        document.getElementById("correct_answer_container").style.display = "none";
+    }
+
     // If not, it is incorrect
     else {
         ++incorrectCount;
         $('#img_element').css("background-image", "url('images/incorrect.png')").fadeIn(0).fadeOut();
         incorrectIndexes.push(actualIndex);
-        document.getElementById("latin_input").value = "";
+        document.getElementById("card_input").value = "";
         document.getElementById("correct_answer_container").style.display = "";
-        document.getElementById("correct_answer").innerHTML = shuffled[actualIndex].latin; // Show correct answer
+        document.getElementById("correct_answer").innerHTML = shuffled[actualIndex][answer_key]; // Show correct answer
     }
 
     if (++actualIndex < shuffled.length) {
-        document.getElementById("char_element").innerHTML = shuffled[actualIndex].kana;
+        document.getElementById("question_element").innerHTML = shuffled[actualIndex][question_key];
+
+        if (shuffled[actualIndex].hasOwnProperty(answer_tag)) {
+            document.getElementById("answer_tag").innerHTML = shuffled[actualIndex][answer_tag] + ": ";
+        }
     } else {
         startEnd();
     }
@@ -188,7 +179,7 @@ function startEnd() {
             table += "<tr>";
             for (let j = i; j < i + Math.ceil(incorrectIndexes.length / MAX_ROWS_PER_COLUMN); ++j) {
                 if (j < incorrectIndexes.length)
-                    table += "<td>" + shuffled[incorrectIndexes[j]].latin + " : " + shuffled[incorrectIndexes[j]].kana + "</td>";
+                    table += "<td>" + shuffled[incorrectIndexes[j]][answer_key] + " : " + shuffled[incorrectIndexes[j]][question_key] + "</td>";
             }
             table += "</tr>";
         }
@@ -198,4 +189,22 @@ function startEnd() {
     } else {
         document.getElementById("answers_table").getElementsByTagName("caption")[0].innerHTML = "PERFECT!";
     }
+}
+
+function restart() {
+
+    let text = `
+    <button class="start_button" onclick="startTest()">Start test</button>
+    <div class="checkboxes_container">`;
+
+    for (let i = 0; i < CHECKS_LENGTH; ++i) {
+        text += `<div>
+                    <input type="checkbox" id="` + i + `" name="` + i + `" ` + (category_checks[i] ? `checked` : `false`) + ` onchange="changeCategory(` + i + `)">
+                    <label for="` + i + `">` + formatCategoryName(JSON_KEYS[i]) + `</label><br>
+                </div>`;
+    }
+
+    text += `</div>`;
+
+    document.getElementById("main").innerHTML = text;
 }
