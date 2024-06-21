@@ -4,6 +4,12 @@ const MAX_ROWS_PER_COLUMN = 15;
 const CARD_HTML = `
     <div id="cards" class="cards">
 
+        <div class="counter_container">
+            <div id="actual_counter">0</div>
+            &nbsp/&nbsp
+            <div id="total_counter"></div>
+        </div>
+
         <div class="element_container">
             <p id="question_element" class="question_element"></p>
             <div id="img_element" class="img_element"></div>
@@ -20,7 +26,6 @@ const CARD_HTML = `
 
         <div class="button_container">
             <button class="primary_button" onclick="location.reload();">Exit</button>
-
             <button id="next_button" class="primary_button" onclick="next()">Next</button>
         </div>
 
@@ -111,6 +116,7 @@ function startTest() {
 
     shuffled = calculateWordsArray().sort((a, b) => 0.5 - Math.random());
     document.getElementById("question_element").innerHTML = shuffled[actualIndex][question_key];
+    document.getElementById("total_counter").innerHTML = shuffled.length;
 
     if (shuffled[actualIndex].hasOwnProperty(answer_tag)) {
         document.getElementById("answer_tag").innerHTML = shuffled[actualIndex][answer_tag] + ": ";
@@ -154,6 +160,8 @@ function next() {
         if (shuffled[actualIndex].hasOwnProperty(answer_tag)) {
             document.getElementById("answer_tag").innerHTML = shuffled[actualIndex][answer_tag] + ": ";
         }
+
+        document.getElementById("actual_counter").innerHTML = actualIndex;
     } else {
         startEnd();
     }
@@ -191,26 +199,9 @@ function startEnd() {
     if (incorrectCount != 0) {
         let table = "";
 
-        // table += "<tbody>";
-        // for (let i = 0; i < incorrectIndexes.length; i += Math.ceil(incorrectIndexes.length / MAX_ROWS_PER_COLUMN)) {
-        //     table += "<tr>";
-        //     for (let j = i; j < i + Math.ceil(incorrectIndexes.length / MAX_ROWS_PER_COLUMN); ++j) {
-        //         if (j < incorrectIndexes.length)
-        //             table += "<td>" + shuffled[incorrectIndexes[j]][answer_key] + " : " + shuffled[incorrectIndexes[j]][question_key] + "</td>";
-        //     }
-        //     table += "</tr>";
-        // }
-        // table += "</tbody>";
-
-
-
-
         for (let i = 0; i < incorrectIndexes.length; ++i) {
             table += `<div class="incorrect_data">` + shuffled[incorrectIndexes[i]][answer_key] + `&nbsp:&nbsp` + shuffled[incorrectIndexes[i]][question_key] + `</div>`;
         }
-
-
-
 
         document.getElementById("answers_table").innerHTML += table;
     } else {
