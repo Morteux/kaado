@@ -19,7 +19,9 @@ const CARD_HTML = `
         </div>
 
         <div class="button_container">
-            <button id="next_button" onclick="next()">Next</button>
+            <button class="primary_button" onclick="location.reload();">Exit</button>
+
+            <button id="next_button" class="primary_button" onclick="next()">Next</button>
         </div>
 
     </div>`;
@@ -194,8 +196,11 @@ function startEnd() {
 function restart() {
 
     let text = `
-    <button class="start_button" onclick="startTest()">Start test</button>
-    <div class="checkboxes_container">`;
+        <button class="primary_button" onclick="startTest()">Start test</button>
+        <button class="primary_button" onclick="window.location.href = '/index.html'">Return to index</button>
+
+        <div class="checkboxes_container">
+    `;
 
     for (let i = 0; i < CHECKS_LENGTH; ++i) {
         text += `<div>
