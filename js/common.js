@@ -164,6 +164,7 @@ function startEnd() {
     <div class="results_container">
         <div><img src="images/correct.png" alt="Correct icon" width="50" height="50"> <p id="correctCounter">0</p></div>
         <div><img src="images/incorrect.png" alt="Incorrect icon" width="50" height="50"> <p id="incorrectCounter">0</p></div>
+        
         <button id="restart" onclick="restart()">Restart</button>
         <button id="return" onclick="window.location.href = '/index.html'">Return to index</button>
     </div>
@@ -196,8 +197,10 @@ function startEnd() {
 function restart() {
 
     let text = `
-        <button class="primary_button" onclick="startTest()">Start test</button>
-        <button class="primary_button" onclick="window.location.href = '/index.html'">Return to index</button>
+        <div class="button_column_container">
+            <button class="primary_button" onclick="startTest()">Start test</button>
+            <button class="primary_button" onclick="window.location.href = '/index.html'">Return to index</button>
+        </div>
 
         <div class="checkboxes_container">
     `;
