@@ -1,4 +1,6 @@
 const JSON_DATA = kanji_json;
-const question_key = "kanji";
-const answer_tag = "yomi";
-const answer_key = "kana";
+
+var question_key = "kanji";
+var answer_key = "kana";
+
+var answer_tag = "yomi";

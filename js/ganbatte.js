@@ -1,3 +1,4 @@
 const JSON_DATA = ganbatte_json;
-const question_key = "kana";
-const answer_key = "latin";
+
+var question_key = "kana";
+var answer_key = "latin";

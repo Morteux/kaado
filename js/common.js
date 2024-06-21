@@ -77,6 +77,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
     restart();
 });
 
+function switchQuestionAnswer() {
+    let aux = question_key;
+    question_key = answer_key;
+    answer_key = aux;
+
+    document.getElementById("switch_question_answer").innerHTML = `Question:&nbsp` + question_key + `<br>Answer:&nbsp` + answer_key;
+}
+
 function changeCategory(category_index) {
     category_checks[category_index] = !category_checks[category_index];
 }
@@ -214,6 +222,7 @@ function restart() {
     let text = `
         <div class="button_column_container">
             <button class="primary_button" onclick="startTest()">Start test</button>
+            <button id="switch_question_answer" class="primary_button" onclick="switchQuestionAnswer()">Question:&nbsp` + question_key + `<br>Answer:&nbsp` + answer_key + `</button>
             <button class="primary_button" onclick="window.location.href = '/index.html'">Return to index</button>
         </div>
 
