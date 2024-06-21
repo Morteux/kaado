@@ -95,7 +95,7 @@ function startTest() {
     incorrectIndexes = [];
 
     // Print initial card template
-    document.getElementById("main").innerHTML = CARD_HTML;
+    document.getElementById("content").innerHTML = CARD_HTML;
 
     document.getElementById("card_input").addEventListener("keypress", function (event) {
         if (event.key === "Enter") {
@@ -160,37 +160,61 @@ function next() {
 }
 
 function startEnd() {
-    document.getElementById("main").innerHTML = `
-    <div class="results_container">
-        <div><img src="images/correct.png" alt="Correct icon" width="50" height="50"> <p id="correctCounter">0</p></div>
-        <div><img src="images/incorrect.png" alt="Incorrect icon" width="50" height="50"> <p id="incorrectCounter">0</p></div>
-        
-        <button id="restart" onclick="restart()">Restart</button>
-        <button id="return" onclick="window.location.href = '/index.html'">Return to index</button>
-    </div>
-    <table id="answers_table" class="answers_table">
-        <caption>Incorrect answers</caption>
-    </table>`;
+    document.getElementById("content").innerHTML = `
+        <div class="end_container">
+            <div class="results_container">
+                <div>
+                    <div class="answers_counter">
+                        <img src="images/correct.png" alt="Correct icon" width="50" height="50"> <p id="correctCounter">0</p>
+                    </div>
+                    <div class="answers_counter">
+                        <img src="images/incorrect.png" alt="Incorrect icon" width="50" height="50"> <p id="incorrectCounter">0</p>
+                    </div>
+                </div>
+                <div>
+                    <button id="restart" onclick="restart()">Restart</button>
+                    <button id="return" onclick="window.location.href = '/index.html'">Return to index</button>
+                </div>
+            </div>
+            <div class="answers_container">
+                <div id="answers_title" class="answers_title">Incorrect answers</div>
+                <div id="answers_table" class="answers_table">
+                
+                </div>
+            </div>
+        </div>
+    `;
 
     document.getElementById("correctCounter").innerHTML = correctCount;
     document.getElementById("incorrectCounter").innerHTML = incorrectCount;
 
     if (incorrectCount != 0) {
         let table = "";
-        table += "<tbody>";
-        for (let i = 0; i < incorrectIndexes.length; i += Math.ceil(incorrectIndexes.length / MAX_ROWS_PER_COLUMN)) {
-            table += "<tr>";
-            for (let j = i; j < i + Math.ceil(incorrectIndexes.length / MAX_ROWS_PER_COLUMN); ++j) {
-                if (j < incorrectIndexes.length)
-                    table += "<td>" + shuffled[incorrectIndexes[j]][answer_key] + " : " + shuffled[incorrectIndexes[j]][question_key] + "</td>";
-            }
-            table += "</tr>";
+
+        // table += "<tbody>";
+        // for (let i = 0; i < incorrectIndexes.length; i += Math.ceil(incorrectIndexes.length / MAX_ROWS_PER_COLUMN)) {
+        //     table += "<tr>";
+        //     for (let j = i; j < i + Math.ceil(incorrectIndexes.length / MAX_ROWS_PER_COLUMN); ++j) {
+        //         if (j < incorrectIndexes.length)
+        //             table += "<td>" + shuffled[incorrectIndexes[j]][answer_key] + " : " + shuffled[incorrectIndexes[j]][question_key] + "</td>";
+        //     }
+        //     table += "</tr>";
+        // }
+        // table += "</tbody>";
+
+
+
+
+        for (let i = 0; i < incorrectIndexes.length; ++i) {
+            table += `<div class="incorrect_data">` + shuffled[incorrectIndexes[i]][answer_key] + `&nbsp:&nbsp` + shuffled[incorrectIndexes[i]][question_key] + `</div>`;
         }
-        table += "</tbody>";
+
+
+
 
         document.getElementById("answers_table").innerHTML += table;
     } else {
-        document.getElementById("answers_table").getElementsByTagName("caption")[0].innerHTML = "PERFECT!";
+        document.getElementById("answers_title").innerHTML = "PERFECT!";
     }
 }
 
@@ -214,5 +238,5 @@ function restart() {
 
     text += `</div>`;
 
-    document.getElementById("main").innerHTML = text;
+    document.getElementById("content").innerHTML = text;
 }
