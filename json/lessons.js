@@ -1242,6 +1242,75 @@ const lessons_json = {
 
 
 
+    "lesson_26": [
+        { "latin": ["", ""], "kana": "" },
+        { "latin": "", "kana": "" }
+    ],
+
+
+
+    "lesson_27": [
+        { "latin": ["", ""], "kana": "" },
+        { "latin": "", "kana": "" }
+    ],
+
+
+
+    "lesson_28": [
+        { "latin": "venderse", "kana": ["売れます", "うれます"] },
+        { "latin": "bailar", "kana": ["踊ります", "おどります"] },
+        { "latin": ["masticar", "morder"], "kana": "かみます" },
+        { "latin": ["elegir", "escoger"], "kana": ["選びます", "えらびます"] },
+        { "latin": ["ir", "frecuentar"], "kana": ["通います", "かよいます"] },
+        { "latin": ["anotar", "tomar notas"], "kana": "メモします" },
+        { "latin": "serio", "kana": "まじめ" },
+        { "latin": ["entusiasmado", "diligente"], "kana": ["熱心「な」", "ねっしん「な」"] },
+        { "latin": ["respetable", "admirable"], "kana": "えらい" },
+        { "latin": ["venir bien", "venir justo", "ser apropiado"], "kana": "ちょうどいい" },
+        { "latin": "paisaje", "kana": ["景色", "けしき"] },
+        { "latin": ["salón de belleza", "peluquería"], "kana": ["美容院", "びよういん"] },
+        { "latin": "cocina", "kana": ["台所", "だいどころ"] },
+        { "latin": ["experiencia", "vivir experiencia"], "kana": ["経験", "けいけん"] },
+        { "latin": "fuerza", "kana": ["力", "ちから"] },
+        { "latin": "popularidad", "kana": ["人気", "にんき"] },
+        { "latin": ["forma", "figura"], "kana": ["形", "かたち"] },
+        { "latin": "color", "kana": ["色", "いろ"] },
+        { "latin": "sabor", "kana": ["味", "あじ"] },
+        { "latin": "chicle", "kana": "がむ" },
+        { "latin": ["bienes", "artículos", "mercancías", "productos"], "kana": ["品物", "しなもの"] },
+        { "latin": "precio", "kana": ["値段", "ねだん"] },
+        { "latin": ["sueldo", "salario"], "kana": ["給料", "きゅうりょう"] },
+        { "latin": ["paga extra", "gratificación", "prima", "bonificación"], "kana": "ボーナス" },
+        { "latin": ["juego", "videojuego"], "kana": "ゲーム" },
+        { "latin": "programa", "kana": ["番組", "ばんぐみ"] },
+        { "latin": ["drama", "serie de televisión"], "kana": "ドラマ" },
+        { "latin": "cantante", "kana": ["歌手", "かしゅ"] },
+        { "latin": "novela", "kana": ["小説", "しょうせつ"] },
+        { "latin": "novelista", "kana": ["小説家", "しょうせつか"] },
+        { "latin": "experto en", "kana": ["～家", "～か"] },
+        { "latin": "máquina", "kana": ["～機", "～き"] },
+        { "latin": "hijo", "kana": ["息子", "むすこ"] },
+        { "latin": "hija", "kana": ["娘", "むすめ"] },
+        { "latin": ["el propio", "mí mismo", "ti mismo", "sí mismo"], "kana": ["自分", "じぶん"] },
+        { "latin": "vida futura", "kana": ["将来", "しょうらい"] },
+        { "latin": ["por un tiempo", "por un rato"], "kana": "しばらく" },
+        { "latin": ["habitualmente", "casi siempre"], "kana": "たいてい" },
+        { "latin": "además", "kana": "それに" },
+        { "latin": ["por eso", "por lo tanto"], "kana": "それで" },
+        { "latin": "aviso", "kana": ["お知らせ", "おしらせ"] },
+        { "latin": "participar", "kana": ["参加します", "さんかします"] },
+        { "latin": "fecha", "kana": ["日にち", "ひにち"] },
+        { "latin": "sábado", "kana": ["土", "ど"] },
+        { "latin": "gimnasio escolar", "kana": ["体育館", "たいいくかん"] },
+        { "latin": "gratis", "kana": ["無料", "むりょう"] },
+        { "latin": "invitar", "kana": ["誘います", "さそいます"] },
+        { "latin": "evento", "kana": "イベント" },
+
+        { "latin": ["producto manufacturado", "producto en fábrica"], "kana": "せいひん" },
+    ],
+
+
+
     "verbos": [
         { "latin": "levantarse", "kana": "おきます" },
         { "latin": ["acostarse", "ir a la cama"], "kana": "ねます" },
