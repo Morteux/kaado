@@ -1241,10 +1241,52 @@ const lessons_json = {
     ],
 
 
-
+    // ["", ""]
     "lesson_26": [
-        { "latin": ["", ""], "kana": "" },
-        { "latin": "", "kana": "" }
+        { "latin": ["ver", "mirar", "observar", "revisar", "inspeccionar", "examinar", "evaluar"], "kana": ["みます", "見ます", "診ます"] },
+        { "latin": "buscar", "kana": ["さがします", "探します", "捜します"] },
+        { "latin": ["retrasarse", "llegar tarde"], "kana": ["おくれます", "遅れます"] },
+        { "latin": "llegar a tiempo", "kana": ["まにあいます", "間に合います"] },
+        { "latin": "hacer", "kana": "やります" },
+        { "latin": ["coger", "recoger"], "kana": ["ひろいます", "拾います"] },
+        { "latin": ["avisar", "comunicar", "ponerse en contacto"], "kana": ["れんらくします", "連絡します"] },
+        { "latin": ["sentirse bien", "sentirse sano"], "kana": ["きぶんがいい", "気分がいい"] },
+        { "latin": ["sentirse enfermo", "sentirse mal"], "kana": ["きぶんがわるい", "気分が悪い"] },
+        { "latin": ["evento deportivo", "fiesta deportiva"], "kana": ["うんどうかい", "運動会"] },
+        { "latin": "baile de la fiesta Bon", "kana": ["ぼんおどり", "盆踊り"] },
+        { "latin": "mercadillo", "kana": "フリーマーケット" },
+        { "latin": ["lugar", "ubicación", "posición"], "kana": ["ばしょ", "場所"] },
+        { "latin": "voluntariado", "kana": "ボランティア" },
+        { "latin": ["cartera", "monedero"], "kana": ["さいふ", "財布"] },
+        { "latin": ["basura", "desperdicios"], "kana": "ごみ" },
+        { "latin": ["Palacio de Dieta", "parlamento"], "kana": ["こっかいぎじどう", "国会議事堂"] },
+        { "latin": "días laborables", "kana": ["へいじつ", "平日"] },
+        { "latin": "dialecto de", "kana": ["～べん", "～弁"] },
+        { "latin": "la próxima vez", "kana": ["こんど", "今度"] },
+        { "latin": ["muy", "bastante"], "kana": "ずいぶん" },
+        { "latin": ["directo", "inmediato", "personal", "de primera mano"], "kana": ["ちょくせつ", "直接"] },
+        { "latin": ["a cualquier hora", "en cualquier momento"], "kana": "いつでも" },
+        { "latin": ["en cualquier sitio", "dondequiera"], "kana": "どこでも" },
+        { "latin": "cualquier persona", "kana": ["だれでも", "誰でも"] },
+        { "latin": "cualquier cosa", "kana": ["なんでも", "何でも"] },
+        { "latin": ["como este", "tal"], "kana": "こんな～" },
+        { "latin": ["como ese", "como esa", "tal"], "kana": "そんな～" },
+        { "latin": "como aquel", "kana": "あんな～" },
+        { "latin": ["universo", "espacio"], "kana": ["うちゅう", "宇宙"] },
+        { "latin": ["sra", "señora"], "kana": ["～さま", "～様"] },
+        { "latin": ["nave espacial", "astro nave"], "kana": ["うちゅうせん", "宇宙船"] },
+        { "latin": "tener miedo a", "kana": ["こわい", "怖い"] },
+        { "latin": "estación espacial", "kana": ["うちゅうステーション", "宇宙ステーション"] },
+        { "latin": "ser diferente", "kana": ["ちがいます", "違います"] },
+        { "latin": "astronauta", "kana": ["うちゅうひこうし", "宇宙飛行士"] },
+
+        { "latin": "avería", "kana": "こしょう" },
+        { "latin": "conveniencia", "kana": "つごう" },
+        { "latin": ["me viene mal", "inconveniente"], "kana": "つごうがわるい" },
+        { "latin": ["me viene bien", "conveniente"], "kana": "つごうがいい" },
+        { "latin": "basurero de barrio", "kana": "ごみおきば" },
+        { "latin": "quemar", "kana": "もえます" },
+        { "latin": "vidrio", "kana": "びん" }
     ],
 
 
