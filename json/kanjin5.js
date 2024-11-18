@@ -1,4 +1,4 @@
-const kanji_json = {
+const kanjin5_json = {
     "kanji_lesson_1": [
         { "yomi": "くんよみ", "kana": "ひと", "kanji": "一" },
         { "yomi": "オンよみ", "kana": ["イチ", "イッ"], "kanji": "一" },
