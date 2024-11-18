@@ -16,7 +16,7 @@ const CARD_HTML = `
         </div>
 
         <div class="input_container">
-            <tag id="answer_tag">Latin syllable:</tag>
+            <tag id="answer_tag">Answer:</tag>
             <input id="card_input" type="text"></input>
         </div>
 
@@ -123,7 +123,12 @@ function startTest() {
     incorrectIndexes = [];
 
     shuffled = calculateWordsArray().sort((a, b) => 0.5 - Math.random());
-    document.getElementById("question_element").innerHTML = shuffled[actualIndex][question_key];
+    
+    if (Array.isArray(shuffled[actualIndex][question_key])) {
+        document.getElementById("question_element").innerHTML = shuffled[actualIndex][question_key].join(", ");
+    } else {
+        document.getElementById("question_element").innerHTML = shuffled[actualIndex][question_key];
+    }
     document.getElementById("total_counter").innerHTML = shuffled.length;
 
     if (shuffled[actualIndex].hasOwnProperty(answer_tag)) {
@@ -159,11 +164,20 @@ function next() {
         incorrectIndexes.push(actualIndex);
         document.getElementById("card_input").value = "";
         document.getElementById("correct_answer_container").style.display = "";
-        document.getElementById("correct_answer").innerHTML = shuffled[actualIndex][answer_key]; // Show correct answer
+
+        if (Array.isArray(shuffled[actualIndex][answer_key])) {
+            document.getElementById("correct_answer").innerHTML = shuffled[actualIndex][answer_key].join(", "); // Show correct answer
+        } else {
+            document.getElementById("correct_answer").innerHTML = shuffled[actualIndex][answer_key]; // Show correct answer
+        }
     }
 
     if (++actualIndex < shuffled.length) {
-        document.getElementById("question_element").innerHTML = shuffled[actualIndex][question_key];
+        if (Array.isArray(shuffled[actualIndex][question_key])) {
+            document.getElementById("question_element").innerHTML = shuffled[actualIndex][question_key].join(", ");
+        } else {
+            document.getElementById("question_element").innerHTML = shuffled[actualIndex][question_key];
+        }
 
         if (shuffled[actualIndex].hasOwnProperty(answer_tag)) {
             document.getElementById("answer_tag").innerHTML = shuffled[actualIndex][answer_tag] + ": ";
@@ -189,7 +203,7 @@ function startEnd() {
                 </div>
                 <div>
                     <button id="restart" onclick="restart()">Restart</button>
-                    <button id="return" onclick="window.location.href = 'https://morteux.github.io/kaado/index.html'">Return to index</button>
+                    <button id="return" onclick="window.location.href = '/index.html'">Return to index</button>
                 </div>
             </div>
             <div class="answers_container">
@@ -223,7 +237,7 @@ function restart() {
         <div class="button_column_container">
             <button class="primary_button" onclick="startTest()">Start test</button>
             <button id="switch_question_answer" class="primary_button" onclick="switchQuestionAnswer()">Question:&nbsp` + question_key + `<br>Answer:&nbsp` + answer_key + `</button>
-            <button class="primary_button" onclick="window.location.href = 'https://morteux.github.io/kaado/index.html'">Return to index</button>
+            <button class="primary_button" onclick="window.location.href = '/index.html'">Return to index</button>
         </div>
 
         <div class="checkboxes_container">
