@@ -123,7 +123,7 @@ function startTest() {
     incorrectIndexes = [];
 
     shuffled = calculateWordsArray().sort((a, b) => 0.5 - Math.random());
-    
+
     if (Array.isArray(shuffled[actualIndex][question_key])) {
         document.getElementById("question_element").innerHTML = shuffled[actualIndex][question_key].join(", ");
     } else {
@@ -222,7 +222,17 @@ function startEnd() {
         let table = "";
 
         for (let i = 0; i < incorrectIndexes.length; ++i) {
-            table += `<div class="incorrect_data">` + shuffled[incorrectIndexes[i]][answer_key] + `&nbsp:&nbsp` + shuffled[incorrectIndexes[i]][question_key] + `</div>`;
+            if (Array.isArray(shuffled[incorrectIndexes[i]][answer_key])) {
+                table += `<div class="incorrect_data">` + shuffled[incorrectIndexes[i]][answer_key].join(", ") + `&nbsp:&nbsp`;
+            } else {
+                table += `<div class="incorrect_data">` + shuffled[incorrectIndexes[i]][answer_key] + `&nbsp:&nbsp`;
+            }
+
+            if (Array.isArray(shuffled[incorrectIndexes[i]][question_key])) {
+                table += shuffled[incorrectIndexes[i]][question_key].join(", ") + `</div>`;
+            } else {
+                table += shuffled[incorrectIndexes[i]][question_key] + `</div>`;
+            }
         }
 
         document.getElementById("answers_table").innerHTML += table;
