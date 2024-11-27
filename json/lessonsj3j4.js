@@ -105,7 +105,52 @@ const lessonsj3j4_json = {
         { "spanish": "invitar", "kana": ["誘います", "さそいます"] },
         { "spanish": "evento", "kana": "イベント" },
 
-        { "spanish": ["producto manufacturado", "producto en fábrica"], "kana": "せいひん" },
+        { "spanish": ["producto manufacturado", "producto en fábrica"], "kana": "せいひん" }
+    ],
+
+
+
+    "lesson_28": [
+        { "spanish": "abrirse", "kana": "" },
+        { "spanish": "cerrarse", "kana": "" },
+        { "spanish": "encenderse", "kana": "" },
+        { "spanish": ["apagarse", "desvanecerse", "desaparecerse"], "kana": "" },
+        { "spanish": ["descomponerse", "romperse"], "kana": "" },
+        { "spanish": ["romperse", "quebrarse", "agrietarse"], "kana": "" },
+        { "spanish": ["romperse", "quebrarse", "partirse"], "kana": "" },
+        { "spanish": ["romperse", "rasgarse", "desgarrarse", "desgastarse"], "kana": "" },
+        { "spanish": "ensuciarse", "kana": "" },
+        { "spanish": ["ser puesto", "poner"], "kana": "" },
+        { "spanish": ["desconectarse", "salirse de su lugar", "desbotonarse"], "kana": "" },
+        { "spanish": ["detenerse", "pararse", "suspenderse"], "kana": "" },
+        { "spanish": "cerrarse", "kana": "" },
+        { "spanish": "equivocarse", "kana": "" },
+        { "spanish": "perder", "kana": "" },
+        { "spanish": "limpiar", "kana": "" },
+        { "spanish": ["cambiar", "sustituir", "reemplazar"], "kana": "" },
+        { "spanish": "ordenar", "kana": "" },
+        { "spanish": "plato", "kana": "" },
+        { "spanish": ["taza", "cuenco"], "kana": "" },
+        { "spanish": "vaso", "kana": "" },
+        { "spanish": ["vidrio", "cristal"], "kana": "" },
+        { "spanish": "bolsa", "kana": "" },
+        { "spanish": ["papel", "documento"], "kana": "" },
+        { "spanish": "rama de árbol", "kana": "" },
+        { "spanish": "empleado de estación", "kana": "" },
+        { "spanish": "puesto de policía", "kana": "" },
+        { "spanish": "discurso", "kana": "" },
+        { "spanish": "respuesta", "kana": "" },
+        { "spanish": ["adelante, por favor", "pase usted"], "kana": "" },
+        { "spanish": "terremoto", "kana": "" },
+        { "spanish": "pared", "kana": "" },
+        { "spanish": ["manecilla", "aguja", "puntero"], "kana": "" },
+        { "spanish": ["apuntar", "indicar"], "kana": "" },
+        { "spanish": "frente a la estación", "kana": "" },
+        { "spanish": ["caerse", "derrumbarse"], "kana": "" },
+        { "spanish": "oeste", "kana": "" },
+        { "spanish": ["en la parte de", "en dirección a", "rumbo a", "hacia"], "kana": "" },
+        { "spanish": "quemarse", "kana": "" },
+        { "spanish": "reportero", "kana": "" }
     ],
 
 
