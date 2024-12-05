@@ -110,7 +110,7 @@ const lessonsj3j4_json = {
 
 
 
-    "lesson_28": [
+    "lesson_29": [
         { "spanish": "abrirse", "kana": "" },
         { "spanish": "cerrarse", "kana": "" },
         { "spanish": "encenderse", "kana": "" },
@@ -340,6 +340,15 @@ const lessonsj3j4_json = {
         { "spanish": "llegar", "kana": "つきます" },
         { "spanish": "envejecer", "kana": "としをとります" },
         { "spanish": "enfadarse", "kana": "むかつきます" },
-        { "spanish": "pasar tiempo", "kana": "たちます" }
+        { "spanish": "pasar tiempo", "kana": "たちます" },
+        { "spanish": ["ver", "mirar", "observar", "revisar", "inspeccionar", "examinar", "evaluar"], "kana": ["みます", "見ます", "診ます"] },
+        { "spanish": "buscar", "kana": ["さがします", "探します", "捜します"] },
+        { "spanish": ["retrasarse", "llegar tarde"], "kana": ["おくれます", "遅れます"] },
+        { "spanish": "llegar a tiempo", "kana": ["まにあいます", "間に合います"] },
+        { "spanish": "hacer", "kana": "やります" },
+        { "spanish": ["coger", "recoger"], "kana": ["ひろいます", "拾います"] },
+        { "spanish": ["avisar", "comunicar", "ponerse en contacto"], "kana": ["れんらくします", "連絡します"] },
+        { "spanish": "ser diferente", "kana": ["ちがいます", "違います"] },
+        { "spanish": "quemar", "kana": "もえます" },
     ]
 }
