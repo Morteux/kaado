@@ -9,6 +9,23 @@
     --font-color: rgb(238, 238, 238);
 }
 
+/* Credits: https://www.nihilist.org.uk/ */
+@font-face {
+    font-family: 'KanjiStrokeOrders';
+    src: url('/fonts/KanjiStrokeOrders_v4.004.ttf');
+}
+
+/* Credits: https://github.com/KazukiKimuraJP/KazukiReiwa?tab=readme-ov-file */
+@font-face {
+    font-family: 'KazukiReiwaLight';
+    src: url('/fonts/KazukiReiwa - Light.ttf');
+}
+
+/* Credits: https://github.com/KazukiKimuraJP/KazukiReiwa?tab=readme-ov-file */
+@font-face {
+    font-family: 'KazukiReiwaRegular';
+    src: url('/fonts/KazukiReiwa - Regular.ttf');
+}
 
 
 
@@ -200,6 +217,7 @@ button:active {
 /* TEST CLASSES */
 
 .cards {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -216,6 +234,12 @@ button:active {
 
     padding: 1vh;
     background-color: var(--primary-color);
+}
+
+.floating_button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
 }
 
 .counter_container {
@@ -313,8 +337,20 @@ input[type="text"] {
     grid-row: 1;
 }
 
+
+.question_show_strokes {
+    font-size: 10rem !important;
+    font-family: "KanjiStrokeOrders" !important;
+}
+
 .question_element {
     z-index: 2;
+
+    font-size: 8rem;
+    font-family: "KazukiReiwaRegular";
+
+    /* font-size: 8rem;
+    font-family: "KazukiReiwaLight"; */
 }
 
 .img_element {

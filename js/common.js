@@ -4,6 +4,10 @@ const MAX_ROWS_PER_COLUMN = 15;
 const CARD_HTML = `
     <div id="cards" class="cards">
 
+        <div class="floating_button">
+            <button id="show_stroke_button" name="button" onclick="showStrokeButton()">Hide stroke</button>
+        </div>
+
         <div class="counter_container">
             <div id="actual_counter">0</div>
             &nbsp/&nbsp
@@ -11,7 +15,7 @@ const CARD_HTML = `
         </div>
 
         <div class="element_container">
-            <p id="question_element" class="question_element"></p>
+            <p id="question_element" class="question_element question_show_strokes"></p>
             <div id="img_element" class="img_element"></div>
         </div>
 
@@ -76,6 +80,19 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     restart();
 });
+
+function showStrokeButton() {
+    let question_element = document.getElementById("question_element");
+    let show_stroke_button = document.getElementById("show_stroke_button");
+
+    if (question_element.classList.contains("question_show_strokes")) {
+        question_element.classList.remove("question_show_strokes");
+        show_stroke_button.innerHTML = "Show stroke";
+    } else {
+        question_element.classList.add("question_show_strokes");
+        show_stroke_button.innerHTML = "Hide stroke";
+    }
+}
 
 function switchQuestionAnswer() {
     let aux = question_key;
