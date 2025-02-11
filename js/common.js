@@ -5,7 +5,7 @@ const CARD_HTML = `
     <div id="cards" class="cards">
 
         <div class="floating_button">
-            <button id="show_stroke_button" name="button" onclick="showStrokeButton()">Hide stroke</button>
+            <button id="show_stroke_button" name="button" onclick="showStrokeButton()">Show stroke</button>
         </div>
 
         <div class="counter_container">
@@ -15,7 +15,7 @@ const CARD_HTML = `
         </div>
 
         <div class="element_container">
-            <p id="question_element" class="question_element question_show_strokes"></p>
+            <p id="question_element" class="question_element"></p>
             <div id="img_element" class="img_element"></div>
         </div>
 
@@ -151,6 +151,9 @@ function startTest() {
     if (shuffled[actualIndex].hasOwnProperty(answer_tag)) {
         document.getElementById("answer_tag").innerHTML = shuffled[actualIndex][answer_tag] + ": ";
     }
+
+    // Show strokes by default
+    showStrokeButton();
 }
 
 function next() {
