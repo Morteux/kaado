@@ -68,6 +68,7 @@ const kanjij3_json = {
         { "yomi": "くんよみ", "kana": "いそ", "kanji": "急" },
         { "yomi": "オンよみ", "kana": "キュウ", "kanji": "急" }
     ],
+    
     "kanji_day_4": [
         { "yomi": "くんよみ", "kana": "ひく", "kanji": "低" },
         { "yomi": "オンよみ", "kana": "テイ", "kanji": "低" },
@@ -90,50 +91,50 @@ const kanjij3_json = {
         { "yomi": "くんよみ", "kana": "くろ", "kanji": "黒" },
         { "yomi": "オンよみ", "kana": "コク", "kanji": "黒" }
     ],
-    // ["", ""]
+    
     "kanji_day_5": [
+        { "yomi": "くんよみ", "kana": "うつ", "kanji": "映" },
+        { "yomi": "オンよみ", "kana": "エイ", "kanji": "映" },
         
-        { "yomi": "オンよみ", "kana": ["トク", "トッ"], "kanji": "特" },
-        { "yomi": "くんよみ", "kana": "わか", "kanji": "別" },
-        { "yomi": "オンよみ", "kana": "ベツ", "kanji": "別" },
-        { "yomi": "くんよみ", "kana": "あ", "kanji": "有" },
-        { "yomi": "オンよみ", "kana": "ユウ", "kanji": "有" },
-        { "yomi": "くんよみ", "kana": "たよ", "kanji": "便" },
-        { "yomi": "オンよみ", "kana": ["ビン", "ベン"], "kanji": "便" },
-        
-        { "yomi": "オンよみ", "kana": "リ", "kanji": "利" },
-        
-        { "yomi": "オンよみ", "kana": ["フ", "ブ"], "kanji": "不" },
-        { "yomi": "くんよみ", "kana": ["き", "きっ"], "kanji": "切" },
-        { "yomi": "オンよみ", "kana": "セツ", "kanji": "切" },
-        { "yomi": "くんよみ", "kana": "もと", "kanji": "元" },
-        { "yomi": "オンよみ", "kana": ["ゲン", "ガン"], "kanji": "元" },
-        { "yomi": "くんよみ", "kana": "", "kanji": "" },
-        { "yomi": "オンよみ", "kana": "", "kanji": "" },
-        { "yomi": "くんよみ", "kana": "", "kanji": "" },
-        { "yomi": "オンよみ", "kana": "", "kanji": "" }
+        { "yomi": "オンよみ", "kana": ["ガ", "カク"], "kanji": "画" },
+        { "yomi": "くんよみ", "kana": "おと", "kanji": "音" },
+        { "yomi": "オンよみ", "kana": "オン", "kanji": "音" },
+        { "yomi": "くんよみ", "kana": "たの", "kanji": "楽" },
+        { "yomi": "オンよみ", "kana": ["ガク", "ラク"], "kanji": "楽" },
+        { "yomi": "くんよみ", "kana": "うた", "kanji": "歌" },
+        { "yomi": "オンよみ", "kana": "カ", "kanji": "歌" },
+        { "yomi": "くんよみ", "kana": "うつ", "kanji": "写" },
+        { "yomi": "オンよみ", "kana": "シャ", "kanji": "写" },
+        { "yomi": "くんよみ", "kana": ["ま", "まっ"], "kanji": "真" },
+        { "yomi": "オンよみ", "kana": "シン", "kanji": "真" },
+        { "yomi": "くんよみ", "kana": "たび", "kanji": "旅" },
+        { "yomi": "オンよみ", "kana": "リョ", "kanji": "旅" },
+        { "yomi": "くんよみ", "kana": "よ", "kanji": "世" },
+        { "yomi": "オンよみ", "kana": ["セ", "セイ"], "kanji": "世" },
+
+        { "yomi": "オンよみ", "kana": "カイ", "kanji": "界" }
     ],
-    // ["", ""]
+    
     "kanji_day_6": [
-        { "yomi": "くんよみ", "kana": "", "kanji": "" },
-        { "yomi": "オンよみ", "kana": "", "kanji": "" },
-        { "yomi": "くんよみ", "kana": "", "kanji": "" },
-        { "yomi": "オンよみ", "kana": "", "kanji": "" },
-        { "yomi": "くんよみ", "kana": "", "kanji": "" },
-        { "yomi": "オンよみ", "kana": "", "kanji": "" },
-        { "yomi": "くんよみ", "kana": "", "kanji": "" },
-        { "yomi": "オンよみ", "kana": "", "kanji": "" },
-        { "yomi": "くんよみ", "kana": "", "kanji": "" },
-        { "yomi": "オンよみ", "kana": "", "kanji": "" },
-        { "yomi": "くんよみ", "kana": "", "kanji": "" },
-        { "yomi": "オンよみ", "kana": "", "kanji": "" },
-        { "yomi": "くんよみ", "kana": "", "kanji": "" },
-        { "yomi": "オンよみ", "kana": "", "kanji": "" },
-        { "yomi": "くんよみ", "kana": "", "kanji": "" },
-        { "yomi": "オンよみ", "kana": "", "kanji": "" },
-        { "yomi": "くんよみ", "kana": "", "kanji": "" },
-        { "yomi": "オンよみ", "kana": "", "kanji": "" },
-        { "yomi": "くんよみ", "kana": "", "kanji": "" },
-        { "yomi": "オンよみ", "kana": "", "kanji": "" }
+        { "yomi": "くんよみ", "kana": "つか", "kanji": "仕" },
+        { "yomi": "オンよみ", "kana": "シ", "kanji": "仕" },
+        { "yomi": "くんよみ", "kana": "こと", "kanji": "事" },
+        { "yomi": "オンよみ", "kana": "ジ", "kanji": "事" },
+        
+        { "yomi": "くんよみ", "kana": "ギン", "kanji": "銀" },
+        
+        { "yomi": "オンよみ", "kana": "イン", "kanji": "員" },
+        
+        { "yomi": "オンよみ", "kana": "イ", "kanji": "医" },
+        { "yomi": "くんよみ", "kana": "もの", "kanji": "者" },
+        { "yomi": "オンよみ", "kana": "シャ", "kanji": "者" },
+        { "yomi": "くんよみ", "kana": "はたら", "kanji": "働" },
+        { "yomi": "オンよみ", "kana": "ドウ", "kanji": "働" },
+        { "yomi": "くんよみ", "kana": "や", "kanji": "屋" },
+        { "yomi": "オンよみ", "kana": "オク", "kanji": "屋" },
+        { "yomi": "くんよみ", "kana": "う", "kanji": "産" },
+        { "yomi": "オンよみ", "kana": "サン", "kanji": "産" },
+        
+        { "yomi": "オンよみ", "kana": "ギョウ", "kanji": "業" }
     ]
 };
