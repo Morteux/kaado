@@ -1,5 +1,5 @@
-const kanjin4_json = {
-    "kanji_lesson_11": [
+const kanjij3_json = {
+    "kanji_day_1": [
         { "yomi": "くんよみ", "kana": "す", "kanji": "住" },
         { "yomi": "オンよみ", "kana": "ジュウ", "kanji": "住" },
         { "yomi": "くんよみ", "kana": ["ところ", "どころ"], "kanji": "所" },
@@ -23,7 +23,7 @@ const kanjin4_json = {
         { "yomi": "オンよみ", "kana": "ソン", "kanji": "村" }
     ],
 
-    "kanji_lesson_12": [
+    "kanji_day_2": [
         { "yomi": "くんよみ", "kana": "あか", "kanji": "明" },
         { "yomi": "オンよみ", "kana": "メイ", "kanji": "明" },
         { "yomi": "くんよみ", "kana": "くら", "kanji": "暗" },
@@ -46,7 +46,7 @@ const kanjin4_json = {
         { "yomi": "オンよみ", "kana": "サイ", "kanji": "細" }
     ],
 
-    "kanji_lesson_13": [
+    "kanji_day_3": [
         
         { "yomi": "オンよみ", "kana": ["トク", "トッ"], "kanji": "特" },
         { "yomi": "くんよみ", "kana": "わか", "kanji": "別" },

@@ -1,5 +1,5 @@
-const kanjin5_json = {
-    "kanji_lesson_1": [
+const kanjij2_json = {
+    "kanji_day_1": [
         { "yomi": "くんよみ", "kana": "ひと", "kanji": "一" },
         { "yomi": "オンよみ", "kana": ["イチ", "イッ"], "kanji": "一" },
         { "yomi": "くんよみ", "kana": "ふた", "kanji": "二" },
@@ -26,7 +26,7 @@ const kanjin5_json = {
         { "yomi": "オンよみ", "kana": "エン", "kanji": "円" }
     ],
 
-    "kanji_lesson_2": [
+    "kanji_day_2": [
         { "yomi": "くんよみ", "kana": "やま", "kanji": "山" },
         { "yomi": "オンよみ", "kana": "サン", "kanji": "山" },
         { "yomi": "くんよみ", "kana": "かわ", "kanji": "川" },
@@ -47,7 +47,7 @@ const kanjin5_json = {
         { "yomi": "オンよみ", "kana": "ネン", "kanji": "年" },
     ],
 
-    "kanji_lesson_3": [
+    "kanji_day_3": [
         { "yomi": "くんよみ", "kana": "ちから", "kanji": "力" },
         { "yomi": "オンよみ", "kana": "リョク", "kanji": "力" },
         { "yomi": "くんよみ", "kana": "た", "kanji": "田" },
@@ -70,7 +70,7 @@ const kanjin5_json = {
         { "yomi": "オンよみ", "kana": ["ホク", "ホツ"], "kanji": "北" }
     ],
 
-    "kanji_lesson_4": [
+    "kanji_day_4": [
         { "yomi": "くんよみ", "kana": "おお", "kanji": "大" },
         { "yomi": "オンよみ", "kana": ["ダイ", "タイ"], "kanji": "大" },
         { "yomi": "くんよみ", "kana": "なか", "kanji": "中" },
@@ -93,7 +93,7 @@ const kanjin5_json = {
         { "yomi": "オンよみ", "kana": "シ", "kanji": "私" }
     ],
 
-    "kanji_lesson_5": [
+    "kanji_day_5": [
         { "yomi": "くんよみ", "kana": "ひと", "kanji": "人" },
         { "yomi": "オンよみ", "kana": ["ジン", "ニン"], "kanji": "人" },
         { "yomi": "くんよみ", "kana": "くち", "kanji": "口" },
@@ -116,7 +116,7 @@ const kanjin5_json = {
         { "yomi": "オンよみ", "kana": ["ショウ", "セイ"], "kanji": "生" }
     ],
 
-    "kanji_lesson_6": [
+    "kanji_day_6": [
         { "yomi": "くんよみ", "kana": "な", "kanji": "名" },
         { "yomi": "オンよみ", "kana": ["メイ", "ミョウ"], "kanji": "名" },
         { "yomi": "くんよみ", "kana": "もと", "kanji": "本" },
@@ -139,7 +139,7 @@ const kanjin5_json = {
         { "yomi": "オンよみ", "kana": "ジ", "kanji": "自" }
     ],
 
-    "kanji_lesson_7": [
+    "kanji_day_7": [
 
         { "yomi": "オンよみ", "kana": "マイ", "kanji": "毎" },
         { "yomi": "くんよみ", "kana": "とき", "kanji": "時" },
@@ -162,7 +162,7 @@ const kanjin5_json = {
         { "yomi": "オンよみ", "kana": "キュウ", "kanji": "休" }
     ],
 
-    "kanji_lesson_8": [
+    "kanji_day_8": [
         { "yomi": "くんよみ", "kana": "まえ", "kanji": "前" },
         { "yomi": "オンよみ", "kana": "ゼン", "kanji": "前" },
         { "yomi": "くんよみ", "kana": ["うし", "あと"], "kanji": "後" },
@@ -183,7 +183,7 @@ const kanjin5_json = {
         { "yomi": "オンよみ", "kana": "バイ", "kanji": "買" }
     ],
 
-    "kanji_lesson_9": [
+    "kanji_day_9": [
         { "yomi": "くんよみ", "kana": ["はは", "お"], "kanji": "母" },
         { "yomi": "オンよみ", "kana": "ボ", "kanji": "母" },
         { "yomi": "くんよみ", "kana": ["ちち", "お"], "kanji": "父" },
@@ -206,7 +206,7 @@ const kanjin5_json = {
         { "yomi": "オンよみ", "kana": "チョウ", "kanji": "長" }
     ],
 
-    "kanji_lesson_10": [
+    "kanji_day_10": [
         { "yomi": "くんよみ", "kana": ["いえ", "うち"], "kanji": "家" },
         { "yomi": "オンよみ", "kana": "カ", "kanji": "家" },
 
@@ -228,74 +228,27 @@ const kanjin5_json = {
         { "yomi": "くんよみ", "kana": "いぬ", "kanji": "犬" },
         { "yomi": "オンよみ", "kana": "ケン", "kanji": "犬" }
     ],
-
-    "kanji_lesson_11": [
-        { "yomi": "くんよみ", "kana": "す", "kanji": "住" },
-        { "yomi": "オンよみ", "kana": "ジュウ", "kanji": "住" },
-        { "yomi": "くんよみ", "kana": ["ところ", "どころ"], "kanji": "所" },
-        { "yomi": "オンよみ", "kana": ["ショ", "ジョ"], "kanji": "所" },
+    
+    "kanji_day_11": [
+        { "yomi": "くんよみ", "kana": "うし", "kanji": "牛" },
+        { "yomi": "オンよみ", "kana": "ギュウ", "kanji": "牛" },
+        { "yomi": "くんよみ", "kana": "た", "kanji": "立" },
+        { "yomi": "オンよみ", "kana": "リツ", "kanji": "立" },
+        { "yomi": "くんよみ", "kana": ["い", "こと"], "kanji": "言" },
+        { "yomi": "オンよみ", "kana": "ゲン", "kanji": "言" },
+        { "yomi": "くんよみ", "kana": "かた", "kanji": "語" },
+        { "yomi": "オンよみ", "kana": "ゴ", "kanji": "語" },
+        { "yomi": "くんよみ", "kana": ["はな", "はなし"], "kanji": "話" },
+        { "yomi": "オンよみ", "kana": "ワ", "kanji": "話" },
         
-        { "yomi": "オンよみ", "kana": "キョウ", "kanji": "京" },
-        { "yomi": "くんよみ", "kana": "みやこ", "kanji": "都" },
-        { "yomi": "オンよみ", "kana": ["ト", "ツ"], "kanji": "都" },
-
-        { "yomi": "オンよみ", "kana": "フ", "kanji": "府" },
-
-        { "yomi": "オンよみ", "kana": "ケン", "kanji": "県" },
-
-        { "yomi": "くんよみ", "kana": "いち", "kanji": "市" },
-        { "yomi": "オンよみ", "kana": "シ", "kanji": "市" },
-
-        { "yomi": "オンよみ", "kana": "ク", "kanji": "区" },
-        { "yomi": "くんよみ", "kana": "まち", "kanji": "町" },
-        { "yomi": "オンよみ", "kana": "チョウ", "kanji": "町" },
-        { "yomi": "くんよみ", "kana": "むら", "kanji": "村" },
-        { "yomi": "オンよみ", "kana": "ソン", "kanji": "村" }
-    ],
-
-    "kanji_lesson_12": [
-        { "yomi": "くんよみ", "kana": "あか", "kanji": "明" },
-        { "yomi": "オンよみ", "kana": "メイ", "kanji": "明" },
-        { "yomi": "くんよみ", "kana": "くら", "kanji": "暗" },
-        { "yomi": "オンよみ", "kana": "アン", "kanji": "暗" },
-        { "yomi": "くんよみ", "kana": "とお", "kanji": "遠" },
-        { "yomi": "オンよみ", "kana": "エン", "kanji": "遠" },
-        { "yomi": "くんよみ", "kana": "ちか", "kanji": "近" },
-        { "yomi": "オンよみ", "kana": "キン", "kanji": "近" },
-        { "yomi": "くんよみ", "kana": "つよ", "kanji": "強" },
-        { "yomi": "オンよみ", "kana": "キョウ", "kanji": "強" },
-        { "yomi": "くんよみ", "kana": "よわ", "kanji": "弱" },
-        { "yomi": "オンよみ", "kana": "ジャク", "kanji": "弱" },
-        { "yomi": "くんよみ", "kana": "おも", "kanji": "重" },
-        { "yomi": "オンよみ", "kana": "ジュウ", "kanji": "重" },
-        { "yomi": "くんよみ", "kana": "かる", "kanji": "軽" },
-        { "yomi": "オンよみ", "kana": "ケイ", "kanji": "軽" },
-        { "yomi": "くんよみ", "kana": "ふと", "kanji": "太" },
-        { "yomi": "オンよみ", "kana": "タイ", "kanji": "太" },
-        { "yomi": "くんよみ", "kana": ["ほそ", "こま"], "kanji": "細" },
-        { "yomi": "オンよみ", "kana": "サイ", "kanji": "細" }
-    ],
-
-    "kanji_lesson_13": [
+        { "yomi": "オンよみ", "kana": "デン", "kanji": "電" },
+        { "yomi": "くんよみ", "kana": "くるま", "kanji": "車" },
+        { "yomi": "オンよみ", "kana": "シャ", "kanji": "車" },
+        { "yomi": "くんよみ", "kana": "えき", "kanji": "駅" },
         
-        { "yomi": "オンよみ", "kana": ["トク", "トッ"], "kanji": "特" },
-        { "yomi": "くんよみ", "kana": "わか", "kanji": "別" },
-        { "yomi": "オンよみ", "kana": "ベツ", "kanji": "別" },
-        { "yomi": "くんよみ", "kana": "あ", "kanji": "有" },
-        { "yomi": "オンよみ", "kana": "ユウ", "kanji": "有" },
-        { "yomi": "くんよみ", "kana": "たよ", "kanji": "便" },
-        { "yomi": "オンよみ", "kana": ["ビン", "ベン"], "kanji": "便" },
-        
-        { "yomi": "オンよみ", "kana": "リ", "kanji": "利" },
-        
-        { "yomi": "オンよみ", "kana": ["フ", "ブ"], "kanji": "不" },
-        { "yomi": "くんよみ", "kana": "き", "kanji": "切" },
-        { "yomi": "オンよみ", "kana": "セン", "kanji": "切" },
-        { "yomi": "くんよみ", "kana": "もと", "kanji": "元" },
-        { "yomi": "オンよみ", "kana": ["ゲン", "ガン"], "kanji": "元" },
-        { "yomi": "くんよみ", "kana": "す", "kanji": "好" },
-        { "yomi": "オンよみ", "kana": "コウ", "kanji": "好" },
-        { "yomi": "くんよみ", "kana": "いそ", "kanji": "急" },
-        { "yomi": "オンよみ", "kana": "キュウ", "kanji": "急" }
+        { "yomi": "くんよみ", "kana": "みせ", "kanji": "店" },
+        { "yomi": "オンよみ", "kana": "テン", "kanji": "店" },
+        { "yomi": "くんよみ", "kana": "みち", "kanji": "道" },
+        { "yomi": "オンよみ", "kana": "ドウ", "kanji": "道" }
     ]
 };

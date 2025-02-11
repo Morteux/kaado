@@ -1,5 +1,5 @@
-const kanjin4words_json = {
-    "kanji_lesson_11": [
+const kanjij3words_json = {
+    "kanji_day_1": [
         { "spanish": "dirección", "kana": "じゅうしょ", "kanji": "住所" },
         { "spanish": "lugar", "kana": "ばしょ", "kanji": "ば所" },
         { "spanish": "cocina", "kana": "だいどころ", "kanji": "だい所" },
@@ -16,7 +16,7 @@ const kanjin4words_json = {
         { "spanish": "alcalde", "kana": "そんちょう", "kanji": "村長" },
     ],
 
-    "kanji_lesson_12": [
+    "kanji_day_2": [
         { "spanish": "explicación", "kana": "せつめい", "kanji": "せつ明" },
         { "spanish": "mañana", "kana": "あした", "kanji": "明日" },
         { "spanish": "contraseña", "kana": "あんしょうばんごう", "kanji": "暗しょうばんごう" },
@@ -32,7 +32,7 @@ const kanjin4words_json = {
         { "spanish": "bacteria", "kana": "さいきん", "kanji": "細きん" },
     ],
 
-    "kanji_lesson_13": [
+    "kanji_day_3": [
         { "spanish": "especialmente", "kana": "とくに", "kanji": "特に" },
         { "spanish": "especial", "kana": "とくべつ", "kanji": "特別" },
         { "spanish": "por separado", "kana": "べつべつに", "kanji": "別々に" },

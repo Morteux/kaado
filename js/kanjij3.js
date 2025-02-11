@@ -1,4 +1,4 @@
-const JSON_DATA = kanjin4_json;
+const JSON_DATA = kanjij3_json;
 
 var question_key = "kanji";
 var answer_key = "kana";
