@@ -153,7 +153,9 @@ function startTest() {
     }
 
     // Show strokes by default
-    showStrokeButton();
+    if (show_strokes_by_default) {
+        showStrokeButton();
+    }
 }
 
 function next() {
