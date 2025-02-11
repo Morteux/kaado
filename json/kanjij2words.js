@@ -1,4 +1,4 @@
-const kanjij3words_json = {
+const kanjij2words_json = {
     "kanji_day_1": [
         { "spanish": "", "kana": "", "kanji": "" },
         { "spanish": "", "kana": "", "kanji": "" },
