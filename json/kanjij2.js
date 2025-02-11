@@ -54,7 +54,6 @@ const kanjij2_json = {
         { "yomi": "オンよみ", "kana": "デン", "kanji": "田" },
         { "yomi": "くんよみ", "kana": "ゆう", "kanji": "夕" },
 
-
         { "yomi": "オンよみ", "kana": "テン", "kanji": "天" },
         { "yomi": "くんよみ", "kana": "そら", "kanji": "空" },
         { "yomi": "オンよみ", "kana": ["クウ", "カラ"], "kanji": "空" },
