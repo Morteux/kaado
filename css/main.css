@@ -97,45 +97,6 @@ button:active {
     align-items: center;
 
     background-color: transparent;
-
-    width: 80%;
-}
-
-.content_column {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-
-    background-color: transparent;
-
-    height: 100%;
-}
-
-.content_column_title {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
-
-    font-size: 2rem;
-    color: var(--font-color);
-}
-
-.content_column_title_furigana {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
-
-    font-size: 1rem;
-    color: var(--font-color);
-
-    line-height: 5px;
 }
 
 .primary_button {
