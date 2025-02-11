@@ -15,18 +15,6 @@
     src: url('../fonts/KanjiStrokeOrders_v4.004.ttf');
 }
 
-/* Credits: https://github.com/KazukiKimuraJP/KazukiReiwa?tab=readme-ov-file */
-@font-face {
-    font-family: 'KazukiReiwaLight';
-    src: url('../fonts/KazukiReiwa - Light.ttf');
-}
-
-/* Credits: https://github.com/KazukiKimuraJP/KazukiReiwa?tab=readme-ov-file */
-@font-face {
-    font-family: 'KazukiReiwaRegular';
-    src: url('../fonts/KazukiReiwa - Regular.ttf');
-}
-
 
 
 
@@ -347,10 +335,6 @@ input[type="text"] {
     z-index: 2;
 
     font-size: 8rem;
-    font-family: "KazukiReiwaRegular";
-
-    /* font-size: 8rem;
-    font-family: "KazukiReiwaLight"; */
 }
 
 .img_element {
