@@ -220,7 +220,7 @@ function startEnd() {
                 </div>
                 <div>
                     <button id="restart" onclick="restart()">Restart</button>
-                    <button id="return" onclick="window.location.href = '/index.html'">Return to index</button>
+                    <button id="return" onclick="window.location.href = '/kaado'">Return to index</button>
                 </div>
             </div>
             <div class="answers_container">
@@ -264,7 +264,7 @@ function restart() {
         <div class="button_column_container">
             <button class="primary_button" onclick="startTest()">Start test</button>
             <button id="switch_question_answer" class="primary_button" onclick="switchQuestionAnswer()">Question:&nbsp` + question_key + `<br>Answer:&nbsp` + answer_key + `</button>
-            <button class="primary_button" onclick="window.location.href = '/index.html'">Return to index</button>
+            <button class="primary_button" onclick="window.location.href = '/kaado'">Return to index</button>
         </div>
 
         <div class="checkboxes_container">

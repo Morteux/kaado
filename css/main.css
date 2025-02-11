@@ -12,19 +12,19 @@
 /* Credits: https://www.nihilist.org.uk/ */
 @font-face {
     font-family: 'KanjiStrokeOrders';
-    src: url('/fonts/KanjiStrokeOrders_v4.004.ttf');
+    src: url('../fonts/KanjiStrokeOrders_v4.004.ttf');
 }
 
 /* Credits: https://github.com/KazukiKimuraJP/KazukiReiwa?tab=readme-ov-file */
 @font-face {
     font-family: 'KazukiReiwaLight';
-    src: url('/fonts/KazukiReiwa - Light.ttf');
+    src: url('../fonts/KazukiReiwa - Light.ttf');
 }
 
 /* Credits: https://github.com/KazukiKimuraJP/KazukiReiwa?tab=readme-ov-file */
 @font-face {
     font-family: 'KazukiReiwaRegular';
-    src: url('/fonts/KazukiReiwa - Regular.ttf');
+    src: url('../fonts/KazukiReiwa - Regular.ttf');
 }
 
 
