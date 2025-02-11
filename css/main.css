@@ -390,6 +390,10 @@ input[type="text"] {
         flex-direction: column;
     }
 
+    .content_column {
+        margin-top: 50px;
+    }
+
     .results_container {
         flex-direction: column;
     }
