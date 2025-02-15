@@ -106,7 +106,7 @@ const kanjij3words_json = {
         { "spanish": "siglo 21", "kana": "にじゅういっせき", "kanji": "２１世き" },
         { "spanish": "mundo", "kana": "せかい", "kanji": "世界" }
     ],
-// ["", ""]
+    
     "kanji_day_6": [
         { "spanish": "trabajo", "kana": "しごと", "kanji": "仕事" },
         { "spanish": "asunto", "kana": "ようじ", "kanji": "よう事" },

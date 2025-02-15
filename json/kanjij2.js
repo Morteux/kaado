@@ -32,7 +32,8 @@ const kanjij2_json = {
         { "yomi": "くんよみ", "kana": "かわ", "kanji": "川" },
         { "yomi": "くんよみ", "kana": "つき", "kanji": "月" },
         { "yomi": "オンよみ", "kana": ["ゲツ", "ガツ"], "kanji": "月" },
-
+        { "yomi": "くんよみ", "kana": "き", "kanji": "木" },
+        { "yomi": "オンよみ", "kana": "モク", "kanji": "木" },
         { "yomi": "くんよみ", "kana": "ひ", "kanji": "火" },
         { "yomi": "オンよみ", "kana": "カ", "kanji": "火" },
         { "yomi": "くんよみ", "kana": "みず", "kanji": "水" },
@@ -166,6 +167,8 @@ const kanjij2_json = {
         { "yomi": "オンよみ", "kana": "ゼン", "kanji": "前" },
         { "yomi": "くんよみ", "kana": ["うし", "あと"], "kanji": "後" },
         { "yomi": "オンよみ", "kana": "ゴ", "kanji": "後" },
+
+        { "yomi": "オンよみ", "kana": "ゴ", "kanji": "午" },
 
         { "yomi": "オンよみ", "kana": "コウ", "kanji": "校" },
         { "yomi": "くんよみ", "kana": "た", "kanji": "食" },
