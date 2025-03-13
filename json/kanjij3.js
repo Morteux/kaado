@@ -136,5 +136,28 @@ const kanjij3_json = {
         { "yomi": "オンよみ", "kana": "サン", "kanji": "産" },
         
         { "yomi": "オンよみ", "kana": "ギョウ", "kanji": "業" }
+    ],
+    
+	"kanji_day_7": [
+        { "yomi": "くんよみ", "kana": "はやし", "kanji": "林" },
+        { "yomi": "オンよみ", "kana": "リン", "kanji": "林" },
+        { "yomi": "くんよみ", "kana": "もり", "kanji": "森" },
+        { "yomi": "オンよみ", "kana": "シン", "kanji": "森" },
+        
+        { "yomi": "オンよみ", "kana": ["ジ","チ"], "kanji": "地" },
+        { "yomi": "くんよみ", "kana": "いけ", "kanji": "池" },
+        { "yomi": "オンよみ", "kana": "チ", "kanji": "池" },
+        { "yomi": "くんよみ", "kana": "うみ", "kanji": "海" },
+        { "yomi": "オンよみ", "kana": "カイ", "kanji": "海" },
+        
+        { "yomi": "オンよみ", "kana": "ヨウ", "kanji": "洋" },
+        { "yomi": "くんよみ", "kana": "ゆき", "kanji": "雪" },
+        { "yomi": "オンよみ", "kana": "セツ", "kanji": "雪" },
+        { "yomi": "くんよみ", "kana": ["ひかり","ひか"], "kanji": "光" },
+        { "yomi": "オンよみ", "kana": "コウ", "kanji": "光" },
+
+        { "yomi": "オンよみ", "kana": ["ダイ","タイ"], "kanji": "台" },
+        { "yomi": "くんよみ", "kana": "かぜ", "kanji": "風" },
+        { "yomi": "オンよみ", "kana": "フウ", "kanji": "風" }
     ]
 };
