@@ -1,13 +1,14 @@
  🈷🈳📖 KANJI DÍA 3 📖🈳🈷
+ 🈷🈳📖 KANJI DÍA 4 📖🈳🈷
 
-1. しみん
-2. くべつ
-3. ふりつ
-4. けんない
-5. けいしょく
-6. きゅうこう
-7. あっか
-8. りょかん
+1. としん
+2. しちょう
+3. くかく
+4. きょうりょく
+5. さいく
+6. おんがく
+7. しゃせい
+8. さんぎょう
 
 
 
@@ -32,11 +33,11 @@
 
 
  🈷🈳📖 RESPUESTAS 📖🈳🈷
-1. 市民 -> ciudadano
-2. 区別 -> distinción, diferencia
-3. 府立 -> administrado por la prefectura
-4. 県内 -> dentro de la prefectura
-5. 軽食 -> comida ligera
-6. 急行 -> tren rápido, prisa
-7. 悪化 -> empeoramiento
-8. 旅館 -> posada japonesa
+1. 都心 -> centro de la ciudad
+2. 市長 -> alcalde
+3. 区画 -> sección, división
+4. 強力 -> fuerte, poderoso
+5. 細工 -> artesanía, trabajo manual
+6. 音楽 -> música
+7. 写生 -> boceto, dibujo
+8. 産業 -> industria
