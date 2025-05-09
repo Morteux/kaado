@@ -1,13 +1,13 @@
- 🈷🈳📖 KANJI DÍA 1 📖🈳🈷
+ 🈷🈳📖 KANJI DÍA 3 📖🈳🈷
 
-1. すむ
-2. ところ
-3. とうきょう
-4. あかるい
-5. べんり
-6. とくべつ
-7. はたらく
-8. がっこう
+1. しみん
+2. くべつ
+3. ふりつ
+4. けんない
+5. けいしょく
+6. きゅうこう
+7. あっか
+8. りょかん
 
 
 
@@ -32,11 +32,11 @@
 
 
  🈷🈳📖 RESPUESTAS 📖🈳🈷
-1. 住む -> vivir, residir 
-2. 所 -> lugar
-3. 東京 -> tokio
-4. 明るい -> brillante, claro
-5. 便利 -> conveniente, útil
-6. 特別 -> especial
-7. 働く -> trabajar
-8. 学校 -> escuela
+1. 市民 -> ciudadano
+2. 区別 -> distinción, diferencia
+3. 府立 -> administrado por la prefectura
+4. 県内 -> dentro de la prefectura
+5. 軽食 -> comida ligera
+6. 急行 -> tren rápido, prisa
+7. 悪化 -> empeoramiento
+8. 旅館 -> posada japonesa
