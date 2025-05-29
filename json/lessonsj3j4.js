@@ -178,7 +178,7 @@ const lessonsj3j4_json = {
         { "spanish": "venir", "kana": ["くる", "来る"] },
         { "spanish": "volver, regresar, irse a casa", "kana": ["かえる", "帰る"] },
         { "spanish": "comer", "kana": ["たべる", "食べる"] },
-        { "spanish": ["beber", "tomar"], "kana": ["のむ", "飲むむ"] },
+        { "spanish": ["beber", "tomar"], "kana": ["のむ", "飲む"] },
         { "spanish": "fumar", "kana": ["すう", "吸う"] },
         { "spanish": ["ver", "mirar"], "kana": ["みる", "見る"] },
         { "spanish": ["oír", "escuchar", "preguntar"], "kana": ["きく", "聞く"] },
@@ -348,6 +348,11 @@ const lessonsj3j4_json = {
         { "spanish": "envejecer", "kana": ["としをとる", "年をとる"] },
         { "spanish": "enfadarse", "kana": ["むかつく", "むかつく"] },
         { "spanish": "pasar tiempo", "kana": ["たつ", "経つ"] },
+
+
+        // J3
+
+
         { "spanish": ["revisar", "inspeccionar", "examinar", "evaluar"], "kana": ["みる", "診る"] },
         { "spanish": ["retrasarse", "llegar tarde"], "kana": ["おくれる", "遅れる"] },
         { "spanish": "llegar a tiempo", "kana": ["まにあう", "間に合う"] },
@@ -488,5 +493,29 @@ const lessonsj3j4_json = {
         { "spanish": ["pudrirse", "descomponerse", "agriarse"], "kana": ["くさる", "腐る"] },
         { "spanish": ["llevar", "transportar"], "kana": ["はこぶ", "運ぶ"] },
         { "spanish": ["usar", "utilizar", "aprovechar"], "kana": ["りようする", "利用する"] },
+
+        
+        // J4
+
+
+        { "spanish": ["alabar", "elogiar"], "kana": ["ほめる", "褒める"] },
+        { "spanish": ["reprochar", "reñir", "regañar"], "kana": ["しかる", "叱る"] },
+        { "spanish": "invitar", "kana": ["さそう", "誘う"] },
+        { "spanish": "invitar", "kana": ["しょうたいする", "招待する"] },
+        { "spanish": ["pedir", "solicitar"], "kana": ["たのむ", "頼む"] },
+        { "spanish": ["advertir", "avisar"], "kana": ["ちゅういする", "注意する"] },
+        { "spanish": ["robar", "quitar"], "kana": ["とる", "取る"] },
+        { "spanish": "pisar", "kana": ["ふむ", "踏む"] },
+        { "spanish": ["destruir", "demoler"], "kana": ["こわす", "壊す"] },
+        { "spanish": "ensuciar", "kana": ["よごす", "汚す"] },
+        { "spanish": ["celebrar", "realizar"], "kana": ["おこなう", "行う"] },
+        { "spanish": "exportar", "kana": ["ゆしゅつする", "輸出する"] },
+        { "spanish": "importar", "kana": ["ゆにゅうする", "輸入する"] },
+        { "spanish": "traducir", "kana": ["ほんやくする", "翻訳する"] },
+        { "spanish": "inventar", "kana": ["はつめいする", "発明する"] },
+        { "spanish": "descubrir", "kana": ["はっけんする", "発見する"] },
+        { "spanish": "incendiarse", "kana": ["やける", "焼ける"] },
+        { "spanish": "dormir", "kana": ["ねむる", "眠る"] },
+        { "spanish": ["grabar", "cincelar"], "kana": ["ほる", "彫る"] },
     ]
 }
