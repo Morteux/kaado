@@ -188,7 +188,7 @@ function next() {
         document.getElementById("correct_answer_container").style.display = "";
 
         if (Array.isArray(shuffled[actualIndex][answer_key])) {
-            document.getElementById("correct_answer").innerHTML = shuffled[actualIndex][answer_key].join(", "); // Show correct answer
+            document.getElementById("correct_answer").innerHTML = shuffled[actualIndex][answer_key].join("<br>"); // Show correct answer
         } else {
             document.getElementById("correct_answer").innerHTML = shuffled[actualIndex][answer_key]; // Show correct answer
         }
@@ -196,7 +196,7 @@ function next() {
 
     if (++actualIndex < shuffled.length) {
         if (Array.isArray(shuffled[actualIndex][question_key])) {
-            document.getElementById("question_element").innerHTML = shuffled[actualIndex][question_key].join(", ");
+            document.getElementById("question_element").innerHTML = shuffled[actualIndex][question_key].join("<br>");
         } else {
             document.getElementById("question_element").innerHTML = shuffled[actualIndex][question_key];
         }
