@@ -144,7 +144,7 @@ const kanjij3_json = {
         { "yomi": "くんよみ", "kana": "もり", "kanji": "森" },
         { "yomi": "オンよみ", "kana": "シン", "kanji": "森" },
         
-        { "yomi": "オンよみ", "kana": ["ジ","チ"], "kanji": "地" },
+        { "yomi": "オンよみ", "kana": ["ジ", "チ"], "kanji": "地" },
         { "yomi": "くんよみ", "kana": "いけ", "kanji": "池" },
         { "yomi": "オンよみ", "kana": "チ", "kanji": "池" },
         { "yomi": "くんよみ", "kana": "うみ", "kanji": "海" },
@@ -153,11 +153,80 @@ const kanjij3_json = {
         { "yomi": "オンよみ", "kana": "ヨウ", "kanji": "洋" },
         { "yomi": "くんよみ", "kana": "ゆき", "kanji": "雪" },
         { "yomi": "オンよみ", "kana": "セツ", "kanji": "雪" },
-        { "yomi": "くんよみ", "kana": ["ひかり","ひか"], "kanji": "光" },
+        { "yomi": "くんよみ", "kana": ["ひかり", "ひか"], "kanji": "光" },
         { "yomi": "オンよみ", "kana": "コウ", "kanji": "光" },
 
-        { "yomi": "オンよみ", "kana": ["ダイ","タイ"], "kanji": "台" },
+        { "yomi": "オンよみ", "kana": ["ダイ", "タイ"], "kanji": "台" },
         { "yomi": "くんよみ", "kana": "かぜ", "kanji": "風" },
         { "yomi": "オンよみ", "kana": "フウ", "kanji": "風" }
+    ],
+    
+	"kanji_day_8": [
+
+        { "yomi": "オンよみ", "kana": "キ", "kanji": "季" },
+        { "yomi": "くんよみ", "kana": "ふし", "kanji": "節" },
+        { "yomi": "オンよみ", "kana": "セツ", "kanji": "節" },
+        { "yomi": "くんよみ", "kana": "はる", "kanji": "春" },
+        { "yomi": "オンよみ", "kana": "シュン", "kanji": "春" },
+        { "yomi": "くんよみ", "kana": "なつ", "kanji": "夏" },
+        { "yomi": "オンよみ", "kana": "カ", "kanji": "夏" },
+        { "yomi": "くんよみ", "kana": "あき", "kanji": "秋" },
+        { "yomi": "オンよみ", "kana": "シュウ", "kanji": "秋" },
+        { "yomi": "くんよみ", "kana": "ふゆ", "kanji": "冬" },
+        { "yomi": "オンよみ", "kana": "トウ", "kanji": "冬" },
+        { "yomi": "くんよみ", "kana": "あつ", "kanji": "暑" },
+        { "yomi": "オンよみ", "kana": "ショ", "kanji": "暑" },
+        { "yomi": "くんよみ", "kana": "さむ", "kanji": "寒" },
+        { "yomi": "オンよみ", "kana": "カン", "kanji": "寒" },
+        { "yomi": "くんよみ", "kana": "あたた", "kanji": "暖" },
+        { "yomi": "オンよみ", "kana": "ダン", "kanji": "暖" },
+        { "yomi": "くんよみ", "kana": "すず", "kanji": "凉" },
+        { "yomi": "オンよみ", "kana": "リョウ", "kanji": "凉" },
+    ],
+    
+	"kanji_day_9": [
+        { "yomi": "くんよみ", "kana": "からだ", "kanji": "休" },
+        { "yomi": "オンよみ", "kana": "タイ", "kanji": "休" },
+        { "yomi": "くんよみ", "kana": "あたま", "kanji": "頭" },
+        { "yomi": "オンよみ", "kana": "ズ", "kanji": "頭" },
+        { "yomi": "くんよみ", "kana": "かお", "kanji": "顏" },
+        { "yomi": "オンよみ", "kana": "ガン", "kanji": "顏" },
+        { "yomi": "くんよみ", "kana": "くび", "kanji": "首" },
+        { "yomi": "オンよみ", "kana": "シュ", "kanji": "首" },
+        { "yomi": "くんよみ", "kana": "こころ", "kanji": "心" },
+        { "yomi": "オンよみ", "kana": "シン", "kanji": "心" },
+        { "yomi": "くんよみ", "kana": "こえ", "kanji": "声" },
+        { "yomi": "オンよみ", "kana": "セイ", "kanji": "声" },
+        { "yomi": "くんよみ", "kana": "やまい", "kanji": "病" },
+        { "yomi": "オンよみ", "kana": "ビョウ", "kanji": "病" },
+        { "yomi": "くんよみ", "kana": "くすり", "kanji": "藥" },
+        { "yomi": "オンよみ", "kana": ["ヤク", "ヤッ"], "kanji": "藥" },
+        
+        { "yomi": "オンよみ", "kana": "カ", "kanji": "科" },
+        { "yomi": "くんよみ", "kana": "うち", "kanji": "內" },
+        { "yomi": "オンよみ", "kana": "ナイ", "kanji": "內" },
+    ],
+    
+	"kanji_day_10": [
+        { "yomi": "くんよみ", "kana": "あさ", "kanji": "朝" },
+        { "yomi": "オンよみ", "kana": ["チョウ", "サ"], "kanji": "朝" },
+        { "yomi": "くんよみ", "kana": "ひる", "kanji": "昼" },
+        { "yomi": "オンよみ", "kana": ["チュウ", "サ"], "kanji": "昼" },
+        { "yomi": "くんよみ", "kana": ["よる", "よ"], "kanji": "夜" },
+        { "yomi": "オンよみ", "kana": "ヤ", "kanji": "夜" },
+        { "yomi": "くんよみ", "kana": "ゆう", "kanji": "夕" },
+        
+        { "yomi": "くんよみ", "kana": ["かた", "がた"], "kanji": "方" },
+        { "yomi": "オンよみ", "kana": "ホウ", "kanji": "方" },
+        
+        { "yomi": "オンよみ", "kana": "バン", "kanji": "晚" },
+        { "yomi": "くんよみ", "kana": "はか", "kanji": "計" },
+        { "yomi": "オンよみ", "kana": "ケイ", "kanji": "計" },
+        
+        { "yomi": "オンよみ", "kana": "ヨウ", "kanji": "曜" },
+        
+        { "yomi": "オンよみ", "kana": "イ", "kanji": "以" },
+        
+        { "yomi": "オンよみ", "kana": "ド", "kanji": "度" },
     ]
 };

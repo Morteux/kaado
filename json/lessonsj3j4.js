@@ -49,6 +49,12 @@ const lessonsj3j4_json = {
 
 
     "lesson_27": [
+        { "spanish": ["tener", "criar"], "kana": ["かう", "飼う"] },
+        { "spanish": "correr", "kana": ["はしる", "走る"] },
+        { "spanish": "verse", "kana": ["みえる", "見える"] },
+        { "spanish": "oírse", "kana": ["きこえる", "聞こえる"] },
+        { "spanish": ["fundarse", "contruirse", "hacerse", "estar lista"], "kana": "できる" },
+        { "spanish": ["organizar", "celebrar", "realizar"], "kana": ["ひらく", "開く"] },
         { "spanish": ["", ""], "kana": "" },
         { "spanish": "", "kana": "" }
     ],
