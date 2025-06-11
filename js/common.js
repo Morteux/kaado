@@ -142,7 +142,7 @@ function startTest() {
     shuffled = calculateWordsArray().sort((a, b) => 0.5 - Math.random());
 
     if (Array.isArray(shuffled[actualIndex][question_key])) {
-        document.getElementById("question_element").innerHTML = shuffled[actualIndex][question_key].join(", ");
+        document.getElementById("question_element").innerHTML = shuffled[actualIndex][question_key].join("<br>");
     } else {
         document.getElementById("question_element").innerHTML = shuffled[actualIndex][question_key];
     }
