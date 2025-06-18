@@ -55,8 +55,43 @@ const lessonsj3j4_json = {
         { "spanish": "oírse", "kana": ["きこえる", "聞こえる"] },
         { "spanish": ["fundarse", "contruirse", "hacerse", "estar lista"], "kana": "できる" },
         { "spanish": ["organizar", "celebrar", "realizar"], "kana": ["ひらく", "開く"] },
-        { "spanish": ["", ""], "kana": "" },
-        { "spanish": "", "kana": "" }
+        { "spanish": "preocupado", "kana": ["しんぱい", "心配"] },
+        { "spanish": "mascota", "kana": "ペット" },
+        { "spanish": ["pájaro", "ave"], "kana": ["とり", "鳥"] },
+        { "spanish": ["voz", "canto"], "kana": ["こえ", "声"] },
+        { "spanish": ["ola", "onda"], "kana": ["なみ", "波"] },
+        { "spanish": "fuegos artificiales", "kana": ["はなび", "花火"] },
+        { "spanish": ["herramienta", "instrumento", "equipo"], "kana": ["どうぐ", "道具"] },
+        { "spanish": "lavado en seco", "kana": "クリーニング" },
+        { "spanish": ["casa", "piso", "departamento"], "kana": ["いえ", "家"] },
+        { "spanish": ["condominio", "edificio de pisos", "edificio de apartamentos"], "kana": "マンション" },
+        { "spanish": "cocina", "kana": "キッチン" },
+        { "spanish": "clase de", "kana": ["きょうしつ", "教室"] },
+        { "spanish": "sala de fiestas", "kana": "パーチールーム" },
+        { "spanish": "persona", "kana": ["かた", "方"] },
+        { "spanish": "después de", "kana": ["ご", "後"] },
+        { "spanish": ["no más que", "solamente"], "kana": "しか" },
+        { "spanish": "otro", "kana": "ほかの" },
+        { "spanish": "claramente", "kana": "はっきり" },
+        { "spanish": "muebles", "kana": ["かぐ", "家具"] },
+        { "spanish": ["estantería", "estante"], "kana": ["ほんだな", "本棚"] },
+        { "spanish": "algún día", "kana": "いつか" },
+        { "spanish": "construir", "kana": ["たてます", "立てます"] },
+        { "spanish": "maravilloso", "kana": "すばらしい" },
+        { "spanish": "niños", "kana": ["こどもたち", "子供たち"] },
+        { "spanish": ["favorito", "preferido"], "kana": ["だいすき", "大好き"] },
+        { "spanish": ["protagonista", "personaje principal"], "kana": ["しゅじんこう", "主人公"] },
+        { "spanish": "forma", "kana": ["かたち", "形"] },
+        { "spanish": ["fantástico", "mágico", "extraño", "misterioso"], "kana": ["ふしぎ", "不思議"] },
+        { "spanish": "bolsillo", "kana": "ポケット" },
+        { "spanish": "por ejemplo", "kana": ["たとえば", "例えば"] },
+        { "spanish": "poner", "kana": ["つけます", "付けます"] },
+        { "spanish": "libremente", "kana": ["じゆうに", "自由に"] },
+        { "spanish": "cielo", "kana": ["そら", "空"] },
+        { "spanish": "volar", "kana": ["とびます", "飛びます"] },
+        { "spanish": ["en el pasado", "antiguamente"], "kana": ["むかし", "昔"] },
+        { "spanish": ["mí mismo", "tí mismo", "sí mismo"], "kana": ["じぶん", "自分"] },
+        { "spanish": "futuro", "kana": ["しょうらい", "将来"] },
     ],
 
 
@@ -168,6 +203,125 @@ const lessonsj3j4_json = {
         { "spanish": "sobre", "kana": "ふうと" },
         { "spanish": "rejilla", "kana": "あみだな" },
         { "spanish": "exterior", "kana": ["外側", "そとがわ"] }
+    ],
+
+
+
+    "lesson_30": [
+        { "spanish": ["pegar", "fijar"], "kana": ["はる", "張る"] },
+        { "spanish": "colgar", "kana": ["かける", "掛ける"] },
+        { "spanish": ["adornar", "decorar"], "kana": ["さがる", "飾る"] },
+        { "spanish": ["poner en fila", "colocar", "enfilar"], "kana": ["ならべる", "並べる"] },
+        { "spanish": "plantar", "kana": ["うえる", "植える"] },
+        { "spanish": ["devolver", "reponer"], "kana": ["もどす", "戻す"] },
+        { "spanish": ["reunir", "juntar", "resumir", "compilar"], "kana": ["まとめる", "纏める"] },
+        { "spanish": ["poner en su lugar", "guardar"], "kana": ["しまう", "仕舞う"] },
+        { "spanish": ["determinar", "decidir"], "kana": ["きめる", "決める"] },
+        { "spanish": "preparar la lección", "kana": ["よしゅうする", "予習する"] },
+        { "spanish": "repasar la lección", "kana": ["ふくしゅうする", "復習する"] },
+        { "spanish": "dejar las cosas como están", "kana": ["そのままにする", "其の儘にする"] },
+        { "spanish": "clase", "kana": ["じゅぎょう", "授業"] },
+        { "spanish": ["conferencia", "clase"], "kana": ["こうぎ", "講義"] },
+        { "spanish": "reunión", "kana": "ミーチング" },
+        { "spanish": ["plan", "programa"], "kana": ["よてい", "予定"] },
+        { "spanish": "aviso", "kana": ["おしらせ", "お知らせ"] },
+        { "spanish": "guía", "kana": "ガイドブック" },
+        { "spanish": "calendario", "kana": "カレンダー" },
+        { "spanish": ["cartel", "letrero", "póster"], "kana": "ポスター" },
+        { "spanish": ["programa", "horario", "agenda"], "kana": ["よていひょう", "予定表"] },
+        { "spanish": ["papelera", "cubo de basura"], "kana": ["ごみばこ", "ごみ箱"] },
+        { "spanish": "muñeca", "kana": ["にんぎょう", "人形"] },
+        { "spanish": "florero", "kana": ["かびん", "花瓶"] },
+        { "spanish": "espejo", "kana": ["かがみ", "鏡"] },
+        { "spanish": "cajón", "kana": ["ひきだし", "引き出し"] },
+        { "spanish": ["vestíbulo", "entrada"], "kana": ["げんかん", "玄関"] },
+        { "spanish": ["pasillo", "corredor"], "kana": ["ろうか", "廊下"] },
+        { "spanish": "pared", "kana": ["かべ", "壁"] },
+        { "spanish": ["charca", "laguna", "estanque"], "kana": ["いけ", "池"] },
+        { "spanish": ["lugar original", "donde estaba"], "kana": ["もとのところ", "元の所"] },
+        { "spanish": "alrededor", "kana": ["まわり", "周り"] },
+        { "spanish": "centro", "kana": ["まんなか", "真ん中"] },
+        { "spanish": ["rincón", "esquina"], "kana": ["すみ", "隅"] },
+        { "spanish": "todavía", "kana": "まだ" },
+        { "spanish": "mochila", "kana": "リュック" },
+        { "spanish": "bolsa para emergencias", "kana": ["ひじょうぶくろ", "非常袋"] },
+        { "spanish": "caso de emergencia", "kana": ["ひじょうじ", "非常時"] },
+        { "spanish": ["subsistir", "vivir"], "kana": ["せいかつします", "生活します"] },
+        { "spanish": "linterna", "kana": ["かいちゅうでんとう", "懐中電灯"] },
+        { "spanish": "etc", "kana": "とか" },
+        { "spanish": "redondo", "kana": ["まるい", "丸い"] },
+        { "spanish": "un cierto", "kana": "ある" },
+        { "spanish": "soñar", "kana": ["ゆめをみます", "夢を見ます"] },
+        { "spanish": ["feliz", "alegre", "contento"], "kana": "うれしい" },
+        { "spanish": ["desagradable", "molesto", "detestable"], "kana": ["いや", "嫌"] },
+        { "spanish": ["y", "entonces"], "kana": "すると" },
+        { "spanish": "despertarse", "kana": ["めがさめます", "目が覚めます"] },
+    ],
+
+
+
+    "lesson_31": [
+        { "spanish": ["continuar", "seguir"], "kana": ["つづける", "続ける"] },
+        { "spanish": "encontrar", "kana": ["みつける", "見つける"] },
+        { "spanish": ["obtener", "tomar", "tomarse"], "kana": ["とる", "取る"] },
+        { "spanish": "presentarse", "kana": ["うける", "受ける"] },
+        { "spanish": ["inscribirse", "pedir", "subscribir"], "kana": ["もうしこむ", "申し込む"] },
+        { "spanish": ["descansar", "tomar un descanso"], "kana": ["きゅうけいする", "休憩する"] },
+        { "spanish": "", "kana": ["", ""] },
+        { "spanish": "", "kana": ["", ""] },
+        { "spanish": "", "kana": ["", ""] },
+        { "spanish": "", "kana": ["", ""] },
+        { "spanish": "", "kana": ["", ""] },
+    ],
+
+
+
+    "lesson_32": [
+        { "spanish": "", "kana": ["", ""] },
+        { "spanish": "", "kana": ["", ""] },
+        { "spanish": "", "kana": ["", ""] },
+        { "spanish": "", "kana": ["", ""] },
+        { "spanish": "", "kana": ["", ""] },
+    ],
+
+
+
+    "lesson_33": [
+        { "spanish": "", "kana": ["", ""] },
+        { "spanish": "", "kana": ["", ""] },
+        { "spanish": "", "kana": ["", ""] },
+        { "spanish": "", "kana": ["", ""] },
+        { "spanish": "", "kana": ["", ""] },
+    ],
+
+
+
+    "lesson_34": [
+        { "spanish": "", "kana": ["", ""] },
+        { "spanish": "", "kana": ["", ""] },
+        { "spanish": "", "kana": ["", ""] },
+        { "spanish": "", "kana": ["", ""] },
+        { "spanish": "", "kana": ["", ""] },
+    ],
+
+
+
+    "lesson_35": [
+        { "spanish": "", "kana": ["", ""] },
+        { "spanish": "", "kana": ["", ""] },
+        { "spanish": "", "kana": ["", ""] },
+        { "spanish": "", "kana": ["", ""] },
+        { "spanish": "", "kana": ["", ""] },
+    ],
+
+
+
+    "lesson_36": [
+        { "spanish": "", "kana": ["", ""] },
+        { "spanish": "", "kana": ["", ""] },
+        { "spanish": "", "kana": ["", ""] },
+        { "spanish": "", "kana": ["", ""] },
+        { "spanish": "", "kana": ["", ""] },
     ],
 
     
