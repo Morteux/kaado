@@ -1,0 +1,106 @@
+const book_json = {
+    "days": [
+        { "spanish": ["sol", "día"], "kana": "ひ", "kanji": "日" },
+        { "spanish": "domingo", "kana": "にちようび", "kanji": "日曜日" },
+        { "spanish": "Japón", "kana": "にほん", "kanji": "日本" },
+        { "spanish": "Japón", "kana": "にっぽん", "kanji": "日本" },
+        { "spanish": "todos los días", "kana": "まいにち", "kanji": "毎日" },
+        { "spanish": ["vacaciones", "día libre"], "kana": "きゅうじつ", "kanji": "休日" },
+        { "spanish": "mañana", "kana": "あす", "kanji": "明日" },
+        { "spanish": "mañana", "kana": "あした", "kanji": "明日" },
+
+        { "spanish": "Luna", "kana": "つき", "kanji": "月" },
+        { "spanish": ["días", "años"], "kana": "つきひ", "kanji": "月日" },
+        { "spanish": "todos los meses", "kana": "まいつき", "kanji": "毎月" },
+        { "spanish": "lunes", "kana": "げつようび", "kanji": "月曜日" },
+        { "spanish": "Año Nuevo", "kana": "しょうがつ", "kanji": "正月" },
+        { "spanish": "próximo mes", "kana": "らいげつ", "kanji": "来月" },
+
+        { "spanish": "fuego", "kana": "ひ", "kanji": "火" },
+        { "spanish": "fuego artificial", "kana": "はなび", "kanji": "花火" },
+        { "spanish": "incendio", "kana": "かじ", "kanji": "火事" },
+        { "spanish": "martes", "kana": "かようび", "kanji": "火曜日" },
+        { "spanish": "extintor", "kana": "しょうかき", "kanji": "消火器" },
+        { "spanish": "simulacro de incendio", "kana": "ぼうかくんれん", "kanji": "防火訓練" },
+        
+        { "spanish": "agua", "kana": "みず", "kanji": "水" },
+        { "spanish": "planta depuradora de agua", "kana": "すいどう", "kanji": "水道" },
+        { "spanish": "azul claro", "kana": "みずいろ", "kanji": "水色" },
+        { "spanish": "humedad", "kana": "すいぶん", "kanji": "水分" },
+        { "spanish": "bañador", "kana": "みずぎ", "kanji": "水着" },
+        { "spanish": "miércoles", "kana": "すいようび", "kanji": "水曜日" },
+
+        { "spanish": "árbol", "kana": "き", "kanji": "木" },
+        { "spanish": "viento frío", "kana": "こがらし", "kanji": "木枯らし" },
+        { "spanish": "madera", "kana": "ざいもく", "kanji": "材木" },
+        { "spanish": "de madera", "kana": "もくぞう", "kanji": "木造" },
+        { "spanish": "lana", "kana": "もめん", "kanji": "木綿" },
+        { "spanish": "jueves", "kana": "もくようび", "kanji": "木曜日" },
+
+        { "spanish": "persona rica", "kana": "かねもち", "kanji": "金持ち" },
+        { "spanish": "precio", "kana": "きんがく", "kanji": "金額" },
+        { "spanish": "dinero", "kana": "おかね", "kanji": "お金" },
+        { "spanish": "finanzas", "kana": "きんゆう", "kanji": "金融" },
+        { "spanish": "oro", "kana": "きん", "kanji": "金" },
+        { "spanish": "viernes", "kana": "きんようび", "kanji": "金曜日" },
+
+        { "spanish": "tierra", "kana": "つち", "kanji": "土" },
+        { "spanish": "arcilla", "kana": "ねんど", "kanji": "粘土" },
+        { "spanish": "cimientos", "kana": "どだい", "kanji": "土台" },
+        { "spanish": "tierra", "kana": "とち", "kanji": "土地" },
+        { "spanish": "sábado", "kana": "どようび", "kanji": "土曜日" },
+        { "spanish": "regalo", "kana": "みやげ", "kanji": "土産" },
+
+        { "spanish": "día de la semana", "kana": "ようび", "kanji": "曜日" },
+        { "spanish": "jueves", "kana": "もくようび", "kanji": "木曜日" },
+        { "spanish": "domingo", "kana": "にちようび", "kanji": "日曜日" },
+        { "spanish": "viernes", "kana": "きんようび", "kanji": "金曜日" },
+        { "spanish": "lunes", "kana": "げつようび", "kanji": "月曜日" },
+        { "spanish": "sábado", "kana": "どようび", "kanji": "土曜日" },
+    ],
+
+    "numbers_1": [
+        { "spanish": "", "kana": "ひとつ", "kanji": "一つ" },
+        { "spanish": "", "kana": "いちがつ", "kanji": "一月" },
+        { "spanish": "", "kana": "いちど", "kanji": "一度" },
+        { "spanish": "", "kana": "だいいち", "kanji": "第一" },
+        { "spanish": "", "kana": "ひとり", "kanji": "一人" },
+        { "spanish": "", "kana": "ついたち", "kanji": "一日" },
+    ],
+
+    "numbers_2": [
+        { "spanish": "", "kana": "", "kanji": "" },
+        { "spanish": "", "kana": "", "kanji": "" },
+        { "spanish": "", "kana": "", "kanji": "" },
+        { "spanish": "", "kana": "", "kanji": "" },
+        { "spanish": "", "kana": "", "kanji": "" },
+        { "spanish": "", "kana": "", "kanji": "" },
+    ],
+
+    "money": [
+        { "spanish": "", "kana": "", "kanji": "" },
+        { "spanish": "", "kana": "", "kanji": "" },
+        { "spanish": "", "kana": "", "kanji": "" },
+        { "spanish": "", "kana": "", "kanji": "" },
+        { "spanish": "", "kana": "", "kanji": "" },
+        { "spanish": "", "kana": "", "kanji": "" },
+    ],
+
+    "time": [
+        { "spanish": "", "kana": "", "kanji": "" },
+        { "spanish": "", "kana": "", "kanji": "" },
+        { "spanish": "", "kana": "", "kanji": "" },
+        { "spanish": "", "kana": "", "kanji": "" },
+        { "spanish": "", "kana": "", "kanji": "" },
+        { "spanish": "", "kana": "", "kanji": "" },
+    ],
+
+    "interrogative_counters": [
+        { "spanish": "", "kana": "", "kanji": "" },
+        { "spanish": "", "kana": "", "kanji": "" },
+        { "spanish": "", "kana": "", "kanji": "" },
+        { "spanish": "", "kana": "", "kanji": "" },
+        { "spanish": "", "kana": "", "kanji": "" },
+        { "spanish": "", "kana": "", "kanji": "" },
+    ],
+};
