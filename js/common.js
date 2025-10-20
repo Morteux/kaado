@@ -25,7 +25,8 @@ const CARD_HTML = `
         </div>
 
         <div id="correct_answer_container" class="input_container" style="display:none;">
-            <span>Correct answer:&nbsp;</span><span id="correct_answer"></span>
+            <div><span>Correct answer:&nbsp;</span><span id="correct_answer"></span></div>
+            <div><span>Translation:&nbsp;</span><span id="translation_answer"></span></div>
         </div>
 
         <div class="button_container">
@@ -189,8 +190,14 @@ function next() {
 
         if (Array.isArray(shuffled[actualIndex][answer_key])) {
             document.getElementById("correct_answer").innerHTML = shuffled[actualIndex][answer_key].join("<br>"); // Show correct answer
+            if(show_spanish_when_failed) {
+                document.getElementById("translation_answer").innerHTML = shuffled[actualIndex]["spanish"];
+            }
         } else {
             document.getElementById("correct_answer").innerHTML = shuffled[actualIndex][answer_key]; // Show correct answer
+            if(show_spanish_when_failed) {
+                document.getElementById("translation_answer").innerHTML = shuffled[actualIndex]["spanish"];
+            }
         }
     }
 

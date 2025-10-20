@@ -307,7 +307,6 @@ td {
 }
 
 /* Start elements */
-.input_container,
 .button_container {
     display: flex;
     flex-direction: row;
@@ -325,6 +324,12 @@ td {
 }
 
 .input_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1.5vh;
+
     border: 2px solid black;
     border-radius: 10px;
     padding: 1vh 0vw;
