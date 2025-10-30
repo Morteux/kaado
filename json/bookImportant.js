@@ -1,4 +1,4 @@
-const book_json = {
+const book_important_json = {
     "days": [
         { "spanish": "domingo", "kana": "にちようび", "kanji": "日曜日" },
         { "spanish": "Japón", "kana": "にほん", "kanji": "日本" },

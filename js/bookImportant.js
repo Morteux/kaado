@@ -1,4 +1,4 @@
-const JSON_DATA = book_json;
+const JSON_DATA = book_important_json;
 
 var question_key = "kanji";
 var answer_key = "kana";
