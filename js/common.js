@@ -53,7 +53,6 @@ var incorrectIndexes = [];
 var category_checks = [];
 
 
-
 // Extra functions 
 
 function capitalizeFirstLetter(string) {
@@ -64,10 +63,27 @@ function formatCategoryName(category_name) {
     return capitalizeFirstLetter(category_name.replaceAll("_", " "));
 }
 
+// Search Kanji on Jisho.org when clicked
+function addSearchKanjiOnClickFeature() {
+    let allTds = document.querySelectorAll('td');
+
+    allTds.forEach(function (tdElement) {
+        allTds = document.querySelectorAll('td');
+        tdElement.addEventListener('click', function () {
+            let kanji = tdElement.innerText;
+            let jishoUrl = 'https://jisho.org/search/' + encodeURIComponent(kanji) + '%23kanji';
+            window.open(jishoUrl, '_blank');
+        });
+
+        tdElement.style.cursor = 'pointer';
+    });
+}
 
 
 // Common functions
 document.addEventListener("DOMContentLoaded", (event) => {
+    addSearchKanjiOnClickFeature();
+    
     CHECKS_LENGTH = Object.keys(JSON_DATA).length;
     JSON_KEYS = Object.keys(JSON_DATA);
 
@@ -190,12 +206,12 @@ function next() {
 
         if (Array.isArray(shuffled[actualIndex][answer_key])) {
             document.getElementById("correct_answer").innerHTML = shuffled[actualIndex][answer_key].join("<br>"); // Show correct answer
-            if(show_spanish_when_failed) {
+            if (show_spanish_when_failed) {
                 document.getElementById("translation_answer").innerHTML = shuffled[actualIndex]["spanish"];
             }
         } else {
             document.getElementById("correct_answer").innerHTML = shuffled[actualIndex][answer_key]; // Show correct answer
-            if(show_spanish_when_failed) {
+            if (show_spanish_when_failed) {
                 document.getElementById("translation_answer").innerHTML = shuffled[actualIndex]["spanish"];
             }
         }
