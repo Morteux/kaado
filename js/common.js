@@ -112,11 +112,11 @@ function showStrokeButton() {
 }
 
 function switchQuestionAnswer() {
-    let aux = question_key;
-    question_key = answer_key;
-    answer_key = aux;
+    let aux = config.question_key;
+    config.question_key = config.answer_key;
+    config.answer_key = aux;
 
-    document.getElementById("switch_question_answer").innerHTML = `Question:&nbsp` + question_key + `<br>Answer:&nbsp` + answer_key;
+    document.getElementById("switch_question_answer").innerHTML = `Question:&nbsp` + config.question_key + `<br>Answer:&nbsp` + config.answer_key;
 }
 
 function changeCategory(category_index) {
@@ -158,10 +158,10 @@ function startTest() {
 
     shuffled = calculateWordsArray().sort((a, b) => 0.5 - Math.random());
 
-    if (Array.isArray(shuffled[actualIndex][question_key])) {
-        document.getElementById("question_element").innerHTML = shuffled[actualIndex][question_key].join("<br>");
+    if (Array.isArray(shuffled[actualIndex][config.question_key])) {
+        document.getElementById("question_element").innerHTML = shuffled[actualIndex][config.question_key].join("<br>");
     } else {
-        document.getElementById("question_element").innerHTML = shuffled[actualIndex][question_key];
+        document.getElementById("question_element").innerHTML = shuffled[actualIndex][config.question_key];
     }
     document.getElementById("total_counter").innerHTML = shuffled.length;
 
@@ -170,7 +170,7 @@ function startTest() {
     }
 
     // Show strokes by default
-    if (show_strokes_by_default) {
+    if (config.show_strokes_by_default) {
         showStrokeButton();
     }
 }
@@ -179,7 +179,7 @@ function next() {
     let input = document.getElementById("card_input").value;
 
     // Check for single string
-    if (!Array.isArray(shuffled[actualIndex][answer_key]) && input.toUpperCase().trim() == shuffled[actualIndex][answer_key].toUpperCase()) {
+    if (!Array.isArray(shuffled[actualIndex][config.answer_key]) && input.toUpperCase().trim() == shuffled[actualIndex][config.answer_key].toUpperCase()) {
         ++correctCount;
         $('#img_element').css("background-image", "url('images/correct.png')").fadeIn(0).fadeOut();
         document.getElementById("card_input").value = "";
@@ -188,7 +188,7 @@ function next() {
     }
 
     // Check for array of strings
-    else if (Array.isArray(shuffled[actualIndex][answer_key]) && shuffled[actualIndex][answer_key].some(e => e.toUpperCase() === input.toUpperCase().trim())) {
+    else if (Array.isArray(shuffled[actualIndex][config.answer_key]) && shuffled[actualIndex][config.answer_key].some(e => e.toUpperCase() === input.toUpperCase().trim())) {
         ++correctCount;
         $('#img_element').css("background-image", "url('images/correct.png')").fadeIn(0).fadeOut();
         document.getElementById("card_input").value = "";
@@ -204,24 +204,24 @@ function next() {
         document.getElementById("card_input").value = "";
         document.getElementById("correct_answer_container").style.display = "";
 
-        if (Array.isArray(shuffled[actualIndex][answer_key])) {
-            document.getElementById("correct_answer").innerHTML = shuffled[actualIndex][answer_key].join("<br>"); // Show correct answer
-            if (show_spanish_when_failed) {
+        if (Array.isArray(shuffled[actualIndex][config.answer_key])) {
+            document.getElementById("correct_answer").innerHTML = shuffled[actualIndex][config.answer_key].join("<br>"); // Show correct answer
+            if (config.show_spanish_when_failed) {
                 document.getElementById("translation_answer").innerHTML = shuffled[actualIndex]["spanish"];
             }
         } else {
-            document.getElementById("correct_answer").innerHTML = shuffled[actualIndex][answer_key]; // Show correct answer
-            if (show_spanish_when_failed) {
+            document.getElementById("correct_answer").innerHTML = shuffled[actualIndex][config.answer_key]; // Show correct answer
+            if (config.show_spanish_when_failed) {
                 document.getElementById("translation_answer").innerHTML = shuffled[actualIndex]["spanish"];
             }
         }
     }
 
     if (++actualIndex < shuffled.length) {
-        if (Array.isArray(shuffled[actualIndex][question_key])) {
-            document.getElementById("question_element").innerHTML = shuffled[actualIndex][question_key].join("<br>");
+        if (Array.isArray(shuffled[actualIndex][config.question_key])) {
+            document.getElementById("question_element").innerHTML = shuffled[actualIndex][config.question_key].join("<br>");
         } else {
-            document.getElementById("question_element").innerHTML = shuffled[actualIndex][question_key];
+            document.getElementById("question_element").innerHTML = shuffled[actualIndex][config.question_key];
         }
 
         if (shuffled[actualIndex].hasOwnProperty(answer_tag)) {
@@ -267,16 +267,16 @@ function startEnd() {
         let table = "";
 
         for (let i = 0; i < incorrectIndexes.length; ++i) {
-            if (Array.isArray(shuffled[incorrectIndexes[i]][answer_key])) {
-                table += `<div class="incorrect_data">` + shuffled[incorrectIndexes[i]][answer_key].join(", ") + `&nbsp:&nbsp`;
+            if (Array.isArray(shuffled[incorrectIndexes[i]][config.answer_key])) {
+                table += `<div class="incorrect_data">` + shuffled[incorrectIndexes[i]][config.answer_key].join(", ") + `&nbsp:&nbsp`;
             } else {
-                table += `<div class="incorrect_data">` + shuffled[incorrectIndexes[i]][answer_key] + `&nbsp:&nbsp`;
+                table += `<div class="incorrect_data">` + shuffled[incorrectIndexes[i]][config.answer_key] + `&nbsp:&nbsp`;
             }
 
-            if (Array.isArray(shuffled[incorrectIndexes[i]][question_key])) {
-                table += shuffled[incorrectIndexes[i]][question_key].join(", ") + `</div>`;
+            if (Array.isArray(shuffled[incorrectIndexes[i]][config.question_key])) {
+                table += shuffled[incorrectIndexes[i]][config.question_key].join(", ") + `</div>`;
             } else {
-                table += shuffled[incorrectIndexes[i]][question_key] + `</div>`;
+                table += shuffled[incorrectIndexes[i]][config.question_key] + `</div>`;
             }
         }
 
@@ -291,7 +291,7 @@ function restart() {
     let text = `
         <div class="button_column_container">
             <button class="primary_button" onclick="startTest()">Start test</button>
-            <button id="switch_question_answer" class="primary_button" onclick="switchQuestionAnswer()">Question:&nbsp` + question_key + `<br>Answer:&nbsp` + answer_key + `</button>
+            <button id="switch_question_answer" class="primary_button" onclick="switchQuestionAnswer()">Question:&nbsp` + config.question_key + `<br>Answer:&nbsp` + config.answer_key + `</button>
             <button class="primary_button" onclick="window.location.href = '/kaado'">Return to index</button>
         </div>
 
