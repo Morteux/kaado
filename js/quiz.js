@@ -134,7 +134,7 @@ function calculateWordsArray() {
 
 function startTest() {
     // Reset all variables
-    shuffled = [];
+    shuffled = JSON_KEYS.sort((a, b) => 0.5 - Math.random());
     actualIndex = 0;
     correctCount = 0;
     incorrectCount = 0;
@@ -149,13 +149,6 @@ function startTest() {
             document.getElementById("next_button").click();
         }
     });
-
-    actualIndex = 0;
-    correctCount = 0;
-    incorrectCount = 0;
-    incorrectIndexes = [];
-
-    shuffled = calculateWordsArray().sort((a, b) => 0.5 - Math.random());
 
     if (Array.isArray(shuffled[actualIndex][config.question_key])) {
         document.getElementById("question_element").innerHTML = shuffled[actualIndex][config.question_key].join("<br>");

@@ -18,8 +18,8 @@
     <link rel="stylesheet" href="css/table.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="js/index.js"></script>
-    <script src="js/common.js"></script>
+    <script src="js/start.js"></script>
+    <script src="js/quiz.js"></script>
 
     <title>Kaado</title>
 </head>
@@ -77,10 +77,16 @@
             </div>
 
             <div class="content_column">
+                <div class="content_column_title">Question/Answer</div>
+                <input type="radio" id="quizKana" name="radioConfigQuiz" checked="checked">
+                <label for="quizKana" class="radioConfig">Japanese → Romaji</label>
+                <input type="radio" id="quizRomaji" name="radioConfigQuiz">
+                <label for="quizRomaji" class="radioConfig">Romaji → Japanese</label>
+
                 <div class="content_column_title">Result</div>
-                <input type="radio" id="resultKana" name="radioConfig" checked="checked">
+                <input type="radio" id="resultKana" name="radioConfigResult" checked="checked">
                 <label for="resultKana" class="radioConfig">Kana</label>
-                <input type="radio" id="resultKanji" name="radioConfig">
+                <input type="radio" id="resultKanji" name="radioConfigResult">
                 <label for="resultKanji" class="radioConfig">Kanji</label>
             </div>
         </div>
