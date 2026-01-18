@@ -7,33 +7,47 @@ var kanji_total = 0;
 
 var kanji_list = {};
 
-fetch('./json/hiragana.json')
-    .then(res => res.json())
-    .then(data => {
-        hiragana = data;
-        kanji_total += Object.keys(hiragana).length;
-        document.getElementById('kanji_total').innerText = kanji_total;
+var config = {
+    question_key: "kana",
+    answer_key: "spanish",
+    show_strokes_by_default: false,
+    show_spanish_when_failed: true
+}
 
-        enableHiraganaCheckboxes();
-    });
+document.addEventListener("DOMContentLoaded", (event) => {
+    fetch('./json/hiragana.json')
+        .then(res => res.json())
+        .then(data => {
+            hiragana = data;
+            kanji_total += Object.keys(hiragana).length;
+            
+            document.getElementById('kanji_total').innerText = kanji_total;
 
-fetch('/json/katakana.json')
-    .then(res => res.json())
-    .then(data => {
-        katakana = data;
-        kanji_total += Object.keys(katakana).length;
-        document.getElementById('kanji_total').innerText = kanji_total;
-        enableKatakanaCheckboxes();
-    });
+            enableHiraganaCheckboxes();
+        });
 
-fetch('/json/kanji.json')
-    .then(res => res.json())
-    .then(data => {
-        kanji = data;
-        kanji_total += Object.keys(kanji).length;
-        document.getElementById('kanji_total').innerText = kanji_total;
-        enableKanjiCheckboxes();
-    });
+    fetch('/json/katakana.json')
+        .then(res => res.json())
+        .then(data => {
+            katakana = data;
+            kanji_total += Object.keys(katakana).length;
+
+            document.getElementById('kanji_total').innerText = kanji_total;
+
+            enableKatakanaCheckboxes();
+        });
+
+    fetch('/json/kanji.json')
+        .then(res => res.json())
+        .then(data => {
+            kanji = data;
+            kanji_total += Object.keys(kanji).length;
+
+            document.getElementById('kanji_total').innerText = kanji_total;
+
+            enableKanjiCheckboxes();
+        });
+});
 
 function enableHiraganaCheckboxes() {
     document.getElementById('hiragana').disabled = false;
@@ -162,4 +176,14 @@ function searchKanjiByJLPT(jlpt_level) {
     }
 
     return results;
+}
+
+function toggleStartScreen() {
+    document.getElementById('start_kanji_stat').classList.toggle("hidden");
+    document.getElementById('start_configuration').classList.toggle("hidden");
+    document.getElementById('start_button_container').classList.toggle("hidden");
+}
+
+function toggleQuizScreen() {
+    document.getElementById('quiz_content').classList.toggle("hidden");
 }

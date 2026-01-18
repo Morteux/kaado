@@ -79,13 +79,12 @@ function addSearchKanjiOnClickFeature() {
     });
 }
 
-
-// Common functions
-document.addEventListener("DOMContentLoaded", (event) => {
+// Initialization function
+function commonInitialize(){
     addSearchKanjiOnClickFeature();
     
-    CHECKS_LENGTH = Object.keys(JSON_DATA).length;
-    JSON_KEYS = Object.keys(JSON_DATA);
+    CHECKS_LENGTH = Object.keys(kanji_list).length;
+    JSON_KEYS = Object.keys(kanji_list);
 
     // Initialize category_checks
     for (let i = 0; i < CHECKS_LENGTH; ++i) {
@@ -96,7 +95,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     category_checks[CHECKS_LENGTH - 1] = true;
 
     restart();
-});
+}
 
 function showStrokeButton() {
     let question_element = document.getElementById("question_element");
@@ -127,7 +126,7 @@ function calculateWordsArray() {
     let words = [];
 
     for (let index = 0; index < category_checks.length; ++index) {
-        if (category_checks[index]) { words = words.concat(JSON_DATA[JSON_KEYS[index]]); }
+        if (category_checks[index]) { words = words.concat(kanji_list[JSON_KEYS[index]]); }
     }
 
     return words;
@@ -142,7 +141,7 @@ function startTest() {
     incorrectIndexes = [];
 
     // Print initial card template
-    document.getElementById("content").innerHTML = CARD_HTML;
+    document.getElementById("quiz_content").innerHTML = CARD_HTML;
 
     document.getElementById("card_input").addEventListener("keypress", function (event) {
         if (event.key === "Enter") {
@@ -235,7 +234,7 @@ function next() {
 }
 
 function startEnd() {
-    document.getElementById("content").innerHTML = `
+    document.getElementById("quiz_content").innerHTML = `
         <div class="end_container">
             <div class="results_container">
                 <div>
@@ -307,5 +306,5 @@ function restart() {
 
     text += `</div>`;
 
-    document.getElementById("content").innerHTML = text;
+    document.getElementById("quiz_content").innerHTML = text;
 }

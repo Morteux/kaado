@@ -1,0 +1,43 @@
+table {
+	display: table;
+    color: var(--font-color);
+    border-collapse: collapse;
+}
+
+th {
+	display: table-cell;
+    text-align: center;
+
+    font-size: 1.5rem;
+    border: 1px solid black;
+    padding: 1vh;
+
+    background-color: var(--primary-shadow);
+}
+
+td {
+	display: block;
+    text-align: center;
+
+    font-size: 3rem;
+    font-family: "KanjiStrokeOrders";
+
+    border: 1px solid black;
+    padding: 1vh;
+
+    background-color: var(--primary-color);
+}
+
+tr {
+	display: table-cell;
+    align-content: start;
+    text-align: -webkit-center;
+}
+
+.answers_title {
+    font-weight: bold;
+    font-size: 2rem;
+
+    background-color: var(--primary-color);
+    border: 2px solid black;
+}
