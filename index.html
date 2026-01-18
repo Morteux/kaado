@@ -25,46 +25,59 @@
             Kaado
         </div>
 
+        <div class="kanji_list">Current list: <span id="kanji_count">0</span>/<span title="Kanji + Hiragana + Katakana" id="kanji_total">0</span></div>
+
         <div id="content" class="content_index">
             <div class="content_column">
-                <div class="content_column_title">J1</div>
-                <button class="button" onclick="location.href='ganbatte.html';">Ganbatte!</button>
-                <button class="button" onclick="location.href='syllables.html';">Syllables</button>
+                <div class="content_column_title_furigana">かな</div>
+                <div class="content_column_title">仮名</div>
+                <input disabled type="checkbox" id="hiragana" name="hiragana" onclick="updateKanjiCount()">
+                <label for="hiragana" class="checkboxConfig">Hiragana</label>
+                <input disabled type="checkbox" id="katakana" name="katakana" onclick="updateKanjiCount()">
+                <label for="katakana" class="checkboxConfig">Katakana</label>
             </div>
             <div class="content_column">
                 <div class="content_column_title_furigana">じょうようかんじ</div>
                 <div class="content_column_title">常用漢字</div>
-                <button class="button" onclick="location.href='index.html';">Grade 1</button>
-                <button class="button" onclick="location.href='index.html';">Grade 2</button>
-                <button class="button" onclick="location.href='index.html';">Grade 3</button>
-                <button class="button" onclick="location.href='index.html';">Grade 4</button>
-                <button class="button" onclick="location.href='index.html';">Grade 5</button>
-                <button class="button" onclick="location.href='index.html';">Grade 6</button>
-                <button class="button" onclick="location.href='index.html';">Grade +6</button>
+                <input disabled type="checkbox" id="grade1" name="grade1" onclick="updateKanjiCount()">
+                <label for="grade1" class="checkboxConfig">1</label>
+                <input disabled type="checkbox" id="grade2" name="grade2" onclick="updateKanjiCount()">
+                <label for="grade2" class="checkboxConfig">2</label>
+                <input disabled type="checkbox" id="grade3" name="grade3" onclick="updateKanjiCount()">
+                <label for="grade3" class="checkboxConfig">3</label>
+                <input disabled type="checkbox" id="grade4" name="grade4" onclick="updateKanjiCount()">
+                <label for="grade4" class="checkboxConfig">4</label>
+                <input disabled type="checkbox" id="grade5" name="grade5" onclick="updateKanjiCount()">
+                <label for="grade5" class="checkboxConfig">5</label>
+                <input disabled type="checkbox" id="grade6" name="grade6" onclick="updateKanjiCount()">
+                <label for="grade6" class="checkboxConfig">6</label>
+                <input disabled type="checkbox" id="grade6plus" name="grade6plus" onclick="updateKanjiCount()">
+                <label for="grade6plus" class="checkboxConfig">6+</label>
             </div>
             <div class="content_column">
-                <div class="content_column_title_furigana">かんじ</div>
-                <div class="content_column_title">漢字</div>
-                <button class="button" onclick="location.href='kanjij2.html';">Kanji J2</button>
-                <button class="button" onclick="location.href='kanjij3.html';">Kanji J3</button>
-                <button class="button" onclick="location.href='kanjij4.html';">Kanji J4</button>
+                <div class="content_column_title">JLPT</div>
+                <input disabled type="checkbox" id="jlptN5" name="jlptN5" onclick="updateKanjiCount()">
+                <label for="jlptN5" class="checkboxConfig">N5</label>
+                <input disabled type="checkbox" id="jlptN4" name="jlptN4" onclick="updateKanjiCount()">
+                <label for="jlptN4" class="checkboxConfig">N4</label>
+                <input disabled type="checkbox" id="jlptN3" name="jlptN3" onclick="updateKanjiCount()">
+                <label for="jlptN3" class="checkboxConfig">N3</label>
+                <input disabled type="checkbox" id="jlptN2" name="jlptN2" onclick="updateKanjiCount()">
+                <label for="jlptN2" class="checkboxConfig">N2</label>
+                <input disabled type="checkbox" id="jlptN1" name="jlptN1" onclick="updateKanjiCount()">
+                <label for="jlptN1" class="checkboxConfig">N1</label>
+                <input disabled type="checkbox" id="jlptN0" name="jlptN0" onclick="updateKanjiCount()">
+                <label for="jlptN0" class="checkboxConfig">N0</label>
             </div>
+
             <div class="content_column">
-                <div class="content_column_title_furigana">たんご</div>
-                <div class="content_column_title">単語</div>
-                <button class="button" onclick="location.href='lessonsj1j2.html';">J1-J2 Lessons</button>
-                <button class="button" onclick="location.href='lessonsj3j4.html';">J3-J4 Lessons</button>
-                <button class="button" onclick="location.href='kanjij2words.html';">J2 Compound Kanji</button>
-                <button class="button" onclick="location.href='kanjij3words.html';">J3 Compound Kanji</button>
-            </div>
-            <div class="content_column">
-                <div class="content_column_title_furigana">かんじたんご</div>
-                <div class="content_column_title">漢字単語</div>
-                <button class="button" onclick="location.href='book.html';">500 Kanji Vocabulary</button>
-                <button class="button" onclick="location.href='bookImportant.html';">500 Kanji Important</button>
+                <div class="content_column_title">Result</div>
+                <input disabled type="radio" id="resultKana" name="radioConfig" checked="checked">
+                <label for="resultKana" class="radioConfig">Kana</label>
+                <input disabled type="radio" id="resultKanji" name="radioConfig">
+                <label for="resultKanji" class="radioConfig">Kanji</label>
             </div>
         </div>
-
     </div>
 </body>
 

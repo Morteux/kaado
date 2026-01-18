@@ -1,4 +1,17 @@
+.kanji_list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 
+    font-size: 20px;
+    color: var(--font-color);
+}
+
+.kanji_list>span {
+    font-size: 30px;
+    color: var(--font-color);
+}
 
 .content_index {
     display: flex;
@@ -46,4 +59,150 @@
     color: var(--font-color);
 
     line-height: 5px;
+}
+
+label {
+    color: var(--font-color);
+}
+
+
+
+
+
+
+
+
+
+
+/* チェックボックス03 */
+input[type=checkbox] {
+    display: none;
+}
+
+.checkboxConfig {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 30px;
+    position: relative;
+    width: auto;
+}
+
+.checkboxConfig::before {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    content: '';
+    display: block;
+    height: 16px;
+    left: 5px;
+    margin-top: -8px;
+    position: absolute;
+    top: 50%;
+    width: 16px;
+}
+
+.checkboxConfig::after {
+    border-right: 6px solid var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    content: '';
+    display: block;
+    height: 20px;
+    left: 7px;
+    margin-top: -16px;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: rotate(45deg) translate3d(0, 2px, 0) scale3d(.7, .7, 1);
+    transition: transform .2s ease-in-out, opacity .2s ease-in-out;
+    width: 9px;
+}
+
+input[type=checkbox]:checked+.checkboxConfig::before {
+    border-color: #666;
+}
+
+input[type=checkbox]:checked+.checkboxConfig::after {
+    opacity: 1;
+    transform: rotate(45deg) scale3d(1, 1, 1);
+}
+
+/* ラジオボタン03 */
+input[type=radio] {
+    display: none;
+}
+
+.radioConfig {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 30px;
+    position: relative;
+    width: auto;
+}
+
+.radioConfig::before {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 16px;
+    left: 5px;
+    margin-top: -8px;
+    position: absolute;
+    top: 50%;
+    width: 16px;
+}
+
+.radioConfig::after {
+    background: var(--primary-color);
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 10px;
+    left: 9px;
+    margin-top: -4px;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: scale3d(.3, .3, 1);
+    transition: transform .2s ease-in-out, opacity .2s ease-in-out;
+    width: 10px;
+}
+
+input[type=radio]:checked+.radioConfig::before {
+    border-color: #666;
+}
+
+input[type=radio]:checked+.radioConfig::after {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 769px) {
+    .content_column {
+        margin-top: 50px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 400px) {
 }
