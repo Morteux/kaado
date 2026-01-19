@@ -22,3 +22,26 @@ button:active {
     align-items: center;
     justify-content: center;
 }
+
+.stroke_button {
+    width: 4vh;
+    height: 4vh;
+    cursor: pointer;
+    margin: 2vh;
+    
+    display: inline-block;
+    padding: 1.5vh 2vh;
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--font-color);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 9px var(--primary-shadow);
+    margin: 2vh;
+}
+
+.stroke_button:active {
+    transform: scale(0.98);
+    box-shadow: 0 9px var(--secondary-shadow);
+}

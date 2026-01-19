@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/table.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="js/wanakana.min.js"></script>
     <script src="js/start.js"></script>
     <script src="js/quiz.js"></script>
 
@@ -31,7 +32,8 @@
             Kaado
         </div>
 
-        <div id="start_kanji_stat" class="kanji_list">Current list: <span id="kanji_count">0</span>/<span title="Kanji + Hiragana + Katakana" id="kanji_total">0</span></div>
+        <div id="start_kanji_stat" class="kanji_list">Current list: <span id="kanji_count">0</span>/<span
+                title="Kanji + Hiragana + Katakana" id="kanji_total">0</span></div>
 
         <div id="start_configuration" class="content_index">
             <div class="content_column">
@@ -77,12 +79,6 @@
             </div>
 
             <div class="content_column">
-                <div class="content_column_title">Question/Answer</div>
-                <input type="radio" id="quizKana" name="radioConfigQuiz" checked="checked">
-                <label for="quizKana" class="radioConfig">Japanese → Romaji</label>
-                <input type="radio" id="quizRomaji" name="radioConfigQuiz">
-                <label for="quizRomaji" class="radioConfig">Romaji → Japanese</label>
-
                 <div class="content_column_title">Result</div>
                 <input type="radio" id="resultKana" name="radioConfigResult" checked="checked">
                 <label for="resultKana" class="radioConfig">Kana</label>
@@ -91,9 +87,76 @@
             </div>
         </div>
 
-        <div id="start_button_container" class="start_button_container"><button id="start_button" name="button" onclick="toggleStartScreen(); toggleQuizScreen(); commonInitialize();">Start</button></div>
+        <div id="start_button_container" class="start_button_container"><button id="start_button" name="button"
+                onclick="toggleStartScreen(); toggleQuizScreen(); commonInitialize();">Start</button></div>
 
-        <div id="quiz_content" class="content hidden"></div>
+        <div id="quiz_content" class="content hidden">
+            <div id="cards" class="cards">
+
+                <div class="floating_button">
+                    <img class="stroke_button" src="images/paintbrush.png" onclick="showStrokeButton()">
+                </div>
+
+                <div class="counter_container">
+                    <div id="actual_counter">0</div>
+                    &nbsp/&nbsp
+                    <div id="total_counter"></div>
+                </div>
+
+                <div class="element_container">
+                    <p id="question_element" class="question_element"></p>
+                    <div id="img_element" class="img_element"></div>
+                </div>
+
+                <div class="input_container">
+                    <tag id="answer_tag">Answer:</tag>
+                    <input id="card_input" type="text"></input>
+                </div>
+
+                <div id="correct_answer_container" class="input_container">
+                    <div id="correct_answer_question"></div>
+                    <div id="correct_answer">
+                        <div id="correct_answer_kun">
+
+                        </div>
+                        <div id="correct_answer_on">
+
+                        </div>
+                    </div>
+                    <div id="correct_answer_meanings"></div>
+                </div>
+
+                <div class="button_container">
+                    <button class="primary_button" onclick="location.reload();">Exit</button>
+                    <button id="next_button" class="primary_button" onclick="next()">Next</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="end_content" class="content hidden">
+            <div class="end_container">
+                <div class="results_container">
+                    <div>
+                        <div class="answers_counter">
+                            <img src="images/correct.png" alt="Correct icon" width="50" height="50">
+                            <p id="correctCounter">0</p>
+                        </div>
+                        <div class="answers_counter">
+                            <img src="images/incorrect.png" alt="Incorrect icon" width="50" height="50">
+                            <p id="incorrectCounter">0</p>
+                        </div>
+                    </div>
+                    <div>
+                        <button id="restart" onclick="restart()">Restart</button>
+                        <button id="return" onclick="window.location.href = '/kaado'">Return to index</button>
+                    </div>
+                </div>
+                <div class="answers_container">
+                    <div id="answers_title" class="answers_title">Incorrect answers</div>
+                    <div id="answers_table" class="answers_table"></div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 

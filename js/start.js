@@ -10,8 +10,7 @@ var kanji_list = {};
 var config = {
     question_key: "kana",
     answer_key: "spanish",
-    show_strokes_by_default: false,
-    show_spanish_when_failed: true
+    show_strokes_by_default: false
 }
 
 document.addEventListener("DOMContentLoaded", (event) => {
