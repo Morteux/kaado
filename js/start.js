@@ -8,7 +8,6 @@ var kanji_total = 0;
 var kanji_list = {};
 
 var config = {
-    question_key: "kana",
     answer_key: "spanish",
     show_strokes_by_default: false
 }

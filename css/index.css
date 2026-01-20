@@ -17,7 +17,8 @@
 
 
 html {
-  font-size: 16px;  /* 1rem = 16px */
+    font-size: 16px;
+    /* 1rem = 16px */
 }
 
 body {
@@ -184,12 +185,6 @@ p {
     justify-content: center;
 }
 
-.answers_container {
-    width: 80vw;
-
-    margin-bottom: 4vh;
-}
-
 .results_container {
     display: flex;
     flex-direction: row;
@@ -221,32 +216,24 @@ p {
     border-radius: 10px;
 }
 
-.answers_counter>img {
-    /* width: 10vw;
-    height: auto;
-
-    margin-right: 3vw; */
-}
-
 .answer_counter>div {
     padding: 1vh;
 }
 
-.answers_table {
+.answers_container {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-bottom: 4vh;
 
     flex-wrap: wrap;
+
+    width: 80vw;
 }
 
-.answers_table>div {
-    flex: 1 1 1;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+.answers_container>div {
+    margin: 0.2vh;
+    width: 100%;
 }
 
 .incorrect_data {
@@ -270,7 +257,7 @@ p {
 label {
     margin: 0;
     font-size: 1rem;
-    
+
     color: var(--font-color);
 }
 

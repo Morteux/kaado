@@ -1,3 +1,26 @@
+const perfectMessages = [
+    "完璧！さすがだね 😄✨",
+    "全問正解！脳が光ってるよ 🧠⚡",
+    "すごい集中力！お見事 👏🤓",
+    "カンジマスターへの道、順調です 🏯📘",
+    "ミスなし！これは気持ちいい 😆🎉",
+    "完全勝利！今日は覚えがいいね 🏆😎",
+    "全部覚えたね？さすが 👀✨",
+    "パーフェクト！努力は裏切らない 💪📚",
+    "頭が冴えてる！この調子 😺💡",
+    "見事にクリア！天才かも 🤯⭐",
+    "ノーミス達成！拍手！ 👏👏",
+    "漢字が友達になった瞬間だね 🤝🈶",
+    "今日の脳トレ、大成功 🧠🎯",
+    "これはもう職人レベル 👨‍🏫✨",
+    "全問正解！成長を感じる 📈😄",
+    "完璧すぎて言葉が出ない 😳🌸",
+    "その調子で積み上げよう 🧱📘",
+    "かなり仕上がってきたね 😎🔥",
+    "漢字に愛されてる説ある 💖🈴",
+    "今日も一歩前進！お疲れさま ☕😊"
+];
+
 // Common variables
 var shuffled = [];
 var actualIndex = 0;
@@ -32,14 +55,6 @@ function showStrokeButton() {
     document.getElementById("question_element").classList.toggle("question_show_strokes");
 }
 
-function switchQuestionAnswer() {
-    let aux = config.question_key;
-    config.question_key = config.answer_key;
-    config.answer_key = aux;
-
-    document.getElementById("switch_question_answer").innerHTML = `Question:&nbsp` + config.question_key + `<br>Answer:&nbsp` + config.answer_key;
-}
-
 function startTest() {
     // Reset all variables
     shuffled = Object.keys(kanji_list).sort((a, b) => 0.5 - Math.random());
@@ -61,14 +76,10 @@ function startTest() {
     });
 
     if (kanji_list[shuffled[actualIndex]].hasOwnProperty("kanji")) {
-        config.question_key = "kanji";
-        config.answer_key = "readings_on";
+        document.getElementById("question_element").innerHTML = kanji_list[shuffled[actualIndex]]["kanji"];
     } else {
-        config.question_key = "kana";
-        config.answer_key = "roumaji";
+        document.getElementById("question_element").innerHTML = kanji_list[shuffled[actualIndex]]["kana"];
     }
-
-    document.getElementById("question_element").innerHTML = kanji_list[shuffled[actualIndex]][config.question_key];
 
     document.getElementById("total_counter").innerHTML = shuffled.length;
 
@@ -80,7 +91,15 @@ function startTest() {
 
 function next() {
     let input = document.getElementById("card_input").value;
-    let correctAnswers = kanji_list[shuffled[actualIndex]][config.answer_key];
+
+    let correctAnswers;
+
+    if (kanji_list[shuffled[actualIndex]].hasOwnProperty("kanji")) {
+        correctAnswers = [...kanji_list[shuffled[actualIndex]]["readings_on"], ...kanji_list[shuffled[actualIndex]]["readings_kun"]];
+    } else {
+        correctAnswers = kanji_list[shuffled[actualIndex]]["roumaji"];
+    }
+
     if (!Array.isArray(correctAnswers)) {
         correctAnswers = [correctAnswers];
     }
@@ -101,19 +120,26 @@ function next() {
     // Show correct answer
     if (kanji_list[shuffled[actualIndex]].hasOwnProperty("kanji")) {
         document.getElementById("correct_answer_question").innerHTML = shuffled[actualIndex];
-        document.getElementById("correct_answer_kun").innerHTML = kanji_list[shuffled[actualIndex]]["readings_kun"].join("、");
-        document.getElementById("correct_answer_on").innerHTML = kanji_list[shuffled[actualIndex]]["readings_on"].join("、");
+        document.getElementById("correct_answer_kun").innerHTML = "Kun: " + kanji_list[shuffled[actualIndex]]["readings_kun"].join("、");
+        document.getElementById("correct_answer_on").innerHTML = "On: " + kanji_list[shuffled[actualIndex]]["readings_on"].join("、");
         document.getElementById("correct_answer_meanings").innerHTML = kanji_list[shuffled[actualIndex]]["meanings"].join(", ");
     } else {
         document.getElementById("correct_answer_question").innerHTML = shuffled[actualIndex];
         document.getElementById("correct_answer_kun").innerHTML = kanji_list[shuffled[actualIndex]]["roumaji"];
+        document.getElementById("correct_answer_on").innerHTML = "";
+        document.getElementById("correct_answer_meanings").innerHTML = "";
     }
 
     // Next question
     document.getElementById("card_input").value = "";
 
     if (++actualIndex < shuffled.length) {
-        document.getElementById("question_element").innerHTML = kanji_list[shuffled[actualIndex]][config.question_key];
+
+        if (kanji_list[shuffled[actualIndex]].hasOwnProperty("kanji")) {
+            document.getElementById("question_element").innerHTML = kanji_list[shuffled[actualIndex]]["kanji"];
+        } else {
+            document.getElementById("question_element").innerHTML = kanji_list[shuffled[actualIndex]]["kana"];
+        }
 
         if (kanji_list[shuffled[actualIndex]].hasOwnProperty("answer_tag")) {
             document.getElementById("answer_tag").innerHTML = kanji_list[shuffled[actualIndex]]["answer_tag"] + ": ";
@@ -132,25 +158,38 @@ function startEnd() {
     document.getElementById("correctCounter").innerHTML = correctCount;
     document.getElementById("incorrectCounter").innerHTML = incorrectCount;
 
+    let answers_container = document.getElementById("answers_container");
+
     if (incorrectCount != 0) {
-        let table = "";
-
         for (let i = 0; i < incorrectIndexes.length; ++i) {
-            if (Array.isArray(shuffled[incorrectIndexes[i]][config.answer_key])) {
-                table += `<div class="incorrect_data">` + shuffled[incorrectIndexes[i]][config.answer_key].join(", ") + `&nbsp:&nbsp`;
-            } else {
-                table += `<div class="incorrect_data">` + shuffled[incorrectIndexes[i]][config.answer_key] + `&nbsp:&nbsp`;
-            }
 
-            if (Array.isArray(shuffled[incorrectIndexes[i]][config.question_key])) {
-                table += shuffled[incorrectIndexes[i]][config.question_key].join(", ") + `</div>`;
+            if (kanji_list[shuffled[incorrectIndexes[i]]].hasOwnProperty("kanji")) {
+                answers_container.innerHTML += `
+                    <div class="correct_answer_container">
+                        <div class="correct_answer">
+                            <div class="correct_answer_question">` + shuffled[incorrectIndexes[i]] + `</div>
+                            <div class="correct_answer_yomi">
+                                <div class="correct_answer_kun">Kun: ` + kanji_list[shuffled[incorrectIndexes[i]]]["readings_kun"].join("、") + `</div>
+                                <div class="correct_answer_on">On: ` + kanji_list[shuffled[incorrectIndexes[i]]]["readings_on"].join("、") + `</div>
+                            </div>
+                        </div>
+                        <div class="correct_answer_meanings">` + kanji_list[shuffled[incorrectIndexes[i]]]["meanings"].join(", ") + `</div>
+                    </div>`;
             } else {
-                table += shuffled[incorrectIndexes[i]][config.question_key] + `</div>`;
+                answers_container.innerHTML += `
+                    <div class="correct_answer_container">
+                        <div class="correct_answer">
+                            <div class="correct_answer_question">` + shuffled[incorrectIndexes[i]] + `</div>
+                            <div class="correct_answer_yomi">
+                                <div class="correct_answer_kun">Kun: ` + kanji_list[shuffled[incorrectIndexes[i]]]["roumaji"] + `</div>
+                                <div class="correct_answer_on"></div>
+                            </div>
+                        </div>
+                        <div class="correct_answer_meanings"></div>
+                    </div>`;
             }
         }
-
-        document.getElementById("answers_table").innerHTML += table;
     } else {
-        document.getElementById("answers_title").innerHTML = "PERFECT!";
+        document.getElementById("answers_title").innerHTML = perfectMessages[Math.floor(Math.random() * perfectMessages.length)];
     }
 }

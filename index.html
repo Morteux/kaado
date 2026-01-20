@@ -113,17 +113,15 @@
                     <input id="card_input" type="text"></input>
                 </div>
 
-                <div id="correct_answer_container" class="input_container">
-                    <div id="correct_answer_question"></div>
-                    <div id="correct_answer">
-                        <div id="correct_answer_kun">
-
-                        </div>
-                        <div id="correct_answer_on">
-
+                <div id="correct_answer_container" class="correct_answer_container">
+                    <div id="correct_answer" class="correct_answer">
+                        <div id="correct_answer_question" class="correct_answer_question"></div>
+                        <div id="correct_answer_yomi" class="correct_answer_yomi">
+                            <div id="correct_answer_kun"></div>
+                            <div id="correct_answer_on"></div>
                         </div>
                     </div>
-                    <div id="correct_answer_meanings"></div>
+                    <div id="correct_answer_meanings" class="correct_answer_meanings"></div>
                 </div>
 
                 <div class="button_container">
@@ -151,10 +149,7 @@
                         <button id="return" onclick="window.location.href = '/kaado'">Return to index</button>
                     </div>
                 </div>
-                <div class="answers_container">
-                    <div id="answers_title" class="answers_title">Incorrect answers</div>
-                    <div id="answers_table" class="answers_table"></div>
-                </div>
+                <div id="answers_container" class="answers_container"></div>
             </div>
         </div>
     </div>
