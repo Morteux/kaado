@@ -1,6 +1,6 @@
-var hiragana;
-var katakana;
-var kanji;
+//var hiragana;
+//var katakana;
+//var kanji;
 
 var kanji_count = 0;
 var kanji_total = 0;
@@ -12,39 +12,53 @@ var config = {
     show_strokes_by_default: false
 }
 
+//document.addEventListener("DOMContentLoaded", (event) => {
+//    fetch('./json/hiragana.json')
+//        .then(res => res.json())
+//        .then(data => {
+//            hiragana = data;
+//            kanji_total += Object.keys(hiragana).length;
+//            
+//            document.getElementById('kanji_total').innerText = kanji_total;
+//
+//            enableHiraganaCheckboxes();
+//        });
+//
+//    fetch('/json/katakana.json')
+//        .then(res => res.json())
+//        .then(data => {
+//            katakana = data;
+//            kanji_total += Object.keys(katakana).length;
+//
+//            document.getElementById('kanji_total').innerText = kanji_total;
+//
+//            enableKatakanaCheckboxes();
+//        });
+//
+//    fetch('/json/kanji.json')
+//        .then(res => res.json())
+//        .then(data => {
+//            kanji = data;
+//            kanji_total += Object.keys(kanji).length;
+//
+//            document.getElementById('kanji_total').innerText = kanji_total;
+//
+//            enableKanjiCheckboxes();
+//        });
+//});
+
 document.addEventListener("DOMContentLoaded", (event) => {
-    fetch('./json/hiragana.json')
-        .then(res => res.json())
-        .then(data => {
-            hiragana = data;
-            kanji_total += Object.keys(hiragana).length;
-            
-            document.getElementById('kanji_total').innerText = kanji_total;
+    kanji_total += Object.keys(hiragana).length;
+    document.getElementById('kanji_total').innerText = kanji_total;
+    enableHiraganaCheckboxes();
 
-            enableHiraganaCheckboxes();
-        });
+    kanji_total += Object.keys(katakana).length;
+    document.getElementById('kanji_total').innerText = kanji_total;
+    enableKatakanaCheckboxes();
 
-    fetch('/json/katakana.json')
-        .then(res => res.json())
-        .then(data => {
-            katakana = data;
-            kanji_total += Object.keys(katakana).length;
-
-            document.getElementById('kanji_total').innerText = kanji_total;
-
-            enableKatakanaCheckboxes();
-        });
-
-    fetch('/json/kanji.json')
-        .then(res => res.json())
-        .then(data => {
-            kanji = data;
-            kanji_total += Object.keys(kanji).length;
-
-            document.getElementById('kanji_total').innerText = kanji_total;
-
-            enableKanjiCheckboxes();
-        });
+    kanji_total += Object.keys(kanji).length;
+    document.getElementById('kanji_total').innerText = kanji_total;
+    enableKanjiCheckboxes();
 });
 
 function enableHiraganaCheckboxes() {
