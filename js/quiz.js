@@ -1,4 +1,27 @@
-const perfectMessages = [
+const startMessages = [
+    "よし、始めよう！💪📘",
+    "準備はいい？集中タイムだ 🧠✨",
+    "今日もいくよ！🚀",
+    "軽くウォームアップしよう 🔥",
+    "落ち着いて、一問ずつね 😌📝",
+    "ここからスタート！📍",
+    "頭を切り替えよう 🧠🔄",
+    "さあ、挑戦の時間だ ⏱️⚔️",
+    "深呼吸して…いこう 🌬️📖",
+    "今日の実力、試してみよう 👀✨",
+    "コツコツいこう 🐢📚",
+    "焦らず、丁寧に 👍",
+    "集中モードON 🔛😐",
+    "まずは一問目から 👣",
+    "ペースは自分次第 😌🎵",
+    "頭を起こそう 🛎️🧠",
+    "いつも通りで大丈夫 🙆‍♂️",
+    "ここが勝負どころ…ではないけどね 😉",
+    "肩の力を抜いていこう 💆‍♂️",
+    "今日も積み上げるぞ 🧱📘"
+];
+
+const endPerfectMessages = [
     "完璧！さすがだね 😄✨",
     "全問正解！脳が光ってるよ 🧠⚡",
     "すごい集中力！お見事 👏🤓",
@@ -27,6 +50,8 @@ var actualIndex = 0;
 var correctCount = 0;
 var incorrectCount = 0;
 var incorrectIndexes = [];
+
+var alreadyStarted = false;
 
 // Search Kanji on Jisho.org when clicked
 function addSearchKanjiOnClickFeature() {
@@ -67,13 +92,17 @@ function startTest() {
     var input = document.getElementById('card_input');
     wanakana.bind(input);
 
-    // Add event listener to input for Enter key
-    document.getElementById("card_input").addEventListener("keypress", function (event) {
-        if (event.key === "Enter") {
-            event.preventDefault();
-            document.getElementById("next_button").click();
-        }
-    });
+    if (!alreadyStarted) {
+        alreadyStarted = true;
+
+        // Add event listener to input for Enter key
+        document.getElementById("card_input").addEventListener("keypress", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                document.getElementById("next_button").click();
+            }
+        });
+    }
 
     if (kanji_list[shuffled[actualIndex]].hasOwnProperty("kanji")) {
         document.getElementById("question_element").innerHTML = kanji_list[shuffled[actualIndex]]["kanji"];
@@ -81,7 +110,10 @@ function startTest() {
         document.getElementById("question_element").innerHTML = kanji_list[shuffled[actualIndex]]["kana"];
     }
 
+    document.getElementById("actual_counter").innerHTML = 0;
     document.getElementById("total_counter").innerHTML = shuffled.length;
+
+    document.getElementById("correct_answer_meanings").innerHTML = startMessages[Math.floor(Math.random() * startMessages.length)];
 
     // Show strokes by default
     if (config.show_strokes_by_default) {
@@ -141,10 +173,6 @@ function next() {
             document.getElementById("question_element").innerHTML = kanji_list[shuffled[actualIndex]]["kana"];
         }
 
-        if (kanji_list[shuffled[actualIndex]].hasOwnProperty("answer_tag")) {
-            document.getElementById("answer_tag").innerHTML = kanji_list[shuffled[actualIndex]]["answer_tag"] + ": ";
-        }
-
         document.getElementById("actual_counter").innerHTML = actualIndex;
     } else {
         startEnd();
@@ -159,6 +187,7 @@ function startEnd() {
     document.getElementById("incorrectCounter").innerHTML = incorrectCount;
 
     let answers_container = document.getElementById("answers_container");
+    answers_container.innerHTML = "";
 
     if (incorrectCount != 0) {
         for (let i = 0; i < incorrectIndexes.length; ++i) {
@@ -190,6 +219,14 @@ function startEnd() {
             }
         }
     } else {
-        document.getElementById("answers_title").innerHTML = perfectMessages[Math.floor(Math.random() * perfectMessages.length)];
+        document.getElementById("answers_title").innerHTML = endPerfectMessages[Math.floor(Math.random() * endPerfectMessages.length)];
     }
+}
+
+function restart() {
+    document.getElementById("end_content").classList.toggle("hidden");
+
+    toggleQuizScreen();
+
+    commonInitialize();
 }

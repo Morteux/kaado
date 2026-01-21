@@ -24,8 +24,13 @@ button:active {
 }
 
 .stroke_button {
-    width: 4vh;
-    height: 4vh;
+    min-width: 3vh;
+    min-height: 3vh;
+    width: 4vw;
+    height: 4vw;
+    max-width: 4vh;
+    max-height: 4vh;
+
     cursor: pointer;
     margin: 2vh;
     

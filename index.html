@@ -109,7 +109,6 @@
                 </div>
 
                 <div class="input_container">
-                    <tag id="answer_tag">Answer:</tag>
                     <input id="card_input" type="text"></input>
                 </div>
 
@@ -126,6 +125,7 @@
 
                 <div class="button_container">
                     <button class="primary_button" onclick="location.reload();">Exit</button>
+                    <button id="end_button" class="primary_button" onclick="startEnd()">End</button>
                     <button id="next_button" class="primary_button" onclick="next()">Next</button>
                 </div>
             </div>
@@ -146,7 +146,7 @@
                     </div>
                     <div>
                         <button id="restart" onclick="restart()">Restart</button>
-                        <button id="return" onclick="window.location.href = '/kaado'">Return to index</button>
+                        <button id="return" onclick="window.location.reload()">Return</button>
                     </div>
                 </div>
                 <div id="answers_container" class="answers_container"></div>
