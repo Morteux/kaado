@@ -71,6 +71,10 @@
 
 
 @media only screen and (max-width: 400px) {
+    body {
+        background-image: url('../images/backgrounds/winter_anim_mobile.svg');
+    }
+
     .results_container>div {
         justify-content: space-evenly;
     }
