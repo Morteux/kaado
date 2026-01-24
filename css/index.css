@@ -6,13 +6,24 @@
 
     --background-color: rgb(43, 43, 59);
 
-    --font-color: rgb(238, 238, 238);
+    /* --font-color: rgb(238, 238, 238); */
+    --font-color: rgb(34, 34, 34);
 }
 
 /* Credits: https://www.nihilist.org.uk/ */
 @font-face {
     font-family: 'KanjiStrokeOrders';
     src: url('../fonts/KanjiStrokeOrders_v4.004.ttf');
+}
+
+@font-face {
+    font-family: 'KazukiReiwa';
+    src: url('../fonts/KazukiReiwa - Regular.ttf');
+}
+
+@font-face {
+    font-family: 'ackaisyo';
+    src: url('../fonts/ackaisyo.ttf');
 }
 
 
@@ -22,7 +33,7 @@ html {
 }
 
 body {
-    background-image: url('../images/backgrounds/winter_anim.svg');
+    /* background-image: url('../images/backgrounds/summer_anim.svg'); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -31,6 +42,9 @@ body {
 
     padding: 0;
     margin: 0;
+
+    font-family: ackaisyo, sans-serif;
+    color: var(--font-color);
 }
 
 p {
@@ -114,8 +128,6 @@ p {
 
     font-size: 1rem;
     color: var(--font-color);
-
-    line-height: 5px;
 }
 
 

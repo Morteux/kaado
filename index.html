@@ -81,17 +81,9 @@
                 <input disabled type="checkbox" id="jlptN0" name="jlptN0" onclick="updateKanjiCount()">
                 <label for="jlptN0" class="checkboxConfig">N0</label>
             </div>
-
-            <div class="content_column">
-                <div class="content_column_title">Result</div>
-                <input type="radio" id="resultKana" name="radioConfigResult" checked="checked">
-                <label for="resultKana" class="radioConfig">Kana</label>
-                <input type="radio" id="resultKanji" name="radioConfigResult">
-                <label for="resultKanji" class="radioConfig">Kanji</label>
-            </div>
         </div>
 
-        <div id="start_button_container" class="start_button_container"><button id="start_button" name="button"
+        <div id="start_button_container" class="start_button_container"><button id="start_button" name="button" disabled
                 onclick="toggleStartScreen(); toggleQuizScreen(); commonInitialize();">Start</button></div>
 
         <div id="quiz_content" class="content hidden">

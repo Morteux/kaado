@@ -71,11 +71,9 @@ function addSearchKanjiOnClickFeature() {
 
 // Initialization function
 function commonInitialize() {
-    if (Object.keys(kanji_list).length != 0) {
-        addSearchKanjiOnClickFeature();
+    addSearchKanjiOnClickFeature();
 
-        startTest();
-    }
+    startTest();
 }
 
 function showStrokeButton() {

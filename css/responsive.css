@@ -72,7 +72,7 @@
 
 @media only screen and (max-width: 400px) {
     body {
-        background-image: url('../images/backgrounds/winter_anim_mobile.svg');
+        /* background-image: url('../images/backgrounds/summer_anim_mobile.svg'); */
     }
 
     .results_container>div {

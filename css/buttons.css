@@ -16,6 +16,11 @@ button:active {
     box-shadow: 0 9px var(--secondary-shadow);
 }
 
+button:disabled,
+button[disabled]{
+    background-color: var(--primary-shadow);
+}
+
 .primary_button {
     display: flex;
     flex-direction: row;

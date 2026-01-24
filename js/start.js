@@ -12,40 +12,24 @@ var config = {
     show_strokes_by_default: false
 }
 
-//document.addEventListener("DOMContentLoaded", (event) => {
-//    fetch('./json/hiragana.json')
-//        .then(res => res.json())
-//        .then(data => {
-//            hiragana = data;
-//            kanji_total += Object.keys(hiragana).length;
-//            
-//            document.getElementById('kanji_total').innerText = kanji_total;
-//
-//            enableHiraganaCheckboxes();
-//        });
-//
-//    fetch('/json/katakana.json')
-//        .then(res => res.json())
-//        .then(data => {
-//            katakana = data;
-//            kanji_total += Object.keys(katakana).length;
-//
-//            document.getElementById('kanji_total').innerText = kanji_total;
-//
-//            enableKatakanaCheckboxes();
-//        });
-//
-//    fetch('/json/kanji.json')
-//        .then(res => res.json())
-//        .then(data => {
-//            kanji = data;
-//            kanji_total += Object.keys(kanji).length;
-//
-//            document.getElementById('kanji_total').innerText = kanji_total;
-//
-//            enableKanjiCheckboxes();
-//        });
-//});
+document.addEventListener("DOMContentLoaded", (event) => {
+    const mes = new Date().getMonth() + 1; // 1–12
+
+    if (window.innerWidth < 640) {
+
+        if (mes >= 3 && mes <= 5) { document.body.style.backgroundImage = "url('../images/backgrounds/spring_anim_mobile.svg')"; }
+        else if (mes >= 6 && mes <= 8) { document.body.style.backgroundImage = "url('../images/backgrounds/summer_anim_mobile.svg')"; }
+        else if (mes >= 9 && mes <= 11) { document.body.style.backgroundImage = "url('../images/backgrounds/fall_anim_mobile.svg')"; }
+        else { document.body.style.backgroundImage = "url('../images/backgrounds/winter_anim_mobile.svg')"; }
+
+    } else {
+
+        if (mes >= 3 && mes <= 5) { document.body.style.backgroundImage = "url('../images/backgrounds/spring_anim.svg')"; }
+        else if (mes >= 6 && mes <= 8) { document.body.style.backgroundImage = "url('../images/backgrounds/summer_anim.svg')"; }
+        else if (mes >= 9 && mes <= 11) { document.body.style.backgroundImage = "url('../images/backgrounds/fall_anim.svg')"; }
+        else { document.body.style.backgroundImage = "url('../images/backgrounds/winter_anim.svg')"; }
+    }
+});
 
 document.addEventListener("DOMContentLoaded", (event) => {
     kanji_total += Object.keys(hiragana).length;
@@ -147,6 +131,11 @@ function updateKanjiCount() {
         kanji_list = { ...kanji_list, ...searchKanjiByJLPT(null) };    // JLPT level null is for kanji outside the JLPT levels
     }
 
+    if (Object.keys(kanji_list).length == 0) {
+        document.getElementById('start_button').disabled = true;
+    } else {
+        document.getElementById('start_button').disabled = false;
+    }
     document.getElementById('kanji_count').innerText = Object.keys(kanji_list).length;
 }
 
