@@ -22,9 +22,9 @@ html {
 }
 
 body {
-    /* background-image: url('../images/background.png');
+    background-image: url('../images/backgrounds/winter_anim.svg');
     background-size: cover;
-    background-repeat: no-repeat; */
+    background-repeat: no-repeat;
 
     background-color: var(--background-color);
 

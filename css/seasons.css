@@ -1,0 +1,79 @@
+:root {
+    --hinomaru: #D94A45;    /* Sun */
+    --skyhigh: #BFD1DC;   /* Sun */
+    --skymedium: #C7D6DD;   /* Sun */
+    --skylow: #E16B5C;   /* Sun */
+    
+    /* Winter
+    A modo de ejemplo, voy a describir la que seria la 
+    animacion y fondo para invierno. Salen de los lados 
+    de la pantalla unas montanas de nieve de tonos 
+    blancos y azulados y de fondo un amanecer con una 
+    luz calida. Como particulas quiero que caigan unos 
+    copos de nieve durante unos segundos desde arriba de 
+    la pantalla hacia abajo */
+    --asahiiro: #F2C6A0;    /* Gradiente muy suave. Fuyuzora → Asahi-iro */
+
+    --fuyuzora: #B9CCD9;    /* Montañas fondo */
+    --setsugen: #D6E1E8;    /* Montañas medio */
+    --usuzora: #E6EEF2;     /* Montañas frente */
+
+    --shiroyuki: #F5F7F6;    /* Nieve / detalles */
+    --aonibi: #7A8C99;    /* Sombras al 5–10 % de opacidad */
+    
+    /* Spring
+    para primavera quiero hacer un arbol de sakura en 
+    unas colinas en plena floracion con unas pequenas 
+    particulas de flores sakura cayendo durante unos 
+    segundos y parando. Para el cielo, creo que seria 
+    mejor un azul fijo de un cielo clareado sin gradiente, 
+    pero acepto consejos y otras propuestas */
+    --haruzora: #DDEFF5;  /* Cielo azul claro, plano */
+
+    --okuoka_haru: #DDE8DB;  /* Colinas traseras */
+    --temaeoka_haru: #C9D8C5;  /* Colinas frontales */
+
+    --sakuramiki: #9FAFB0;  /* Tronco y ramas */
+    --usuzakura: #E8B7C6;  /* Copa / masa de flores */
+
+    --sakurashiro: #F7F3F4;  /* Pétalos claros */
+
+    --kasumikage: #9FAFB0;  /* Gris azulado suave (sombra) */
+
+    /* Summer 
+    para verano, como es la temporada de lluvias, 
+    quizas unas particulas de lluvia con unas nubes 
+    blancas rapidas que aparezcan de un lado de la 
+    pantalla y salgan por el otro mientras caen 
+    particulas de lluvia ligera y luego dando paso a 
+    un cielo claro brillante caluroso y un campo 
+    quizas un poco seco (aqui acepto tambien sugerencias) */
+    --tsuyuzora: #DDE8ED; /* Cielo durante la temporada de lluvias */
+    --natsuzora: #CFE6EC; /* Cielo despejado de verano */
+
+    --kumo: #F5F7F4;    /* Nubes blancas en movimiento */
+    --ame: #8CB3C6; /* Partículas de lluvia ligera. Usar con baja opacidad. */
+    
+    --natsugasumi: #B4CBD2;   /* Mountains */
+    --okuoka_natsu: #BFD6CC;   /* Colinas traseras */
+    --temaeoka_natsu: #AFCFC1; /* Colinas frontales */
+
+    --aonibi: #6F8590;    /* Sombras suaves y neutras. Usar al 5–10 % de opacidad. */
+
+    /* Fall 
+    para otono quiero algo parecido a primavera, pero 
+    con colores adecuados para otono y ademas habra un 
+    arbol con hojas momiji y la animacion como tal 
+    seran esas hojas cayendo con una rafaga de viento frio */
+    --akizora: #E6DCCF;   /* Cielo otoñal seco. */
+
+    --akiiwa: #9B8F7A;   /* Mountains */
+    --okuoka_aki: #E0D3C1;   /* Colinas traseras. */
+    --temaeoka_aki: #CBB79D; /* Colinas frontales. */
+
+    --momijimiki: #7B6A58;    /* Tronco y ramas del árbol de momiji. */
+    --momijiiro: #B36A5E; /* Color principal de las hojas del momiji */
+    
+    --koyoiro: #C49A6C;   /* Variación secundaria de hoja otoñal */
+    --kazekage: #7B6A58;  /* Color base para sombras y viento. Usar al 5–10 % de opacidad. */
+}
