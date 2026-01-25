@@ -1,7 +1,3 @@
-//var hiragana;
-//var katakana;
-//var kanji;
-
 var kanji_count = 0;
 var kanji_total = 0;
 
@@ -19,38 +15,38 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
         if (mes >= 3 && mes <= 5) {
             document.body.style.backgroundImage = "url('../images/backgrounds/spring_anim_mobile.svg')";
-            document.body.style.backgroundColor = "--var(--temaeoka_haru)";
+            document.body.style.backgroundColor = "var(--temaeoka_haru)";
         }
         else if (mes >= 6 && mes <= 8) {
             document.body.style.backgroundImage = "url('../images/backgrounds/summer_anim_mobile.svg')";
-            document.body.style.backgroundColor = "--var(--temaeoka_natsu)";
+            document.body.style.backgroundColor = "var(--temaeoka_natsu)";
         }
         else if (mes >= 9 && mes <= 11) {
             document.body.style.backgroundImage = "url('../images/backgrounds/fall_anim_mobile.svg')";
-            document.body.style.backgroundColor = "--var(--temaeoka_aki)";
+            document.body.style.backgroundColor = "var(--temaeoka_aki)";
         }
         else {
             document.body.style.backgroundImage = "url('../images/backgrounds/winter_anim_mobile.svg')";
-            document.body.style.backgroundColor = "--var(--usuzora)";
+            document.body.style.backgroundColor = "var(--usuzora)";
         }
 
     } else {
 
         if (mes >= 3 && mes <= 5) {
             document.body.style.backgroundImage = "url('../images/backgrounds/spring_anim.svg')";
-            document.body.style.backgroundColor = "--var(--temaeoka_haru)";
+            document.body.style.backgroundColor = "var(--temaeoka_haru)";
         }
         else if (mes >= 6 && mes <= 8) {
             document.body.style.backgroundImage = "url('../images/backgrounds/summer_anim.svg')";
-            document.body.style.backgroundColor = "--var(--temaeoka_natsu)";
+            document.body.style.backgroundColor = "var(--temaeoka_natsu)";
         }
         else if (mes >= 9 && mes <= 11) {
             document.body.style.backgroundImage = "url('../images/backgrounds/fall_anim.svg')";
-            document.body.style.backgroundColor = "--var(--temaeoka_aki)";
+            document.body.style.backgroundColor = "var(--temaeoka_aki)";
         }
         else {
             document.body.style.backgroundImage = "url('../images/backgrounds/winter_anim.svg')";
-            document.body.style.backgroundColor = "--var(--usuzora)";
+            document.body.style.backgroundColor = "var(--usuzora)";
         }
     }
 });

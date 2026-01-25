@@ -4,8 +4,6 @@
     }
 
     body {
-        background-color: var(--background-color);
-
         padding: 0;
         margin: 0;
     }
@@ -71,10 +69,6 @@
 
 
 @media only screen and (max-width: 400px) {
-    body {
-        /* background-image: url('../images/backgrounds/summer_anim_mobile.svg'); */
-    }
-
     .results_container>div {
         justify-content: space-evenly;
     }
