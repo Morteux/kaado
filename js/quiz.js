@@ -88,10 +88,6 @@ function startTest() {
     incorrectCount = 0;
     incorrectIndexes = [];
 
-    // Initialize IME input
-    var input = document.getElementById('card_input');
-    wanakana.bind(input);
-
     if (!alreadyStarted) {
         alreadyStarted = true;
 
@@ -106,6 +102,9 @@ function startTest() {
 
     if (kanji_list[shuffled[actualIndex]].hasOwnProperty("kanji")) {
         document.getElementById("question_element").innerHTML = kanji_list[shuffled[actualIndex]]["kanji"];
+
+        // Set wanakana IME input
+        wanakana.bind(document.getElementById('card_input'));
     } else {
         document.getElementById("question_element").innerHTML = kanji_list[shuffled[actualIndex]]["kana"];
     }
@@ -169,8 +168,14 @@ function next() {
 
         if (kanji_list[shuffled[actualIndex]].hasOwnProperty("kanji")) {
             document.getElementById("question_element").innerHTML = kanji_list[shuffled[actualIndex]]["kanji"];
+
+            // Set wanakana IME input
+            wanakana.bind(document.getElementById('card_input'));
         } else {
             document.getElementById("question_element").innerHTML = kanji_list[shuffled[actualIndex]]["kana"];
+
+            // Remove wanakana IME input
+            wanakana.unbind(document.getElementById('card_input'));
         }
 
         document.getElementById("actual_counter").innerHTML = actualIndex;
